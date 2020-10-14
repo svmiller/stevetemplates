@@ -1,0 +1,13 @@
+!inst/doc
+
+.Rhistory
+.Rproj.user
+.DS_Store
+
+data-raw
+data/map_quiz.rda
+deprecated
+source-dir
+inst/doc
+doc
+Meta
