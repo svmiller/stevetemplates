@@ -1,6 +1,6 @@
 ---
 output: 
-  stevetemplates::svm_article2:
+  stevetemplates::article2:
     citation_package: natbib
     dev: cairo_pdf
     keep_tex: true
@@ -24,7 +24,7 @@ fontsize: 11pt
 # spacing: double
 endnote: no
 # pandocparas: TRUE
-sansitup: TRUE
+sansitup: FALSE
 header-includes:
   - \usepackage{longtable}
   - \LTcapwidth=.95\textwidth
@@ -35,7 +35,6 @@ header-includes:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-library(stevemisc)
 ```
 
 
@@ -55,7 +54,7 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 mtcars %>%
   ggplot(.,aes(wt, mpg)) + geom_point() +
-  theme_steve_web() +
+  theme_bw() +
   geom_smooth(method="lm") +
   labs(caption = "Data: 1974 Motor Trend US magazine",
        x = "Weight (1,000 Pounds)",
