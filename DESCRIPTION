@@ -1,11 +1,13 @@
 Package: stevetemplates
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Steve's R Markdown Templates
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Steven V. Miller
+Maintainer: Steven V. Miller <steven.v.miller@gmail.com>
+Description: These are my collection of R Markdown templates, mostly for compilation to PDF.
+    These are useful for all things academic, including your manuscripts and presentations.
+License: MIT
 Encoding: UTF-8
 LazyData: true
+Imports:
+    rmarkdown
