@@ -1,12 +1,13 @@
 Package: stevetemplates
 Type: Package
 Title: Steve's R Markdown Templates
+Depends: R (>= 3.5.0)
 Version: 0.2.0
 Author: Steven V. Miller
 Maintainer: Steven V. Miller <steven.v.miller@gmail.com>
 Description: These are my collection of R Markdown templates, mostly for compilation to PDF.
-    These are useful for all things academic, including your manuscripts and presentations.
-License: MIT
+    These are useful for all things academic, including your manuscripts and CVs.
+License: GPL-2
 Encoding: UTF-8
 LazyData: true
 Imports:

@@ -25,7 +25,7 @@
 #' | `myphoto` | file name for your photo, only necessary if `includephoto: TRUE`. |
 #' | `shift` | shift/adjust photo, defaults to '7in, -.25in' if `includephoto: TRUE` |
 #' | `photobigness` | how big photo should be, adjust to taste if `includephoto: TRUE` |
-#' | `photozoom` | adjust zoom on photo, defaults to '.2\textwdith' if `includephoto: TRUE` |
+#' | `photozoom` | adjust zoom on photo, defaults to 20% of textwidth (as LaTeX macro) if `includephoto: TRUE` |
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Arguments to [`rmarkdown::pdf_document`].

@@ -31,7 +31,7 @@ for this template.\tabular{ll}{
    \code{myphoto} \tab file name for your photo, only necessary if \code{includephoto: TRUE}. \cr
    \code{shift} \tab shift/adjust photo, defaults to '7in, -.25in' if \code{includephoto: TRUE} \cr
    \code{photobigness} \tab how big photo should be, adjust to taste if \code{includephoto: TRUE} \cr
-   \code{photozoom} \tab adjust zoom on photo, defaults to '.2\textwdith' if \code{includephoto: TRUE} \cr
+   \code{photozoom} \tab adjust zoom on photo, defaults to 20\% of textwidth (as LaTeX macro) if \code{includephoto: TRUE} \cr
 }
 }
 
