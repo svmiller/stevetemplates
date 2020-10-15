@@ -12,3 +12,4 @@ LazyData: true
 Imports:
     rmarkdown,
     tidyverse
+RoxygenNote: 7.1.1
