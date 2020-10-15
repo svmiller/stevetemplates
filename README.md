@@ -22,4 +22,4 @@ The easiest way to use my templates is within Rstudio. Go to *File > New File > 
 - [**Steve's Non-Academic Résumé Template**](http://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/): This is an addition I made in 2020 to my suite of R Markdown templates. It's a bit clunky, but it's useful and markup-light for non-academic résumés.
 - [**Steve's Memo Template**](http://svmiller.com/blog/2019/06/r-markdown-memo-template/): I created this for a memo I needed to write in 2019.
 
-The user should notice that the YAML contains the functions (loaded in this package) to compile these documents. They are basic wrappers for `rmarkdown::pdf_document`.
+The user should notice that the YAML contains the functions (loaded in this package) to compile these documents. They are basic wrappers for `rmarkdown::pdf_document`. Please consult the corresponding posts and [the template repository](https://github.com/svmiller/stevetemplates/tree/master/inst/rmarkdown/templates) for rudimentary examples and the underlying code to help guide your usage.
