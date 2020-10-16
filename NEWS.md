@@ -7,7 +7,7 @@ stevetemplates 0.2.0
 - Clarify license is GPL-2
 - Do `R CMD check` to make sure everything comes up green.
 - Get rid of `tidyverse` import/dependency, since it just bogs down testing and is not required.
-- Add "does file exist tests."
+- Add "does file exist" tests, importantly for CRAN.
 
 stevetemplates 0.1.0
 ---------------------------------------------------------------------
