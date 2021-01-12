@@ -44,8 +44,8 @@ devtools::install_github("svmiller/stevetemplates")
 
 The easiest way to use my templates is within Rstudio. Go to *File \>
 New File \> R Markdown*. Here, select any template you’d like to use.
-The development version should have more options, but the options
-published right now on CRAN include:
+The version on CRAN should lag behind the development version, but the
+development version includes the following templates:
 
   - [**Steve’s First Article/Manuscript
     Template**](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/):
@@ -79,6 +79,15 @@ published right now on CRAN include:
     Template**](http://svmiller.com/blog/2019/06/r-markdown-memo-template/):
     I created this for a memo I needed to write in 2019. You can call it
     in the YAML with `stevetemplates::memo`.
+  - **Steve’s Statement Template**: I created this template in 2016 (I
+    believe). I use it for writing various “statements” (e.g. [my
+    research
+    statement](http://svmiller.com/docs/svm-research-statement.pdf),
+    statement of [teaching
+    philosophy](http://svmiller.com/docs/svm-teaching-philosophy.pdf))
+    when applying for jobs. I also use it for miscellaneous university
+    busy work. You can call it in the YAML with
+    `stevetemplates::statement`.
 
 The user should notice that the YAML contains the functions (loaded in
 this package) to compile these documents. They are basic wrappers for
