@@ -37,7 +37,7 @@ devtools::install_github("svmiller/stevetemplates")
 
 ## Usage
 
-The easiest way to use my templates is within Rstudio. Go to *File > New File > R Markdown*. Here, select any template you'd like to use. Options right now include:
+The easiest way to use my templates is within Rstudio. Go to *File > New File > R Markdown*. Here, select any template you'd like to use. The development version should have more options, but the options published right now on CRAN include:
 
 - [**Steve's First Article/Manuscript Template**](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/): This is my first article/manuscript template and I made it around 2016. I include this as a legacy. I used to use these quite often for my manuscripts, though I switched to another template (also included in this package). I don't intend to offer much support for this template anymore, but it has lots of goodies (e.g. appendix support, suppressing title pages, etc.). You can call it in the YAML with `stevetemplates::article`.
 - [**Steve's 2nd Article/Manuscript Template**](http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/): This is my second article/manuscript template that I made in September 2020. It's patterned off [the Association for Computing Machinery (ACM) LaTeX templates](https://www.latextemplates.com/template/acm-publications). You can call it in the YAML with `stevetemplates::article2`.

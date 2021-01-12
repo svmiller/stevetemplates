@@ -44,7 +44,8 @@ devtools::install_github("svmiller/stevetemplates")
 
 The easiest way to use my templates is within Rstudio. Go to *File \>
 New File \> R Markdown*. Here, select any template you’d like to use.
-Options right now include:
+The development version should have more options, but the options
+published right now on CRAN include:
 
   - [**Steve’s First Article/Manuscript
     Template**](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/):
