@@ -4,14 +4,13 @@ output:
     latex_engine: pdflatex
 geometry: margin=1in
 
-title: "Research Statement"
+title: "A Statement"
 author: Steven V. Miller
 affiliation: Department of Political Science, Clemson University
 email: "svmille@clemson.edu"
 
-fontfamily: mathpazo
+fontfamily: cochineal
 fontsize: 11pt
-# mainfont: cochineal
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ipsum vel lacus eleifend ultrices. Donec metus lectus, pulvinar faucibus pretium id, sollicitudin vel purus. Nulla et metus eu quam tincidunt interdum. Phasellus mi urna, pellentesque et auctor nec, pharetra ultrices ex. Curabitur pretium velit porttitor risus efficitur condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et semper elit. Ut interdum semper venenatis. Nunc vitae massa ut ipsum laoreet posuere. Nulla non libero sed risus finibus mollis a at tellus. Suspendisse egestas sodales lorem. Vivamus eu massa quis lacus blandit mattis. Proin consectetur nunc at elit egestas scelerisque. Morbi vitae metus metus.
