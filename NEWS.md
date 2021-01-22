@@ -1,7 +1,13 @@
 stevetemplates 0.3.0
 ---------------------------------------------------------------------
 
-- Add statement template.
+The newest release has the following additions and changes to pre-existing templates. Additions include:
+
+- A statement template for making, well, statements and such.
+
+Changes include:
+
+- Took out some commented code in `article2` that was breaking things. R Markdown/Pandoc can punish you for commenting out code when you should remove it.
 
 
 stevetemplates 0.2.0
