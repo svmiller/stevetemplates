@@ -39,3 +39,9 @@ article2 <- function(...){
                           latex_engine = "xelatex",
                           ...)
 }
+
+#' @rdname article2
+#' @export
+templ_article2 <- function(){
+  print(system.file("rmarkdown", "templates", "article2", "resources", "template.tex", package = "stevetemplates"))
+}

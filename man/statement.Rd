@@ -2,9 +2,12 @@
 % Please edit documentation in R/statement.R
 \name{statement}
 \alias{statement}
+\alias{templ_statement}
 \title{Steve's Statement Template}
 \usage{
 statement(...)
+
+templ_statement()
 }
 \arguments{
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}

@@ -3,3 +3,4 @@
 ^cran-comments\.md$
 ^CRAN-RELEASE$
 ^NEWS\.md$
+^README\.Rmd$

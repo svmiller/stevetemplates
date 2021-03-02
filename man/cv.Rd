@@ -2,9 +2,12 @@
 % Please edit documentation in R/cv.R
 \name{cv}
 \alias{cv}
+\alias{templ_cv}
 \title{Steve's Academic CV Template}
 \usage{
 cv(...)
+
+templ_cv()
 }
 \arguments{
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}

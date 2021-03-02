@@ -27,3 +27,10 @@ statement <- function(...){
   rmarkdown::pdf_document(template = templ,
                           ...)
 }
+
+
+#' @rdname statement
+#' @export
+templ_statement <- function() {
+  print(system.file("rmarkdown", "templates", "statement", "resources", "template.tex", package = "stevetemplates"))
+}

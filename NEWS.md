@@ -8,6 +8,7 @@ The newest release has the following additions and changes to pre-existing templ
 Changes include:
 
 - Took out some commented code in `article2` that was breaking things. R Markdown/Pandoc can punish you for commenting out code when you should remove it.
+- Companion functions for isolating the system path of the template. These functions have a prefix of `templ_` and can be useful for a "make" approach to document preparation.
 
 
 stevetemplates 0.2.0

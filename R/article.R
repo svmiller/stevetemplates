@@ -32,3 +32,9 @@ article <- function(...){
   rmarkdown::pdf_document(template = templ,
                           ...)
 }
+
+#' @rdname article
+#' @export
+templ_article <- function() {
+  print(system.file("rmarkdown", "templates", "article", "resources", "template.tex", package = "stevetemplates"))
+}

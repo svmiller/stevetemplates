@@ -2,9 +2,12 @@
 % Please edit documentation in R/article2.R
 \name{article2}
 \alias{article2}
+\alias{templ_article2}
 \title{Steve's 2nd Article/Manuscript Template}
 \usage{
 article2(...)
+
+templ_article2()
 }
 \arguments{
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}

@@ -31,3 +31,11 @@ memo <- function(...){
   rmarkdown::pdf_document(template = templ,
                           ...)
 }
+
+
+#' @rdname memo
+#' @export
+templ_memo <- function() {
+  print(system.file("rmarkdown", "templates", "memo", "resources", "template.tex", package = "stevetemplates"))
+}
+

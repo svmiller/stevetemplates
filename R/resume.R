@@ -39,3 +39,10 @@ resume <- function(...){
                           latex_engine = "xelatex",
                           ...)
 }
+
+
+#' @rdname resume
+#' @export
+templ_resume <- function() {
+  print(system.file("rmarkdown", "templates", "resume", "resources", "template.tex", package = "stevetemplates"))
+}

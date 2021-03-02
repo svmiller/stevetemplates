@@ -2,9 +2,12 @@
 % Please edit documentation in R/memo.R
 \name{memo}
 \alias{memo}
+\alias{templ_memo}
 \title{Steve's Memo Template}
 \usage{
 memo(...)
+
+templ_memo()
 }
 \arguments{
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}

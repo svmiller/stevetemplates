@@ -33,3 +33,10 @@ cv <- function(...){
   rmarkdown::pdf_document(template = templ,
                           ...)
 }
+
+
+#' @rdname cv
+#' @export
+templ_cv <- function() {
+  print(system.file("rmarkdown", "templates", "cv", "resources", "template.tex", package = "stevetemplates"))
+}

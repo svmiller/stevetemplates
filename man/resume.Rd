@@ -2,9 +2,12 @@
 % Please edit documentation in R/resume.R
 \name{resume}
 \alias{resume}
+\alias{templ_resume}
 \title{Steve's Non-Academic Résumé Template:}
 \usage{
 resume(...)
+
+templ_resume()
 }
 \arguments{
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}
