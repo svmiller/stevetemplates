@@ -1,3 +1,14 @@
+stevetemplates 0.4.0
+---------------------------------------------------------------------
+
+The newest release has the following additions and changes to pre-existing templates. Additions include:
+
+- A template for "anonymous" manuscripts. Note: `article` and `article2` have anonymous parameters built into them, but this is a template I created because one particular journal to which I submitted a manuscript once demanded that the anonymous manuscript look *exactly* a certain way. From that, what is now `anonms` in this package was born.
+
+Changes include:
+
+- `article`, `article2`, and `anonms` feature the "CSL" environment change that Pandoc recently rolled out. I think this came at the end of 2020. It is only relevant if you *don't* use natbib for handling references.
+
 stevetemplates 0.3.0
 ---------------------------------------------------------------------
 
