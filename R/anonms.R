@@ -1,7 +1,7 @@
 #' Steve's Anonymous Manuscript Template
 #'
 #' The R Markdown template Steve used once for an anonymous manuscript submission that needed to look an exact way. I've used this only once
-#' for a manuscript submission to a particular journal. It was not published. I have not had the occasion to submit there anyway.
+#' for a manuscript submission to a particular journal. It was not published. I have not had the occasion to submit there again.
 #'
 #' # About YAML header fields
 #'
