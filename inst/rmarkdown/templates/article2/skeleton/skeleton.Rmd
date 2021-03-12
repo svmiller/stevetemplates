@@ -21,7 +21,7 @@ geometry: margin=1in
 mainfont: cochineal
 #sansfont: Linux Biolinum O
 fontsize: 11pt
-# spacing: double
+# doublespacing: TRUE
 endnote: no
 # pandocparas: TRUE
 sansitup: FALSE

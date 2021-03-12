@@ -518,6 +518,11 @@ $endfor$
 
 \newtheorem{hypothesis}{Hypothesis}
 
+$if(doublespacing)$
+\usepackage{setspace}
+$else$
+$endif$
+
 \begin{document}
 
 % \textsf{\textbf{This is sans-serif bold text.}}
@@ -642,6 +647,12 @@ $else$
 \setlength{\parskip}{0pt}
 $endif$
 
+% We'll put doublespacing here
+$if(doublespacing)$
+\doublespacing
+$else$
+$endif$
+% Remember to cut it out later before bib
 $body$
 
 $if(has-frontmatter)$
@@ -663,6 +674,14 @@ $endif$
   \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
 $if(beamer)$
 \end{frame}
+$endif$
+
+
+% should be about here.
+% We'll put doublespacing end here
+$if(doublespacing)$
+\singlespacing
+$else$
 $endif$
 
 $endif$

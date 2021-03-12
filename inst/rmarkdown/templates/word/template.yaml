@@ -1,0 +1,4 @@
+name: Steve's Word Manuscript Template
+description: >
+   The R Markdown template Steve uses, and hates using, for journals that insist on Microsoft Word uploads.
+create_dir: FALSE

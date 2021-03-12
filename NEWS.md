@@ -1,3 +1,15 @@
+stevetemplates 0.5.0
+---------------------------------------------------------------------
+
+The newest release has the following additions and changes to pre-existing templates. Additions include:
+
+- A template for Microsoft Word manuscripts. Functionality for Word templates is somewhat limited so I recommend using this only for presentations that need to be anonymized for submission to an academic journal.
+
+Changes include:
+
+- Add `doublespacing` to `article2` document. Documentation and skeleton updated accordingly.
+
+
 stevetemplates 0.4.0
 ---------------------------------------------------------------------
 

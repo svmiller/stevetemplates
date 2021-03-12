@@ -36,6 +36,7 @@ on the Github repo if I didn't.\tabular{ll}{
    \code{sansitup} \tab logical, defaults to \code{FALSE}. If \code{TRUE}, better mimics ACM's use of sans fonts for section headers \cr
    \code{mainfont} \tab optional (I think?), but it's the main font to use with \code{xelatex}. I use \code{cochineal} here. \cr
    \code{sansfont} \tab optional, only necessary if \code{sansitup: TRUE}. Specifies sans font. I recommend Linux Biolinum \cr
+   \code{doublespacing} \tab optional, if anything is here to process, this will double-space the document. \cr
 }
 }
 
