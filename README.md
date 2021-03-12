@@ -96,7 +96,9 @@ development version includes the following templates:
     and never worked with it because Word is limited in its
     functionality. I’ve since come back to this template because its
     limitations make it wonderful for “anonymizing” a manuscript for
-    submission to journals that are picky about PDF submissions.
+    submission to journals that are picky about PDF submissions. This
+    manuscript features prominently in my
+    [`{steveproj}`](https://github.com/svmiller/steveproj) package.
 
 The user should notice that the YAML contains the functions (loaded in
 this package) to compile these documents. They are basic wrappers for
