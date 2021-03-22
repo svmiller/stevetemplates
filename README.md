@@ -79,6 +79,11 @@ development version includes the following templates:
     templates. It’s a bit clunky, but it’s useful and markup-light for
     non-academic résumés. You can call it in the YAML with
     `stevetemplates::resume`.
+-   **Steve’s HTML Template**: I created this template on the fly for
+    formatting academic manuscripts to an HTML document. Capabilities
+    are limited the extent to which there’s more CSS I need to adjust.
+    This manuscript features prominently in my
+    [`{steveproj}`](https://github.com/svmiller/steveproj) package.
 -   [**Steve’s Memo
     Template**](http://svmiller.com/blog/2019/06/r-markdown-memo-template/):
     I created this for a memo I needed to write in 2019. You can call it

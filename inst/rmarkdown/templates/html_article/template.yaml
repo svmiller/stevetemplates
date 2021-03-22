@@ -1,0 +1,4 @@
+name: Steve's HTML Article Template
+description: >
+   The R Markdown template Steve added in support of another package, for rendering academic manuscripts to HTML documents.
+create_dir: FALSE
