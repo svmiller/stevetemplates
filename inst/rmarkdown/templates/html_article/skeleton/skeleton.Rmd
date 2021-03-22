@@ -1,5 +1,5 @@
 ---
-output: stevetemplates::html_article:
+output: stevetemplates::html_article
 title: "An HTML Article Template"
 thanks: "Replication files are available on the author's Github account (http://github.com/svmiller/svm-r-markdown-templates). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: steven.v.miller@gmail.com."
 author:
@@ -19,7 +19,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Subsection
 
-### Third subsection
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed commodo consequat mi in fermentum. Phasellus id nisi at nibh sollicitudin volutpat non et massa. Nam nec sapien porttitor, sollicitudin erat vitae, auctor mauris. Nam nisl enim, sagittis vitae semper vitae, suscipit id turpis. Aliquam vel lacinia libero, sit amet dapibus nunc. Nullam vitae bibendum orci. Vestibulum hendrerit maximus volutpat. Nulla a placerat sapien. Integer ullamcorper dapibus magna, eget scelerisque orci consequat quis. Fusce suscipit mi tortor, ultricies faucibus arcu finibus at. Quisque blandit velit in hendrerit pulvinar.
 
