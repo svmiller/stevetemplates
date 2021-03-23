@@ -9,7 +9,7 @@ The newest release has the following additions and changes to pre-existing templ
 Changes include:
 
 - Add `doublespacing` to `article2` document. Documentation and skeleton updated accordingly.
-
+- Fix `\lfoot{}` and `\cfoot{}` problem in the CV template. HT: @waternumbers
 
 stevetemplates 0.4.0
 ---------------------------------------------------------------------
