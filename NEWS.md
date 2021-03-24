@@ -10,7 +10,7 @@ Changes include:
 
 - Add `doublespacing` to `article2` document. Documentation and skeleton updated accordingly.
 - Fix `\lfoot{}` and `\cfoot{}` problem in the CV template. HT: @waternumbers
-- Clarification about a missing LaTeX depency from `{tinytex}` installations for the `article2` template. I thank Ian Adams and Cornelius Hennch for pointing to this issue.
+- Clarification about a missing LaTeX dependency from `{tinytex}` installations for the `article2` template. I thank Ian Adams and Cornelius Hennch for pointing to this issue.
 
 stevetemplates 0.4.0
 ---------------------------------------------------------------------
