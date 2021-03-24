@@ -17,6 +17,13 @@ Another template for academic articles/manuscripts. For more information, see he
 \url{http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/}. Please note
 that \code{xelatex} is functionally required for this template/function.
 }
+\details{
+If your version of TeX comes by way of Yihui Xie's \pkg{tinytex}, you'll want to
+additionally install the "xurl" library. Otherwise, you'll get a vague error about a
+missing LaTeX dependency. \code{tinytex::tlmgr_install("xurl")} should suffice. I
+thank Ian Adams and Cornelius Hennch for finding this issue and pointing to this
+solution.
+}
 \section{About YAML header fields}{
 This section documents some of the YAML fields to know
 for this template. Much should've been carried over from my
