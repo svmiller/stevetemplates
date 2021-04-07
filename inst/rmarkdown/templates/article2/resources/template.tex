@@ -1,3 +1,5 @@
+% ARTICLE 2 ----
+% This is just here so I know exactly what I'm looking at in Rstudio when messing with stuff.
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
@@ -520,6 +522,21 @@ $endfor$
 
 $if(doublespacing)$
 \usepackage{setspace}
+$else$
+$endif$
+
+% trick for moving figures to back of document
+% really wish we'd knock this shit off with moving tables/figures to back of document
+% but, alas...
+
+$if(anonymous)$
+\usepackage[notablist,nofiglist]{endfloat}
+
+\renewcommand\floatplace[1]{%
+  \begin{center}
+***\emph{Insert \csname #1name\endcsname~\csname thepost#1\endcsname\ here.}***
+  \end{center}}
+
 $else$
 $endif$
 
