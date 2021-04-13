@@ -10,7 +10,6 @@ Description: These are my collection of 'R Markdown' templates, mostly for compi
     for things like your CV or your articles and manuscripts.
 License: GPL-2
 Encoding: UTF-8
-LazyData: true
 Imports:
     rmarkdown
 RoxygenNote: 7.1.1
