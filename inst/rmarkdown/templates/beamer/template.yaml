@@ -1,0 +1,4 @@
+name: Steve's Beamer Template
+description: >
+   The R Markdown template Steve uses for Beamer presentations.
+create_dir: FALSE

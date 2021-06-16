@@ -14,7 +14,7 @@
 word <- function(...){
   templ <- system.file("rmarkdown", "templates", "word", "resources", "template.docx", package = "stevetemplates")
   rmarkdown::word_document(reference_docx = templ,
-                          ...)
+                           ...)
 }
 
 #' @rdname word

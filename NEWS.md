@@ -1,7 +1,11 @@
 stevetemplates 0.6.0 (in development)
 ---------------------------------------------------------------------
 
-The newest release has the following additions and changes to pre-existing templates. Changes include:
+The newest release has the following additions and changes to pre-existing templates. Additions include:
+
+- A template for Beamer presentations.
+
+Changes include:
 
 - A user-specified date format in YAML for the CV template.
 
