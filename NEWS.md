@@ -1,3 +1,11 @@
+stevetemplates 0.6.0 (in development)
+---------------------------------------------------------------------
+
+The newest release has the following additions and changes to pre-existing templates. Changes include:
+
+- A user-specified date format in YAML for the CV template.
+
+
 stevetemplates 0.5.0
 ---------------------------------------------------------------------
 
