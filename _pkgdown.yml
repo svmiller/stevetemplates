@@ -1,0 +1,8 @@
+url: http://svmiller.com
+
+template:
+  params:
+    bootswatch: journal
+
+figures:
+  fig.width: 11
