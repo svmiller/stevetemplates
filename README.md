@@ -79,6 +79,11 @@ development version includes the following templates:
     templates. It’s a bit clunky, but it’s useful and markup-light for
     non-academic résumés. You can call it in the YAML with
     `stevetemplates::resume`.
+-   [**Steve’s Beamer
+    Template**](http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/):
+    This is my go-to presentation template as I prefer Beamer PDFs to
+    other presentation formats. You can call it in the YAML with
+    `stevetemplates::beamer`.
 -   **Steve’s HTML Template**: I created this template on the fly for
     formatting academic manuscripts to an HTML document. Capabilities
     are limited the extent to which there’s more CSS I need to adjust.
