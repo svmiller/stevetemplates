@@ -2,7 +2,7 @@
 output: 
   stevetemplates::beamer:
     keep_tex: TRUE
-    latex_engine: xelatex # pdflatex also works here
+    latex_engine: pdflatex # use xelatex here instead! I recommend it, but this is minimal reprex
     dev: cairo_pdf # I typically comment this out  if latex_engine: pdflatex
     slide_level: 3 # I prefer this, but I won't force it on you.
 title: An Example R Markdown Document
@@ -13,8 +13,8 @@ institute: Department of Political Science
 # scaletg: .9 # Optional, proportional (0, 1) to paper width. Defaults to .3
 fontsize: 10pt
 make149: TRUE
-mainfont: "Open Sans" # Try out some font options if xelatex
-titlefont: "Titillium Web" # Try out some font options if xelatex
+# mainfont: "Open Sans" # Try out some font options if xelatex
+# titlefont: "Titillium Web" # Try out some font options if xelatex
 # specify color as six-digit RGB (no pound sign)
 # primarycolor: "990000" 
 # secondarycolor: "000099"
