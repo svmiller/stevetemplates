@@ -21,16 +21,16 @@ that \code{xelatex} is not required for this template but is heavily suggested.
 \section{About YAML header fields}{
 \tabular{ll}{
    FIELD \tab DESCRIPTION \cr
-   \code{title} \tab title of the presentation \cr
-   \code{subtitle} \tab subtitle of the presentation. Optional, but useful. For in-class lectures, I put the class name here. \cr
-   \code{institute} \tab Optional, but list your department/college here. \cr
-   \code{titlegraphic} \tab Optional, but put a university watermark here. \cr
-   \code{scaletg} \tab Optional, but scale \code{titlegraphic} relative to the width of the document. Defaults to .3 \cr
-   \code{make149} \tab Optional, but gives 14:9 dimension to presentation (my favorite) \cr
-   \code{mainfont} \tab Optional but it's the main font to use with \code{xelatex}. I use \verb{Open Sans} here. \cr
-   \code{titlefont} \tab Optional for fancy fonts for slide titles. I use \verb{Titillium Web} here. \cr
-   \code{primarycolor} \tab Optional, but specifies a "primary" color in six-digit RGB color. Defaults to \verb{522D80} \cr
-   \code{secondarycolor} \tab Optional, but specifies a "secondary" color in six-digit RGB color. Defaults to \code{F56600} \cr
+   \code{title} \tab Title of the presentation \cr
+   \code{subtitle} \tab Subtitle of the presentation. Optional, but useful. For in-class lectures, I put the class name here. \cr
+   \code{institute} \tab List your department/college here. Optional. \cr
+   \code{titlegraphic} \tab Put a path to university watermark here. Optional. \cr
+   \code{scaletg} \tab Scale \code{titlegraphic} relative to the width of the document. Optional, defaults to .25. \cr
+   \code{make149} \tab Logical, gives 14:9 dimension to presentation (my favorite). Optional, defaults to FALSE. \cr
+   \code{mainfont} \tab The main font to use with \code{xelatex}. I use \verb{Open Sans} here. Optional, but recommended. \cr
+   \code{titlefont} \tab The font for slide titles. I use \verb{Titillium Web} here. Optional, but recommended. \cr
+   \code{primarycolor} \tab Specifies a "primary" color in six-digit RGB color. Defaults to \verb{522D80}. Optional. \cr
+   \code{secondarycolor} \tab Specifies a "secondary" color in six-digit RGB color. Defaults to \code{F56600}. Optional. \cr
 }
 }
 

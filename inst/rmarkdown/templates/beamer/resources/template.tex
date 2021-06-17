@@ -210,9 +210,9 @@ $endif$
 %----------------------------------------------------------------------------------
 $if(institute)$\institute{$institute$}$endif$
 
-% \titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~/Dropbox/teaching/clemson-academic.png}} % <-- if you want to know what this looks like without it as a Markdown field. 
+% \titlegraphic{\includegraphics[width=0.3\paperwidth]{\string~/Dropbox/teaching/clemson-academic.png}} % <-- if you want to know what this looks like without it as a Markdown field.
 % -----------------------------------------------------------------------------------------------------
-$if(titlegraphic)$\titlegraphic{\includegraphics[width=$if(scaletg)$$scaletg$$else$0.3$endif$\paperwidth]{$titlegraphic$}}$endif$
+$if(titlegraphic)$\titlegraphic{\includegraphics[width=$if(scaletg)$$scaletg$$else$0.25$endif$\paperwidth]{$titlegraphic$}}$endif$
 
 
 % Some additional title page adjustments.
@@ -261,7 +261,7 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 \setlength{\parskip}{0pt}
 
 
-% Allow for those simple two-tone footlines I like. 
+% Allow for those simple two-tone footlines I like.
 % Edit the colors as you see fit.
 %--------------------------------------------------
 \defbeamertemplate*{footline}{my footline}{%
@@ -323,7 +323,7 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 \usepackage[font=small,skip=0pt]{caption}
  \else
  \fi
- 
+
 % Some random stuff now...
 % ------------------------
 
@@ -341,7 +341,7 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 \draw[shift={(-0.3,0.8)}] \eye;
 \draw[shift={(0,0.85)}] \eye;
 % draw mouth
-\draw (-0.1,0.2) to [out=15,in=-100] (0.4,0.95); 
+\draw (-0.1,0.2) to [out=15,in=-100] (0.4,0.95);
 \end{tikzpicture}}
 
 % header includes go last.
