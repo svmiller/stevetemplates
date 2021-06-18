@@ -42,58 +42,58 @@ devtools::install_github("svmiller/stevetemplates")
 
 ## Usage
 
-The easiest way to use my templates is within Rstudio. Go to *File &gt;
-New File &gt; R Markdown*. Here, select any template you’d like to use.
+The easiest way to use my templates is within Rstudio. Go to *File \>
+New File \> R Markdown*. Here, select any template you’d like to use.
 The version on CRAN should lag behind the development version, but the
 development version includes the following templates:
 
--   **Steve’s Anonymous Manuscript Template**: This is an R Markdown
+  - **Steve’s Anonymous Manuscript Template**: This is an R Markdown
     template I used exactly once for an anonymous manuscript submission
     that needed to look an exact way. That submission was not published
     at that journal. I have not had the occasion to submit there again.
--   [**Steve’s First Article/Manuscript
+  - [**Steve’s First Article/Manuscript
     Template**](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/):
-    This is my first article/manuscript template and I made it
-    around 2016. I include this as a legacy. I used to use these quite
-    often for my manuscripts, though I switched to another template
-    (also included in this package). I don’t intend to offer much
-    support for this template anymore, but it has lots of goodies
-    (e.g. appendix support, suppressing title pages, etc.). You can call
-    it in the YAML with `stevetemplates::article`.
--   [**Steve’s 2nd Article/Manuscript
+    This is my first article/manuscript template and I made it around
+    2016. I include this as a legacy. I used to use these quite often
+    for my manuscripts, though I switched to another template (also
+    included in this package). I don’t intend to offer much support for
+    this template anymore, but it has lots of goodies (e.g. appendix
+    support, suppressing title pages, etc.). You can call it in the YAML
+    with `stevetemplates::article`.
+  - [**Steve’s 2nd Article/Manuscript
     Template**](http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/):
     This is my second article/manuscript template that I made in
     September 2020. It’s patterned off [the Association for Computing
     Machinery (ACM) LaTeX
     templates](https://www.latextemplates.com/template/acm-publications).
     You can call it in the YAML with `stevetemplates::article2`.
--   [**Steve’s Academic CV
+  - [**Steve’s Academic CV
     Template**](http://svmiller.com/blog/2016/03/svm-r-markdown-cv/):
     This is my academic CV template I made in 2016, and I think it’s my
     most popular. It’s certainly the one I see most often in the wild.
     It’s also what I currently use for [my CV](http://svmiller.com/cv/).
     You can call it in the YAML with `stevetemplates::cv`.
--   [**Steve’s Non-Academic Résumé
+  - [**Steve’s Non-Academic Résumé
     Template**](http://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/):
     This is an addition I made in 2020 to my suite of R Markdown
     templates. It’s a bit clunky, but it’s useful and markup-light for
     non-academic résumés. You can call it in the YAML with
     `stevetemplates::resume`.
--   [**Steve’s Beamer
+  - [**Steve’s Beamer
     Template**](http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/):
     This is my go-to presentation template as I prefer Beamer PDFs to
     other presentation formats. You can call it in the YAML with
     `stevetemplates::beamer`.
--   **Steve’s HTML Template**: I created this template on the fly for
+  - **Steve’s HTML Template**: I created this template on the fly for
     formatting academic manuscripts to an HTML document. Capabilities
     are limited the extent to which there’s more CSS I need to adjust.
     This manuscript features prominently in my
     [`{steveproj}`](https://github.com/svmiller/steveproj) package.
--   [**Steve’s Memo
+  - [**Steve’s Memo
     Template**](http://svmiller.com/blog/2019/06/r-markdown-memo-template/):
     I created this for a memo I needed to write in 2019. You can call it
     in the YAML with `stevetemplates::memo`.
--   **Steve’s Statement Template**: I created this template in 2016 (I
+  - **Steve’s Statement Template**: I created this template in 2016 (I
     believe). I use it for writing various “statements” (e.g. [my
     research
     statement](http://svmiller.com/docs/svm-research-statement.pdf),
@@ -102,7 +102,12 @@ development version includes the following templates:
     when applying for jobs. I also use it for miscellaneous university
     busy work. You can call it in the YAML with
     `stevetemplates::statement`.
--   **Steve’s Word Template**: I created this template many years ago
+  - [**Steve’s Syllabus
+    Template**](http://svmiller.com/blog/2016/07/r-markdown-syllabus/):
+    This is one of my first templates, dating to mid-2016. I use it for
+    all my syllabi for any class I teach. You can call it in the YAML
+    with `stevetemplates::syllabus`.
+  - **Steve’s Word Template**: I created this template many years ago
     and never worked with it because Word is limited in its
     functionality. I’ve since come back to this template because its
     limitations make it wonderful for “anonymizing” a manuscript for
@@ -116,4 +121,6 @@ this package) to compile these documents. They are basic wrappers for
 [the template
 repository](https://github.com/svmiller/stevetemplates/tree/master/inst/rmarkdown/templates)
 for rudimentary examples and the underlying code to help guide your
-usage.
+usage. Importantly: some features/functionality might not be evident in
+these templates because they may require other add-ons (e.g. R packages
+or specialty fonts) that you may or may not have.

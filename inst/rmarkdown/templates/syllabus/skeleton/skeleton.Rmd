@@ -1,0 +1,320 @@
+---
+output: 
+  stevetemplates::syllabus:
+    latex_engine: xelatex
+    dev: cairo_pdf
+geometry: margin=1in
+
+title: "POSC 0000: A Class with an R Markdown Syllabus"
+author: Steven V. Miller
+date: "Spring 2021"
+
+email: "svmille@clemson.edu"
+web: "svmiller.com/teaching"
+officehours: "\\shrug"
+office: "\\shrug"
+classroom: "\\shrug"
+classhours: "\\shrug"
+
+fontfamily: mathpazo
+fontsize: 11pt
+header-includes:
+   - \linespread{1.05}
+---
+ <!-- CCCCCCCCnncdxxxxxxx -->
+<!-- Fun fact: my cat added this comment as she walked over the keyboard while I was working on this template. -->
+<!-- I'm going to keep it going forward. Long live Queen Bea. -->
+```{r setup, include=FALSE}
+# knitr::opts_chunk$set(cache=FALSE, dev='pdf')
+knitr::opts_chunk$set(cache=F,
+                      fig.path = 'figs/',
+                      cache.path='cache/',
+                      warning=F,
+                      message=F)
+
+knitr::opts_chunk$set(
+                  fig.process = function(x) {
+                      x2 = sub('-\\d+([.][a-z]+)$', '\\1', x)
+                      if (file.rename(x, x2)) x2 else x
+                      }
+                  )
+
+
+advdate <- function(obj, adv) {
+ tmon <- obj + 7*(adv-1)
+ tfri <- obj + 4 + 7*(adv-1)
+ tmon <- format(tmon, format="%m/%d")
+ tfri <- format(tfri, format="%m/%d")
+ zadv <- sprintf("%02d", adv)
+ tmp <- paste("Week ",zadv,sep='',", ", tmon," - ",tfri)
+ return(tmp)
+}
+
+options(scipen=999)
+library(tidyverse)
+library(stevemisc)
+#library(ggpmisc)
+#library(anonymizer)
+# library(ggcal)
+#library(stringr)
+#library(kfigr)
+#library(broom)
+library(lubridate)
+
+
+
+# library(RefManageR)
+# library(knitcitations)
+# library(rcrossref)
+#bib <- ReadBib("~/Dropbox/master.bib")
+#myopts <- BibOptions(bib.style = "authoryear", style="latex", first.inits=FALSE, max.names = 20)
+
+# Create a calendar for your syllabus ----
+# Source: http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/
+
+# 1) what is the first Monday of the semester?
+# Any number of ways to identify dates in R, but we'll use {lubridate} and the ymd() function here.
+# Format: YYYYMMDD. In this example, 4 January 2021.
+
+mon <- ymd(20210104)
+
+# What are some dates you won't be here? In this example, I had a conference on 7 January 2021.
+# Spring Break was 15 March 2021 to 19 March 2021.
+not_here_dates <- c(
+  # SPSA 2021,
+  ymd(20210107),
+  # Spring Break
+  seq(ymd(20210315),ymd(20210319), by=1))
+
+# You can adjust this as you see fit. Basically: add assignment types (e.g. papers, quizzes).
+# My intro class was fairly simple: just exams.
+exam_dates <- c(ymd(20210218), ymd(20210401), ymd(20210429))
+
+# What are the full dates of the semester? Here, I'll exclude exam week as I like to do.
+# In this case: 6 January to 23 April
+semester_dates <- seq(ymd(20210106), ymd(20210423), by=1)
+
+# Custom function for treating the first day of the month as the first week 
+# of the month up until the first Sunday (unless Sunday was the start of the month)
+wom <- function(date) {
+    first <- wday(as.Date(paste(year(date),month(date),1,sep="-")))
+    return((mday(date)+(first-2)) %/% 7+1)
+  }
+
+# Create a data frame of dates, assign to Cal
+tibble(date = seq(ymd(20210101), ymd(20210430), by=1))  %>%
+  mutate(mon = lubridate::month(date, label=T, abbr=F), # get month label
+         wkdy = weekdays(date, abbreviate=T), # get weekday label
+         wkdy = fct_relevel(wkdy, "Sun", "Mon", "Tue", "Wed", "Thu","Fri","Sat"), # make sure Sunday comes first
+         semester = ifelse(date %in% semester_dates, 1, 0), # is date part of the semester?
+         exams = ifelse(date %in% exam_dates, 1, 0), # is it an exam?
+         not_here = ifelse(date %in% not_here_dates, 1, 0), # is it a day off?
+         day = lubridate::mday(date), # get day of month to add later as a label
+         # Below: our custom wom() function
+         week = wom(date)) -> Cal
+
+# Create a category variable, for filling.
+# I can probably make this a case_when(), but this will work.
+
+Cal %>%
+  mutate(category = NA,
+         category = ifelse(semester == 1, "Semester", category),
+         category = ifelse(semester == 1 & wkdy %in% c("Tue", "Thu"), "Class Day", category),
+         category = ifelse(exams == 1, "Exams", category),
+         category = ifelse(is.na(category) | (semester == 1 & not_here == 1), "NA", category)) -> Cal 
+
+Cal %>% 
+  ggplot(.,aes(wkdy, week)) +
+  # custom theme stuff below
+  # theme_steve_web() + 
+  theme_bw() +
+  theme(panel.grid.major.x = element_blank()) +
+  # geom_tile and facet_wrap will do all the heavy lifting
+  geom_tile(alpha=0.8, aes(fill=category), color="black", size=.45) +
+  facet_wrap(~mon, scales="free", ncol=3) +
+  # fill in tiles to make it look more "calendary" (sic)
+  geom_text(aes(label=day),family="Open Sans") +
+  # put your y-axis down, flip it, and reverse it
+  scale_y_reverse(breaks=NULL) +
+  # manually fill scale colors to something you like...
+  scale_fill_manual(values=c("Class Day"="steelblue", 
+                             "Semester"="lightsteelblue",
+                             "NA" = "white", # I like these whited out...
+                             "Exams"="indianred4"),
+                    #... but also suppress a label for a non-class semester day
+                    breaks=c("Class Day","Exams")) +
+  labs(fill = "", x="", y="",
+       caption = "Notable dates: SPSA 2021 (7 January), Spring Break (15-19 March)")  -> class_cal
+
+```
+
+# Course Description
+
+You'll learn stuff in this class, I hope. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas scelerisque elit sapien, eu consequat dui blandit in. Vestibulum dignissim feugiat mauris, at pretium turpis blandit nec. Aliquam porta scelerisque tortor, eget imperdiet quam dapibus et. Sed ut sollicitudin orci, id elementum arcu. Sed arcu quam, vestibulum molestie mattis sed, ultricies sed est. Phasellus eu nunc et urna volutpat pharetra. Donec interdum ante vitae odio malesuada blandit. Fusce at condimentum libero, eu elementum arcu. Aenean posuere id lorem in varius. Sed bibendum neque pretium dolor faucibus, in cursus ipsum suscipit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat volutpat. Phasellus mollis egestas risus, non maximus nisl euismod sit amet. Vestibulum laoreet et urna vitae rutrum. Donec quis dui elit.
+
+# Course Objectives
+
+1. You'll learn this
+
+2. And also that
+
+3. Perhaps some of this too.
+
+# Required Readings
+
+```{r, echo = FALSE, results="asis", eval=F} 
+#bib["vasquez2009twp", "wagner2007ws"]
+``` 
+
+
+# Course Policy
+
+I will detail the policy for this course below. Basically, don't cheat and try to learn stuff. Don't be that guy.
+
+## Grading Policy
+
+- **20%** of your grade will be determined by a midterm during normal class hours.
+
+- **20%** of your grade will be determined by a term paper that documents your appreciation of Foghat's "Slow Ride", the most important song ever written. "Slow Ride" is what Mozart wishes *Don Giovanni* could have been.
+
+- **10%** of your grade will be determined by your attendance and participation in class. Generally, ask questions and answer them.
+
+- **20%** of your grade will be determined by a 20-page term paper on when exactly "The Love Boat" jumped the proverbial shark. You will address whether this shark-jumping can be attributed to Ted McGinley, the introduction of Jill Whelan as "Vicki", or some other cause.
+
+- **30%** of your grade will be determined by a final exam.
+
+## Attendance Policy
+
+```{r, include=FALSE}
+# I like to put in a cautionary tale about the importance of attending classes. This will approximate the underlying data.
+# Data are clearly fake, though.
+
+tibble(perattend = rbnorm(800, 81.84, 22.74, 0, 100),
+       grade = 10.19 + .78*perattend + rnorm(800, 0, 20),
+       rgrade = case_when(
+         grade < 0 ~ 0,
+         grade > 100 ~ 100,
+         TRUE ~ grade
+       )) -> Attend
+
+options(scipen=999)
+M1 <- lm(rgrade ~ perattend, Attend)
+M2 <- lm(rgrade ~ perattend, data=subset(Attend, perattend >= 75))
+
+M1df <- broom::tidy(M1)
+M2df <- broom::tidy(M2)
+#library(ggplot2)
+#library(kfigr)
+```
+
+> *Showing up is 80 percent of life* -- Woody Allen, [via Marshall Brickman](http://quoteinvestigator.com/2013/06/10/showing-up/#note-6553-1)
+
+Students should be weary of skipping class. I deduct *all* participation points for a class after five unexcused absences and this can have important implications for a student's overall grade in the class. There is already a strong positive correlation between the percentage of classes a student has attended in the course and the student's final grade for the semester (*r* = `r round(cor(Attend$perattend, Attend$rgrade, use="complete.obs"), 3)`) for all `r nrow(Attend)` students I have taught since Fall 2014. 
+
+A simple linear regression of a student's final grade on percentage of classes attended for the semester for all classes I have taught since Fall 2014 suggests an increase of one percent in attendance for the semester leads to an estimated increase of `r round(M1$coefficients[2], 3)` in the student's final grade. Whereas one missed classes constitutes about a five-percent decrease in percentage attendance for the semester, one missed class means an estimated decrease of `r round(M1$coefficients[2], 3)*5` in the overall grade. The effect of attendance on the final grade for the class is precise (*t* = `r round(M1df$statistic[2], 3)`) and the likelihood that there is no actual relationship between attendance and final grade for the semester is almost zero. This simple linear model with just one predictor (attendance) provides a good fit as well (R$^2$ = `r round(summary(M1)$r.squared, 3)`). See Figure 1 in this document.
+
+```{r attendplot, echo = FALSE, results="asis", cache=FALSE, fig.cap="A Scatterplot of the Relationship between Class Attendance and Final Grade", fig.height=4, fig.pos="H"}
+Graph <- ggplot(Attend, aes(x = perattend, y = rgrade))
+Graph + geom_point() + labs(x="Percent Attendance in Class", y="Final Grade in Class (0-100)") + 
+                              geom_smooth(method=lm)
+```
+
+A student might object that attendance is partly endogenous to a grade since past classes deducted all participation points after five unexcused absences. This is true, but the findings hold even when I subset the data to cases where attendance is greater than 75% (i.e. roughly the threshold below which I deduct all participation points). Students who just meet the threshold for full participation points nevertheless get an estimated decrease of `r round(M2$coefficients[2], 3)*5` in their overall grade for each missed class. This effect is also precise (*t* = `r round(M2df$statistic[2], 3)`). Put another way, we would have observed this effect in my data if there were no *true* effect of attendance on grades about `r round(summary(M2)$coefficients[2,4]*100000)` times in 100,000 "trials" (i.e. *p* = `r round(summary(M2)$coefficients[2,4], 5)`), on average. That probability is effectively zero. *Attend class*.
+
+## Late Arrival of the Professor Policy
+
+My current university, from what I have been told, asks professors to have policies written into their syllabus about what students should do if the professor is more than 15 minutes late to class. This seems like an anachronism. I will inform students via e-mail in advance of class if class is cancelled for the day. I will also contact our department secretary if something happened on the way to work. Failing that, assume the worst happened to me. I ask the students make sure that my story gets the proper treatment on an *Investigation Discovery* show. I also ask that my story be narrated by Keith Morrison.
+
+## E-mail Policy
+
+I am usually quick to respond to student e-mails. However, student e-mails tend to do several things that try my patience. I have a new policy, effective Fall 2016, that outlines why I will not respond to certain e-mails students send. Multiple rationales follow.
+
+1. The student could answer his/her own inquiry by reading the syllabus.
+2. The student missed class for which there was no exam. I do not need to know the exact reason for a missed class. Students with excusable absences are responsible for giving me a note *in hard copy* that documents the reason for the missed class. An e-mail is unnecessary unless the impromptu absence involved missing a midterm or final.
+3. The student wants to know what topics s/he missed during a class s/he skipped. The answer is always "you missed what was on the syllabus."
+4. The student is protesting a grade without reference to specific points of objection. See the policy on protesting a grade in the syllabus. These e-mails tend to be expressive utility on the part of the student and do not require a response from me. Students interested in improving their knowledge of material should see me during office hours.
+5. The students wants to know how many classes s/he missed at some point during the semester. I assume the student has a better answer to that question than me until the end of the semester.
+6. The student is requesting an extension on an assignment for which the syllabus already established the deadline. The answer is always "no".
+7. The student is ["grade grubbing"](https://www.math.uh.edu/~tomforde/GradeGrubbing.html) or asking to round up a grade. The answer is always "no".
+8. The student is asking for an extra credit opportunity, a request that amounts to more grading for the professor. The answer is "no".
+
+
+## Make-Up Exam Policy
+
+There are **NO** make-ups for missed exams. Don't bother asking.
+
+## Academic Dishonesty Policy
+
+Don’t cheat. Don’t be that guy. Yes, you. You know exactly what I’m talking about too.
+
+## Disabilities Policy
+
+Federal law mandates the provision of services at the university-level to qualified students with disabilities. Make sure to include all that relevant information here.
+
+
+\newpage
+
+# Class Schedule
+
+Students must read the following before Tuesday's class session.  Important: class readings are subject to change, contingent on mitigating circumstances and the progress we make as a class.  Students are encouraged to attend lectures and check the course website for updates. 
+
+Here is that calendar I promised.
+
+
+```{r calendar, echo=F, eval=T, fig.cap="A Calendar for the Class (My Class Title, Spring 2021)",  warning=F, fig.width=11, fig.height=7}
+
+class_cal
+
+```
+
+## `r advdate(mon, 1)`: Syllabus Day
+
+*No class Thursday (Political scientists usually have a conference to start the semester).*
+
+Read *all* associated documents on course website.
+  
+  - [Taking Good Notes](http://svmiller.com/blog/2014/09/taking-good-notes/)
+  - [Dos and Dont's of Writing for Students](http://svmiller.com/blog/2015/06/dos-and-donts-of-writing-for-students/)
+  - [Assorted Tips for Students on Writing Research Papers](http://svmiller.com/blog/2015/12/assorted-tips-students-research-papers/)
+  - [Exam Grading Policy](https://www.dropbox.com/s/apihjs7di81aqcv/svm-exam-grading-policy.pdf?dl=0)
+  - [Fun with Attendance and Grades (i.e. Students Should Attend Class)](http://svmiller.com/blog/2016/05/fun-with-attendance-grades/)
+    
+
+## `r advdate(mon, 2)`: The First Topic
+
+fdsfsf
+
+##  `r advdate(mon, 3)`: The Second Topic
+
+
+*Your "Slow Ride" appreciation paper is due in Thursday's class*.
+
+##  `r advdate(mon, 4)`: Another Topic
+
+##  `r advdate(mon, 5)`: The Fourth Topic 
+
+
+##  `r advdate(mon, 6)`: Keep
+##  `r advdate(mon, 7)`: Going
+##  `r advdate(mon, 8)`: Down
+
+##  `r advdate(mon, 9)`: the
+
+##  `r advdate(mon, 10)`: Line
+
+##  `r advdate(mon, 11)`: Until
+
+##  `r advdate(mon, 12)`: You
+
+## `r advdate(mon, 13)`: Are
+
+##  `r advdate(mon, 14)`: Done
+
+##  `r advdate(mon, 15)`: with
+
+
+##  `r advdate(mon, 16)`: your
+
+
+##  `r advdate(mon, 17)`: Syllabus 
+

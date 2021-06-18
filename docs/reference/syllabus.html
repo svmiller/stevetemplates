@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • stevetemplates</title>
+<title>Steve's Syllabus Template — syllabus • stevetemplates</title>
 
 
 <!-- jquery -->
@@ -41,7 +41,12 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Steve's Syllabus Template — syllabus" />
+<meta property="og:description" content="This is the R Markdown template I use for my syllabi. For
+a discussion of some of its features, see here:
+http://svmiller.com/blog/2016/07/r-markdown-syllabus/. The skeleton also
+includes code for a calendar. I discuss this here:
+http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/" />
 
 
 
@@ -60,7 +65,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -105,102 +110,53 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Steve's Syllabus Template</h1>
+    
+    <div class="hidden name"><code>syllabus.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>This is the R Markdown template I use for my syllabi. For
+a discussion of some of its features, see here:
+<a href='http://svmiller.com/blog/2016/07/r-markdown-syllabus/'>http://svmiller.com/blog/2016/07/r-markdown-syllabus/</a>. The skeleton also
+includes code for a calendar. I discuss this here:
+<a href='http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/'>http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/</a></p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>syllabus</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="anonms.html">anonms()</a></code> <code><a href="anonms.html">templ_anonms()</a></code> </p>
-        </td>
-        <td><p>Steve's Anonymous Manuscript Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="article.html">article()</a></code> <code><a href="article.html">templ_article()</a></code> </p>
-        </td>
-        <td><p>Steve's First Article/Manuscript Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="article2.html">article2()</a></code> <code><a href="article2.html">templ_article2()</a></code> </p>
-        </td>
-        <td><p>Steve's 2nd Article/Manuscript Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="beamer.html">beamer()</a></code> <code><a href="beamer.html">templ_beamer()</a></code> </p>
-        </td>
-        <td><p>Steve's Beamer Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="cv.html">cv()</a></code> <code><a href="cv.html">templ_cv()</a></code> </p>
-        </td>
-        <td><p>Steve's Academic CV Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="html_article.html">html_article()</a></code> <code><a href="html_article.html">templ_html_article()</a></code> </p>
-        </td>
-        <td><p>Steve's HTML Article Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="memo.html">memo()</a></code> <code><a href="memo.html">templ_memo()</a></code> </p>
-        </td>
-        <td><p>Steve's Memo Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="resume.html">resume()</a></code> <code><a href="resume.html">templ_resume()</a></code> </p>
-        </td>
-        <td><p>Steve's Non-Academic Résumé Template:</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="statement.html">statement()</a></code> <code><a href="statement.html">templ_statement()</a></code> </p>
-        </td>
-        <td><p>Steve's Statement Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="syllabus.html">syllabus()</a></code> <code><a href="syllabus.html">templ_syllabus()</a></code> </p>
-        </td>
-        <td><p>Steve's Syllabus Template</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="word.html">word()</a></code> <code><a href="word.html">templ_word()</a></code> </p>
-        </td>
-        <td><p>Steve's Word Manuscript Template</p></td>
-      </tr>
-    </tbody>
+<span class='fu'>templ_syllabus</span><span class='op'>(</span><span class='op'>)</span></pre>
+
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>...</th>
+      <td><p>Arguments to <code><a href='https://pkgs.rstudio.com/rmarkdown/reference/pdf_document.html'>rmarkdown::pdf_document</a></code>.</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="about-yaml-header-fields"><a class="anchor" href="#about-yaml-header-fields"></a>About YAML header fields</h2>
+
+    
+<table class='table'>
+<tr><td>FIELD</td><td>DESCRIPTION</td></tr>
+<tr><td><code>title</code></td><td>Title of the class</td></tr>
+<tr><td><code>author</code></td><td>Name(s) of the professor(s)</td></tr>
+<tr><td><code>date</code></td><td>The semester</td></tr>
+<tr><td><code>email</code></td><td>Your email. Technically optional, but you really should use it.</td></tr>
+<tr><td><code>web</code></td><td>Class website. Technically optional, but you really should use it.</td></tr>
+<tr><td><code>officehours</code></td><td>Your office hours. Technically optional, but you really should use it.</td></tr>
+<tr><td><code>office</code></td><td>Your office location. Technically optional, but you really should use it.</td></tr>
+<tr><td><code>classroom</code></td><td>The classroom location. Technically optional, but you really should use it.</td></tr>
+<tr><td><code>classhours</code></td><td>When/for how long the class meets in a given session. Technically optional, but you really should use it.</td></tr>
+</table>
+
+
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
