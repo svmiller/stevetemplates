@@ -12,3 +12,5 @@ inst/doc
 doc
 Meta
 CRAN-RELEASE
+_dross
+!.gitignore
