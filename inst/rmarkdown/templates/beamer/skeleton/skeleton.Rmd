@@ -31,8 +31,8 @@ knitr::opts_chunk$set(
                       if (file.rename(x, x2)) x2 else x
                       }
                   )
-library(tidyverse)
-library(stevemisc)
+#library(tidyverse)
+#library(stevemisc)
 ```
 
 
