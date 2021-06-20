@@ -1,6 +1,6 @@
 Package: stevetemplates
 Type: Package
-Title: Steve's 'R Markdown' Templates
+Title: Steve's R Markdown Templates
 Depends: R (>= 3.5.0)
 Version: 0.5.9
 Author: Steven V. Miller

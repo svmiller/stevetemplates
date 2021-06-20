@@ -6,3 +6,37 @@ template:
 
 figures:
   fig.width: 11
+
+authors:
+  Steven V. Miller:
+    href: http://svmiller.com
+
+navbar:
+  structure:
+    left:  [home, reference, examples, news]
+    right: [github]
+  components:
+    reference:
+      text: "Templates"
+      href: "reference/index.html"
+    examples:
+      text: "Examples"
+      menu:
+      - text: "First Article/Manuscript Template"
+        href: https://raw.githubusercontent.com/svmiller/woi/master/ms.pdf
+      - text: "Second Article/Manuscript Template"
+        href: http://svmiller.com/peacesciencer/ms.pdf
+      - text: "CV Template"
+        href: http://svmiller.com/docs/svm-cv.pdf
+      - text: "Résumé Template"
+        href: https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/resume-example/svm-resume-example.pdf
+      - text: "Beamer Template"
+        href: http://posc1020.svmiller.com/terrorism/posc1020-lecture-terrorism.pdf
+      - text: "HTML Template"
+        href: http://svmiller.com/peacesciencer/ms.html
+      - text: "Memo Template"
+        href: https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/memo-example/svm-memo-example.pdf
+      - text: "Statement Template"
+        href: http://svmiller.com/docs/svm-research-statement.pdf
+      - text: "Syllabus Template"
+        href: https://www.dropbox.com/s/ffnj5xdswd9pa29/data-science-syllabus.pdf

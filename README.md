@@ -16,12 +16,12 @@ I’m making available as an R package. The impetus behind the R package
 is three-fold. First, I’ve always wanted to get something on CRAN just
 to say I did it. Two, I’m hopelessly vain and like making my first name
 as a prefix for various R-related things (see also:
-[`stevemisc`](https://github.com/svmiller/stevemisc) and the forthcoming
-`stevedata` as part of the hypothetical and ideally also forthcoming
-`steveverse` for all things R and me (i.e. Steve)). Three, it would be
-nice to cut down on how clunky my YAML can get and it’d be nice for me
-and other users to have one single place to store these templates that
-don’t depend on my cornball relative paths.
+[`{stevemisc}`](http://svmiller.com/stevemisc/) and
+[`{stevedata}`](http://svmiller.com/stevedata/) as part of the
+hypothetical `{steveverse}` for all things R and me (i.e. Steve)).
+Three, it would be nice to cut down on how clunky my YAML can get and
+it’d be nice for me and other users to have one single place to store
+these templates that don’t depend on my cornball relative paths.
 
 ## Installation
 
@@ -53,10 +53,10 @@ development version includes the following templates:
     at that journal. I have not had the occasion to submit there again.
   - [**Steve’s First Article/Manuscript
     Template**](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/):
-    This is my first article/manuscript template and I made it around
-    2016. I include this as a legacy. I used to use these quite often
-    for my manuscripts, though I switched to another template (also
-    included in this package). I don’t intend to offer much support for
+    This is my first article/manuscript template and I made over five
+    years ago. I used this template quite often for my manuscripts, but
+    I switched to another template (also included in this package). It’s
+    here as a legacy addition. I don’t intend to offer much support for
     this template anymore, but it has lots of goodies (e.g. appendix
     support, suppressing title pages, etc.). You can call it in the YAML
     with `stevetemplates::article`.
