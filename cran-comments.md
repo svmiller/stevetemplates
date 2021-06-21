@@ -12,4 +12,4 @@ Not applicable right now.
 
 ## Downstream dependencies
 
-This is a simple template package with no major downstream dependencies to note.
+This is a simple template package with no downstream dependencies to note.
