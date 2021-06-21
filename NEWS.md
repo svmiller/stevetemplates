@@ -1,10 +1,11 @@
-stevetemplates 0.6.0 (in development)
+stevetemplates 0.6.0
 ---------------------------------------------------------------------
 
 The newest release has the following additions and changes to pre-existing templates. Additions include:
 
 - A template for Beamer presentations.
 - A template for course syllabi, formatted to LaTeX PDFs.
+- A template for cover letters, formatted to LaTeX PDFs.
 
 Changes include:
 

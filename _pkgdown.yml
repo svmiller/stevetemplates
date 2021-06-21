@@ -26,6 +26,8 @@ navbar:
         href: https://raw.githubusercontent.com/svmiller/woi/master/ms.pdf
       - text: "Second Article/Manuscript Template"
         href: http://svmiller.com/peacesciencer/ms.pdf
+      - text: "Cover Letter Template"
+        href: https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/cover-letter-example/svm-rmarkdown-cover-letter-example.pdf
       - text: "CV Template"
         href: http://svmiller.com/docs/svm-cv.pdf
       - text: "Résumé Template"

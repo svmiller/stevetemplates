@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Steve's 2nd Article/Manuscript Template — article2 • stevetemplates</title>
+<title>Steve's (Non-Academic) Cover Letter Template — cover_letter • stevetemplates</title>
 
 
 <!-- jquery -->
@@ -41,10 +41,10 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Steve's 2nd Article/Manuscript Template — article2" />
-<meta property="og:description" content="Another template for academic articles/manuscripts. For more information, see here:
-http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/. Please note
-that xelatex is functionally required for this template/function." />
+<meta property="og:title" content="Steve's (Non-Academic) Cover Letter Template — cover_letter" />
+<meta property="og:description" content="A template for cover letters when applying for non-academic jobs. For more information, see here:
+https://twitter.com/stevenvmiller/status/1320831949469065218. This template will force the use of
+xelatex." />
 
 
 
@@ -149,20 +149,20 @@ that xelatex is functionally required for this template/function." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Steve's 2nd Article/Manuscript Template</h1>
+    <h1>Steve's (Non-Academic) Cover Letter Template</h1>
     
-    <div class="hidden name"><code>article2.Rd</code></div>
+    <div class="hidden name"><code>cover_letter.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Another template for academic articles/manuscripts. For more information, see here:
-<a href='http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/'>http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/</a>. Please note
-that <code>xelatex</code> is functionally required for this template/function.</p>
+    <p>A template for cover letters when applying for non-academic jobs. For more information, see here:
+<a href='https://twitter.com/stevenvmiller/status/1320831949469065218'>https://twitter.com/stevenvmiller/status/1320831949469065218</a>. This template will force the use of
+<code>xelatex</code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>article2</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
+    <pre class="usage"><span class='fu'>cover_letter</span><span class='op'>(</span><span class='va'>...</span><span class='op'>)</span>
 
-<span class='fu'>templ_article2</span><span class='op'>(</span><span class='op'>)</span></pre>
+<span class='fu'>templ_cover_letter</span><span class='op'>(</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -173,34 +173,21 @@ that <code>xelatex</code> is functionally required for this template/function.</
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
-
-    <p>If your version of TeX comes by way of Yihui Xie's <span class="pkg">tinytex</span>, you'll want to
-additionally install the "xurl" library. Otherwise, you'll get a vague error about a
-missing LaTeX dependency. <code><a href='https://rdrr.io/pkg/tinytex/man/tlmgr.html'>tinytex::tlmgr_install("xurl")</a></code> should suffice. I
-thank Ian Adams and Cornelius Hennch for finding this issue and pointing to this
-solution.</p>
     <h2 class="hasAnchor" id="about-yaml-header-fields"><a class="anchor" href="#about-yaml-header-fields"></a>About YAML header fields</h2>
 
     <p>This section documents some of the YAML fields to know
-for this template. Much should've been carried over from my
-first article/manuscript template. Please yell at me/raise an issue
-on the Github repo if I didn't.</p><table class='table'>
+for this template.</p><table class='table'>
 <tr><td>FIELD</td><td>DESCRIPTION</td></tr>
-<tr><td><code>name</code></td><td>name of the author</td></tr>
-<tr><td><code>affiliation</code></td><td>the affiliation of the author</td></tr>
-<tr><td><code>thanks</code></td><td>A place to thank people for their input, identify corresponding author, etc.</td></tr>
-<tr><td><code>abstract</code></td><td>include an abstract of the paper here</td></tr>
-<tr><td><code>keywords</code></td><td>some keywords for the manuscript</td></tr>
-<tr><td><code>anonymous</code></td><td>logical, defaults to <code>FALSE</code>. If <code>TRUE</code>, scrubs all identifying author info for peer review</td></tr>
-<tr><td><code>removetitleabstract</code></td><td>logical, defaults to <code>FALSE</code>. If <code>TRUE</code>, removes title/abstract for peer review (if you'd like)</td></tr>
-<tr><td><code>appendix</code></td><td>optional, but specifies appendix figure/table prefices</td></tr>
-<tr><td><code>endnotes</code></td><td>logical, defaults to <code>FALSE</code>. If <code>TRUE</code>, makes R Markdown footnotes as endnotes</td></tr>
-<tr><td><code>pandocparas</code></td><td>logical, defaults to <code>FALSE</code>. If <code>TRUE</code>, keeps Pandoc's default paragraph format</td></tr>
-<tr><td><code>sansitup</code></td><td>logical, defaults to <code>FALSE</code>. If <code>TRUE</code>, better mimics ACM's use of sans fonts for section headers</td></tr>
-<tr><td><code>mainfont</code></td><td>optional (I think?), but it's the main font to use with <code>xelatex</code>. I use <code>cochineal</code> here.</td></tr>
-<tr><td><code>sansfont</code></td><td>optional, only necessary if <code>sansitup: TRUE</code>. Specifies sans font. I recommend Linux Biolinum</td></tr>
-<tr><td><code>doublespacing</code></td><td>optional, if anything is here to process, this will double-space the document.</td></tr>
+<tr><td><code>author</code></td><td>name of the author</td></tr>
+<tr><td><code>address</code></td><td>the author's address, which can (and should) be piped with <code><a href='https://rdrr.io/r/base/Logic.html'>|</a></code> separators</td></tr>
+<tr><td><code>email</code></td><td>the author's email</td></tr>
+<tr><td><code>url</code></td><td>the author's website domain</td></tr>
+<tr><td><code>phone</code></td><td>the author's phone number</td></tr>
+<tr><td><code>fontawesome</code></td><td>logical, defaults to <code>TRUE</code>. If <code>TRUE</code>, use <code>fontawesome</code> icons</td></tr>
+<tr><td><code>mainfont</code></td><td>The main font to use with <code>xelatex</code>. I use <code>cochineal</code> here. Optional, but recommended.</td></tr>
+<tr><td><code>monofont</code></td><td>The monospaced font to use with <code>xelatex</code>. I use <code>Fira Code</code> here. Optional, but recommended.</td></tr>
+<tr><td><code>date</code></td><td>Specify a date format</td></tr>
+<tr><td><code>greetings</code></td><td>Specify a salutations to start the letter</td></tr>
 </table>
 
 
