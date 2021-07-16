@@ -200,7 +200,7 @@ $if(fontawesome)$\usepackage{fontawesome}$endif$
 \chead{}
 \rhead{}
 \lfoot{}
-\cfoot{\scriptsize  $author-meta$ - $title$ }
+\cfoot{\scriptsize  $author-meta$ - $title$ - $if(updated)$$else$$if(rdateformat)$$rdateformat$$else$\apstylekinda\today$endif$$endif$}
 \rfoot{\scriptsize \thepage/{\hypersetup{linkcolor=black}\pageref{LastPage}}}
 
 % Always load hyperref last.
