@@ -26,6 +26,7 @@ for this template.\tabular{ll}{
    \code{fontawesome} \tab logical, defaults to \code{TRUE}. If \code{TRUE}, use fontawesome icons \cr
    \code{email} \tab your email, for the third row \cr
    \code{github} \tab optional, displays Github user name on third row \cr
+   \code{orcid} \tab optional, displays ORCID ID on third row \cr
    \code{phone} \tab optional, displays your phone number on third row \cr
    \code{web} \tab optional, displays your domain name on third row \cr
    \code{updated} \tab optional, displays (on third row) when file was last updated \cr

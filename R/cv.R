@@ -17,6 +17,7 @@
 #' | `fontawesome` | logical, defaults to `TRUE`. If `TRUE`, use fontawesome icons |
 #' | `email` | your email, for the third row |
 #' | `github` | optional, displays Github user name on third row |
+#' | `orcid` | optional, displays ORCID ID on third row |
 #' | `phone` | optional, displays your phone number on third row |
 #' | `web` | optional, displays your domain name on third row |
 #' | `updated` | optional, displays (on third row) when file was last updated |
