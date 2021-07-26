@@ -1,3 +1,5 @@
+% CV ----
+% This is just here so I know exactly what I'm looking at in Rstudio when messing with stuff.
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$paper,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{$documentclass$}
 $if(fontfamily)$
 \usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
@@ -200,7 +202,7 @@ $if(fontawesome)$\usepackage{fontawesome}$endif$
 \chead{}
 \rhead{}
 \lfoot{}
-\cfoot{\scriptsize  $author-meta$ - $title$ - $if(updated)$$else$$if(rdateformat)$$rdateformat$$else$\apstylekinda\today$endif$$endif$}
+\cfoot{\scriptsize  $author-meta$ - $title$$if(updated)$$else$ - $if(rdateformat)$$rdateformat$$else$\apstylekinda\today$endif$$endif$}
 \rfoot{\scriptsize \thepage/{\hypersetup{linkcolor=black}\pageref{LastPage}}}
 
 % Always load hyperref last.

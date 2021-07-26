@@ -1,3 +1,5 @@
+% SYLLABUS ----
+% This is just here so I know exactly what I'm looking at in Rstudio when messing with stuff.
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$babel-lang$,$endif$$if(papersize)$$papersize$,$endif$$for(classoption)$$classoption$$sep$,$endfor$]{article}
 \usepackage[$geometry$]{geometry}
 \newcommand*{\authorfont}{\fontfamily{phv}\selectfont}
@@ -12,7 +14,7 @@ $endif$
 \newcommand{\blankline}{\quad\pagebreak[2]}
 
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} 
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs}
 
 \usepackage{parskip}
@@ -27,7 +29,7 @@ $endif$
 
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{6pt plus 2pt minus 1pt}
-%\setlength{\emergencystretch}{3em}  % prevent overfull lines 
+%\setlength{\emergencystretch}{3em}  % prevent overfull lines
 
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -36,7 +38,7 @@ $endif$
 \pagestyle{fancy}
 \usepackage{lastpage}
 \renewcommand{\headrulewidth}{0.3pt}
-\renewcommand{\footrulewidth}{0.0pt} 
+\renewcommand{\footrulewidth}{0.0pt}
 
 \lhead{}
 \chead{}
@@ -79,7 +81,7 @@ $endif$
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$},
-             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},
             pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
             colorlinks=true,
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
@@ -164,20 +166,20 @@ $endif$
 \draw[shift={(-0.3,0.8)}] \eye;
 \draw[shift={(0,0.85)}] \eye;
 % draw mouth
-\draw (-0.1,0.2) to [out=15,in=-100] (0.4,0.95); 
+\draw (-0.1,0.2) to [out=15,in=-100] (0.4,0.95);
 \end{tikzpicture}}
 
 $for(header-includes)$
 $header-includes$
 $endfor$
 
-\begin{document}  
+\begin{document}
 
 	$if(title)$
 	\maketitle
 	$endif$
-	
-	
+
+
 		\thispagestyle{firststyle}
 
 %	\thispagestyle{empty}
@@ -192,9 +194,9 @@ Office: $if(office)$$office$$else$TBD$endif$  & Class Room: $if(classroom)$$clas
 	&  \\
 	\hline
 	\end{tabular*}
-	
+
 \vspace{2mm}
-	
+
 
 
 $body$
