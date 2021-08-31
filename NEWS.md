@@ -3,6 +3,7 @@ stevetemplates 0.7.0 (in development)
 
 - ORCID links in the CV.
 - Adjust behavior for `updated` field in the CV template. If `TRUE`, the last update appears in the third row of the header. If `FALSE`, it appears in the center footer.
+- Add AMS mathematical facilities to the first article (`article`) template. HT @shenkin.
 
 stevetemplates 0.6.0
 ---------------------------------------------------------------------
