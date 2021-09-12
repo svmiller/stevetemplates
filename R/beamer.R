@@ -2,8 +2,12 @@
 #'
 #' This is the R Markdown template I use for in-class or in-person presentations. For
 #' a discussion of some of its features, see here:
-#' <http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/>. Note
-#' that `xelatex` is not required for this template but is heavily suggested.
+#' <http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/>.
+#'
+#' Note that `xelatex` is not required for this template but is heavily suggested. If
+#' you elect to use `xelatex`, you *must* supply something in `titlefont:` and
+#' `mainfont:` that your particular LaTeX installation will recognize. See discussion
+#' here: \url{https://github.com/svmiller/stevetemplates/issues/4}
 #'
 #' # About YAML header fields
 #'
