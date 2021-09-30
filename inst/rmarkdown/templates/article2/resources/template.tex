@@ -531,7 +531,7 @@ $endif$
 
 $if(anonymous)$
 \usepackage[notablist,nofiglist]{endfloat}
-
+\DeclareDelayedFloatFlavor{longtable}{table}
 $if(appendixletter)$
 \renewcommand\floatplace[1]{%
   \begin{center}
@@ -550,8 +550,8 @@ $endif$
 % ***\emph{\csname #1name\endcsname~\csname thepost#1\endcsname\ about here}***
 %   \end{center}}
 
-$else$
-$endif$
+% $else$
+% $endif$
 
 \begin{document}
 
