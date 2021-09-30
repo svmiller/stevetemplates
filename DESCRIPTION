@@ -12,6 +12,6 @@ License: GPL-2
 Encoding: UTF-8
 Imports:
     rmarkdown
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Suggests: 
     testthat

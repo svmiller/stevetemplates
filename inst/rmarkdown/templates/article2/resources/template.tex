@@ -532,10 +532,23 @@ $endif$
 $if(anonymous)$
 \usepackage[notablist,nofiglist]{endfloat}
 
+$if(appendixletter)$
+\renewcommand\floatplace[1]{%
+  \begin{center}
+***\emph{\csname #1name\endcsname~$appendixletter$.\csname thepost#1\endcsname\ about here}***
+  \end{center}}
+$else$
 \renewcommand\floatplace[1]{%
   \begin{center}
 ***\emph{\csname #1name\endcsname~\csname thepost#1\endcsname\ about here}***
   \end{center}}
+$endif$
+
+
+% \renewcommand\floatplace[1]{%
+%   \begin{center}
+% ***\emph{\csname #1name\endcsname~\csname thepost#1\endcsname\ about here}***
+%   \end{center}}
 
 $else$
 $endif$
