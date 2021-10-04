@@ -1,14 +1,7 @@
 ---
-output: stevetemplates::word:
+output: stevetemplates::word
 title: "Another Pandoc Markdown Article Starter and Template"
-thanks: "Replication files are available on the author's Github account (http://github.com/svmiller/svm-r-markdown-templates). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: steven.v.miller@gmail.com."
-author:
-- name: Steven V. Miller
-  affiliation: Clemson University
-- name: A Second Author Who Did Less Work
-  affiliation: The Ohio State University
-- name: A Graduate Student
-  affiliation: University of Alabama
+author: Steven V. Miller
 ---
 
 ```{r setup, include=FALSE}

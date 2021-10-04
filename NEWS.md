@@ -5,6 +5,7 @@ stevetemplates 0.7.0 (in development)
 - Adjust behavior for `updated` field in the CV template. If `TRUE`, the last update appears in the third row of the header. If `FALSE`, it appears in the center footer.
 - Add AMS mathematical facilities to the first article (`article`) template. HT @shenkin.
 - Integrate `appendixletter` with LaTeX package `endfloat` in the second article template. This is useful if you want specialty table/figure numbering *and* you want an anonymous document.
+- Adjust Word skeleton to be more minimal and actually render.
 
 stevetemplates 0.6.0
 ---------------------------------------------------------------------
