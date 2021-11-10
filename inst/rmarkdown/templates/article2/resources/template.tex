@@ -552,6 +552,23 @@ $endif$
 % $else$
 % $endif$
 
+% Optional code chunks ------
+% SOURCE: https://stackoverflow.com/questions/50702942/does-rmarkdown-allow-captions-and-references-for-code-chunks
+$if(chunkcaption)$
+\usepackage{caption}
+\usepackage{floatrow}
+
+\DeclareNewFloatType{chunk}{placement=H, fileext=chk, name=}
+\captionsetup{options=chunk}
+\renewcommand{\thechunk}{Chunk~$if(appendix)$$appendixletter$.$else$$endif$\arabic{chunk}}
+\makeatletter
+\@addtoreset{chunk}{section}
+\makeatother
+$else$
+$endif$
+
+
+
 \begin{document}
 
 % \textsf{\textbf{This is sans-serif bold text.}}
