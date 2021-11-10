@@ -7,7 +7,7 @@ stevetemplates 0.7.0
 - Integrate `appendixletter` with LaTeX package `endfloat` in the second article template. This is useful if you want specialty table/figure numbering *and* you want an anonymous document.
 - Adjust Word skeleton to be more minimal and actually render.
 - Some added CSS for better tables in the HTML template.
-- The `article2` template now supports captions for code chunks, courtesy of [this Stack Overflow post](https://stackoverflow.com/questions/50702942/does-rmarkdown-allow-captions-and-references-for-code-chunks). This appears in the YAML as `chunkcaption: TRUE` if you want to enable it. If you enable it, change the `knitr` code to what you see (commented) in the setup chunk. Consult the Stack Overflow thread for more informaiton.
+- The `article2` template now supports captions for code chunks, courtesy of [this Stack Overflow post](https://stackoverflow.com/questions/50702942/does-rmarkdown-allow-captions-and-references-for-code-chunks). This appears in the YAML as `chunkcaption: TRUE` if you want to enable it. If you enable it, change the `knitr` code to what you see (commented) in the setup chunk. Consult the Stack Overflow thread for more information.
 
 stevetemplates 0.6.0
 ---------------------------------------------------------------------
