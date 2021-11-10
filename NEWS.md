@@ -6,6 +6,7 @@ stevetemplates 0.7.0 (in development)
 - Add AMS mathematical facilities to the first article (`article`) template. HT @shenkin.
 - Integrate `appendixletter` with LaTeX package `endfloat` in the second article template. This is useful if you want specialty table/figure numbering *and* you want an anonymous document.
 - Adjust Word skeleton to be more minimal and actually render.
+- Some added CSS for better tables in the HTML template.
 
 stevetemplates 0.6.0
 ---------------------------------------------------------------------
