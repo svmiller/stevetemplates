@@ -1,3 +1,8 @@
+stevetemplates 0.8.0 (in development)
+---------------------------------------------------------------------
+
+- Bug fix for center footer in the non-academic résumé template. HT @mwpeterson for finding this.
+
 stevetemplates 0.7.0
 ---------------------------------------------------------------------
 
