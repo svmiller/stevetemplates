@@ -4,14 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="These are my collection of R Markdown templates, mostly for compilation to PDF.
+    These are useful for all things academic and professional, if you are using R Markdown
+    for things like your CV or your articles and manuscripts.">
 <title>Steve's R Markdown Templates • stevetemplates</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/journal/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
-<script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="deps/bootstrap-5.0.2/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.0.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
 <meta property="og:title" content="Steve's R Markdown Templates">
 <meta property="og:description" content="These are my collection of R Markdown templates, mostly for compilation to PDF.
     These are useful for all things academic and professional, if you are using R Markdown
@@ -21,108 +23,75 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
-    <div class="container template-home">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">stevetemplates</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.7.9</span>
-      </span>
-    </div>
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
+    
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="index.html">stevetemplates</a>
+
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.7.9</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-2">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="reference/index.html">Templates</a>
 </li>
-<li>
-  <a href="reference/index.html">Templates</a>
+<li class="nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-examples">Examples</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-examples">
+    <a class="external-link dropdown-item" href="https://raw.githubusercontent.com/svmiller/woi/master/ms.pdf">First Article/Manuscript Template</a>
+    <a class="dropdown-item" href="http://svmiller.com/peacesciencer/ms.pdf">Second Article/Manuscript Template</a>
+    <a class="external-link dropdown-item" href="https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/cover-letter-example/svm-rmarkdown-cover-letter-example.pdf">Cover Letter Template</a>
+    <a class="dropdown-item" href="http://svmiller.com/docs/svm-cv.pdf">CV Template</a>
+    <a class="external-link dropdown-item" href="https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/resume-example/svm-resume-example.pdf">Résumé Template</a>
+    <a class="external-link dropdown-item" href="http://posc1020.svmiller.com/terrorism/posc1020-lecture-terrorism.pdf">Beamer Template</a>
+    <a class="dropdown-item" href="http://svmiller.com/peacesciencer/ms.html">HTML Template</a>
+    <a class="external-link dropdown-item" href="https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/memo-example/svm-memo-example.pdf">Memo Template</a>
+    <a class="dropdown-item" href="http://svmiller.com/docs/svm-research-statement.pdf">Statement Template</a>
+    <a class="external-link dropdown-item" href="https://www.dropbox.com/s/ffnj5xdswd9pa29/data-science-syllabus.pdf">Syllabus Template</a>
+  </div>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Examples
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="https://raw.githubusercontent.com/svmiller/woi/master/ms.pdf">First Article/Manuscript Template</a>
-    </li>
-    <li>
-      <a href="http://svmiller.com/peacesciencer/ms.pdf">Second Article/Manuscript Template</a>
-    </li>
-    <li>
-      <a href="https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/cover-letter-example/svm-rmarkdown-cover-letter-example.pdf">Cover Letter Template</a>
-    </li>
-    <li>
-      <a href="http://svmiller.com/docs/svm-cv.pdf">CV Template</a>
-    </li>
-    <li>
-      <a href="https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/resume-example/svm-resume-example.pdf">Résumé Template</a>
-    </li>
-    <li>
-      <a href="http://posc1020.svmiller.com/terrorism/posc1020-lecture-terrorism.pdf">Beamer Template</a>
-    </li>
-    <li>
-      <a href="http://svmiller.com/peacesciencer/ms.html">HTML Template</a>
-    </li>
-    <li>
-      <a href="https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/memo-example/svm-memo-example.pdf">Memo Template</a>
-    </li>
-    <li>
-      <a href="http://svmiller.com/docs/svm-research-statement.pdf">Statement Template</a>
-    </li>
-    <li>
-      <a href="https://www.dropbox.com/s/ffnj5xdswd9pa29/data-science-syllabus.pdf">Syllabus Template</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="news/index.html">Changelog</a>
+<li class="nav-item">
+  <a class="nav-link" href="news/index.html">Changelog</a>
 </li>
       </ul>
-<ul class="nav navbar-nav navbar-right"></ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav"></ul>
 </div>
-<!--/.nav-collapse -->
+
+    
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
-
-      
-
-      </header><div class="row">
-  <div class="contents col-md-9">
-<div id="steves-r-markdown-templates" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#steves-r-markdown-templates" class="anchor"></a>Steve’s R Markdown Templates</h1></div>
+</nav><div class="container template-home">
+<div class="row">
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header"><h1 id="steves-r-markdown-templates">Steve’s R Markdown Templates<a class="anchor" aria-label="anchor" href="#steves-r-markdown-templates"></a>
+</h1></div>
 
 <p><img src="http://svmiller.com/images/stevetemplates-hexlogo.png" alt="My stevetemplates hexlogo" align="right" width="200" style="padding: 0 15px; float: right;"></p>
-<p><code>stevetemplates</code> is an R package to help you create lovely R Markdown documents, primarily for conversion to LaTeX PDFs. They come from <a href="https://github.com/svmiller/svm-r-markdown-templates">my suite of R Markdown templates</a>, which I’m making available as an R package. The impetus behind the R package is three-fold. First, I’ve always wanted to get something on CRAN just to say I did it. Two, I’m hopelessly vain and like making my first name as a prefix for various R-related things (see also: <a href="http://svmiller.com/stevemisc/"><code>{stevemisc}</code></a> and <a href="http://svmiller.com/stevedata/"><code>{stevedata}</code></a> as part of the hypothetical <code>{steveverse}</code> for all things R and me (i.e. Steve)). Three, it would be nice to cut down on how clunky my YAML can get and it’d be nice for me and other users to have one single place to store these templates that don’t depend on my cornball relative paths.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<p><code>stevetemplates</code> is an R package to help you create lovely R Markdown documents, primarily for conversion to LaTeX PDFs. They come from <a href="https://github.com/svmiller/svm-r-markdown-templates" class="external-link">my suite of R Markdown templates</a>, which I’m making available as an R package. The impetus behind the R package is three-fold. First, I’ve always wanted to get something on CRAN just to say I did it. Two, I’m hopelessly vain and like making my first name as a prefix for various R-related things (see also: <a href="http://svmiller.com/stevemisc/"><code>{stevemisc}</code></a> and <a href="http://svmiller.com/stevedata/"><code>{stevedata}</code></a> as part of the hypothetical <code>{steveverse}</code> for all things R and me (i.e. Steve)). Three, it would be nice to cut down on how clunky my YAML can get and it’d be nice for me and other users to have one single place to store these templates that don’t depend on my cornball relative paths.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>You can install this on CRAN.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"stevetemplates"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"stevetemplates"</span><span class="op">)</span></code></pre></div>
 <p>The development version may also have some extra goodies not yet published on CRAN. You can install the development version of <code>stevetemplates</code> from Github via the <code>devtools</code> package. I suppose using the <code>remotes</code> package would work as well.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"svmiller/stevetemplates"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"svmiller/stevetemplates"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="usage" class="section level2">
-<h2 class="hasAnchor">
-<a href="#usage" class="anchor"></a>Usage</h2>
+<div class="section level2">
+<h2 id="usage">Usage<a class="anchor" aria-label="anchor" href="#usage"></a>
+</h2>
 <p>The easiest way to use my templates is within Rstudio. Go to <em>File &gt; New File &gt; R Markdown</em>. Here, select any template you’d like to use. The version on CRAN should lag behind the development version, but the development version includes the following templates:</p>
 <ul>
 <li>
@@ -130,7 +99,7 @@
 <li>
 <a href="http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/"><strong>Steve’s First Article/Manuscript Template</strong></a>: This is my first article/manuscript template and I made over five years ago. I used this template quite often for my manuscripts, but I switched to another template (also included in this package). It’s here as a legacy addition. I don’t intend to offer much support for this template anymore, but it has lots of goodies (e.g. appendix support, suppressing title pages, etc.). You can call it in the YAML with <code><a href="reference/article.html">stevetemplates::article</a></code>.</li>
 <li>
-<a href="http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/"><strong>Steve’s 2nd Article/Manuscript Template</strong></a>: This is my second article/manuscript template that I made in September 2020. It’s patterned off <a href="https://www.latextemplates.com/template/acm-publications">the Association for Computing Machinery (ACM) LaTeX templates</a>. You can call it in the YAML with <code><a href="reference/article2.html">stevetemplates::article2</a></code>.</li>
+<a href="http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/"><strong>Steve’s 2nd Article/Manuscript Template</strong></a>: This is my second article/manuscript template that I made in September 2020. It’s patterned off <a href="https://www.latextemplates.com/template/acm-publications" class="external-link">the Association for Computing Machinery (ACM) LaTeX templates</a>. You can call it in the YAML with <code><a href="reference/article2.html">stevetemplates::article2</a></code>.</li>
 <li>
 <a href="http://svmiller.com/blog/2016/03/svm-r-markdown-cv/"><strong>Steve’s Academic CV Template</strong></a>: This is my academic CV template I made in 2016, and I think it’s my most popular. It’s certainly the one I see most often in the wild. It’s also what I currently use for <a href="http://svmiller.com/cv/">my CV</a>. You can call it in the YAML with <code><a href="reference/cv.html">stevetemplates::cv</a></code>.</li>
 <li>
@@ -138,7 +107,7 @@
 <li>
 <a href="http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/"><strong>Steve’s Beamer Template</strong></a>: This is my go-to presentation template as I prefer Beamer PDFs to other presentation formats. You can call it in the YAML with <code><a href="reference/beamer.html">stevetemplates::beamer</a></code>.</li>
 <li>
-<strong>Steve’s HTML Template</strong>: I created this template on the fly for formatting academic manuscripts to an HTML document. Capabilities are limited the extent to which there’s more CSS I need to adjust. This manuscript features prominently in my <a href="https://github.com/svmiller/steveproj"><code>{steveproj}</code></a> package.</li>
+<strong>Steve’s HTML Template</strong>: I created this template on the fly for formatting academic manuscripts to an HTML document. Capabilities are limited the extent to which there’s more CSS I need to adjust. This manuscript features prominently in my <a href="https://github.com/svmiller/steveproj" class="external-link"><code>{steveproj}</code></a> package.</li>
 <li>
 <a href="http://svmiller.com/blog/2019/06/r-markdown-memo-template/"><strong>Steve’s Memo Template</strong></a>: I created this for a memo I needed to write in 2019. You can call it in the YAML with <code><a href="reference/memo.html">stevetemplates::memo</a></code>.</li>
 <li>
@@ -146,61 +115,71 @@
 <li>
 <a href="http://svmiller.com/blog/2016/07/r-markdown-syllabus/"><strong>Steve’s Syllabus Template</strong></a>: This is one of my first templates, dating to mid-2016. I use it for all my syllabi for any class I teach. You can call it in the YAML with <code><a href="reference/syllabus.html">stevetemplates::syllabus</a></code>.</li>
 <li>
-<strong>Steve’s Word Template</strong>: I created this template many years ago and never worked with it because Word is limited in its functionality. I’ve since come back to this template because its limitations make it wonderful for “anonymizing” a manuscript for submission to journals that are picky about PDF submissions. This manuscript features prominently in my <a href="https://github.com/svmiller/steveproj"><code>{steveproj}</code></a> package.</li>
+<strong>Steve’s Word Template</strong>: I created this template many years ago and never worked with it because Word is limited in its functionality. I’ve since come back to this template because its limitations make it wonderful for “anonymizing” a manuscript for submission to journals that are picky about PDF submissions. This manuscript features prominently in my <a href="https://github.com/svmiller/steveproj" class="external-link"><code>{steveproj}</code></a> package.</li>
 </ul>
-<p>The user should notice that the YAML contains the functions (loaded in this package) to compile these documents. They are basic wrappers for <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/pdf_document.html">rmarkdown::pdf_document</a></code>. Please consult the corresponding posts and <a href="https://github.com/svmiller/stevetemplates/tree/master/inst/rmarkdown/templates">the template repository</a> for rudimentary examples and the underlying code to help guide your usage. Importantly: some features/functionality might not be evident in these templates because they may require other add-ons (e.g. R packages or specialty fonts) that you may or may not have.</p>
+<p>The user should notice that the YAML contains the functions (loaded in this package) to compile these documents. They are basic wrappers for <code><a href="https://pkgs.rstudio.com/rmarkdown/reference/pdf_document.html" class="external-link">rmarkdown::pdf_document</a></code>. Please consult the corresponding posts and <a href="https://github.com/svmiller/stevetemplates/tree/master/inst/rmarkdown/templates" class="external-link">the template repository</a> for rudimentary examples and the underlying code to help guide your usage. Importantly: some features/functionality might not be evident in these templates because they may require other add-ons (e.g. R packages or specialty fonts) that you may or may not have.</p>
 </div>
 </div>
-  </div>
+  </main><aside class="col-md-3"><div class="links">
+<h2 data-toc-skip>Links</h2>
+<ul class="list-unstyled">
+<li><a href="https://cloud.r-project.org/package=stevetemplates" class="external-link">View on CRAN</a></li>
+</ul>
+</div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-    <div class="links">
-<h2>Links</h2>
-<ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=stevetemplates">https://​cloud.r-project.org/​package=stevetemplates</a>
-</li>
-</ul>
-</div>
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-2">GPL-2</a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-2" class="external-link">GPL-2</a></li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing stevetemplates</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>
 <a href="http://svmiller.com">Steven V. Miller</a> <br><small class="roles"> Maintainer </small>  </li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=stevetemplates"><img src="https://www.r-pkg.org/badges/version/stevetemplates?color=green"></a></li>
-<li><a href="https://cran.r-project.org/package=stevetemplates"><img src="http://cranlogs.r-pkg.org/badges/grand-total/stevetemplates?color=green"></a></li>
-<li><a href="https://cran.r-project.org/package=stevetemplates"><img src="http://cranlogs.r-pkg.org/badges/last-month/stevetemplates?color=green"></a></li>
-<li><a href="https://cran.r-project.org/package=stevetemplates"><img src="http://cranlogs.r-pkg.org/badges/last-week/stevetemplates?color=green"></a></li>
+<li><a href="https://cran.r-project.org/package=stevetemplates" class="external-link"><img src="https://www.r-pkg.org/badges/version/stevetemplates?color=green"></a></li>
+<li><a href="https://cran.r-project.org/package=stevetemplates" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/grand-total/stevetemplates?color=green"></a></li>
+<li><a href="https://cran.r-project.org/package=stevetemplates" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/last-month/stevetemplates?color=green"></a></li>
+<li><a href="https://cran.r-project.org/package=stevetemplates" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/last-week/stevetemplates?color=green"></a></li>
 </ul>
 </div>
-</div>
-</div>
 
-
-      <footer><div class="copyright">
-  <p>Developed by <a href="http://svmiller.com">Steven V. Miller</a>.</p>
+  </aside>
 </div>
 
-<div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+
+    <footer><div class="pkgdown-footer-left">
+  <p></p>
+<p>Developed by <a href="http://svmiller.com">Steven V. Miller</a>.</p>
 </div>
 
-      </footer>
+<div class="pkgdown-footer-right">
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.0.</p>
+</div>
+
+    </footer>
 </div>
 
   
 
+  
 
   </body>
 </html>

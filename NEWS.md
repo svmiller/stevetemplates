@@ -1,10 +1,10 @@
-stevetemplates 0.8.0 (in development)
----------------------------------------------------------------------
+# stevetemplates 0.8.0 (in development)
+
 
 - Bug fix for center footer in the non-academic résumé template. HT @mwpeterson for finding this.
 
-stevetemplates 0.7.0
----------------------------------------------------------------------
+# stevetemplates 0.7.0
+
 
 - ORCID links in the CV.
 - Adjust behavior for `updated` field in the CV template. If `TRUE`, the last update appears in the third row of the header. If `FALSE`, it appears in the center footer.
@@ -14,8 +14,8 @@ stevetemplates 0.7.0
 - Some added CSS for better tables in the HTML template.
 - The `article2` template now supports captions for code chunks, courtesy of [this Stack Overflow post](https://stackoverflow.com/questions/50702942/does-rmarkdown-allow-captions-and-references-for-code-chunks). This appears in the YAML as `chunkcaption: TRUE` if you want to enable it. If you enable it, change the `knitr` code to what you see (commented) in the setup chunk. Consult the Stack Overflow thread for more information.
 
-stevetemplates 0.6.0
----------------------------------------------------------------------
+# stevetemplates 0.6.0
+
 
 The newest release has the following additions and changes to pre-existing templates. Additions include:
 
@@ -28,8 +28,8 @@ Changes include:
 - A user-specified date format in YAML for the CV template.
 
 
-stevetemplates 0.5.0
----------------------------------------------------------------------
+# stevetemplates 0.5.0
+
 
 The newest release has the following additions and changes to pre-existing templates. Additions include:
 
@@ -44,8 +44,8 @@ Changes include:
 - Force tables/figs to back of document in `article2` when `anonymous: TRUE`. This comes by way of the `endfloat` package in LaTeX.
 
 
-stevetemplates 0.4.0
----------------------------------------------------------------------
+# stevetemplates 0.4.0
+
 
 The newest release has the following additions and changes to pre-existing templates. Additions include:
 
@@ -55,8 +55,8 @@ Changes include:
 
 - `article`, `article2`, and `anonms` feature the "CSL" environment change that Pandoc recently rolled out. I think this came at the end of 2020. It is only relevant if you *don't* use natbib for handling references.
 
-stevetemplates 0.3.0
----------------------------------------------------------------------
+# stevetemplates 0.3.0
+
 
 The newest release has the following additions and changes to pre-existing templates. Additions include:
 
@@ -68,8 +68,8 @@ Changes include:
 - Companion functions for isolating the system path of the template. These functions have a prefix of `templ_` and can be useful for a "make" approach to document preparation.
 
 
-stevetemplates 0.2.0
----------------------------------------------------------------------
+# stevetemplates 0.2.0
+
 
 - Rename functions from, for example, `svm_article2` to `article2`.
 - Add article template, CV template, non-ac résumé template, and memo template.
@@ -79,7 +79,7 @@ stevetemplates 0.2.0
 - Get rid of `tidyverse` import/dependency, since it just bogs down testing and is not required.
 - Add "does file exist" tests, importantly for CRAN.
 
-stevetemplates 0.1.0
----------------------------------------------------------------------
+# stevetemplates 0.1.0
+
 
 - Initial developmental release, with article2 template.

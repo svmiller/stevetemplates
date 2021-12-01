@@ -1,6 +1,7 @@
 url: http://svmiller.com
 
 template:
+  bootstrap: 5
   params:
     bootswatch: journal
 
