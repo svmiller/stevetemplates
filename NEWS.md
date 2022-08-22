@@ -5,6 +5,7 @@
 - Bug fix for color in the CV template. HT @dojobo for finding this.
 - Disabled `titlesec` in `cv`. This is admittedly an ad hoc adjustment based on a new computer I have.
 - Default Beamer colors changed from Clemson University colors to Stockholm University colors.
+- Default `titlegraphic` scaling in `beamer` is now .3, because of new gig.
 
 # stevetemplates 0.7.0
 

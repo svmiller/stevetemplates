@@ -17,12 +17,12 @@
 #' | `subtitle` | Subtitle of the presentation. Optional, but useful. For in-class lectures, I put the class name here. |
 #' | `institute` | List your department/college here. Optional. |
 #' | `titlegraphic` | Put a path to university watermark here. Optional. |
-#' | `scaletg` | Scale `titlegraphic` relative to the width of the document. Optional, defaults to .25. |
+#' | `scaletg` | Scale `titlegraphic` relative to the width of the document. Optional, defaults to .3 |
 #' | `make149` | Logical, gives 14:9 dimension to presentation (my favorite). Optional, defaults to FALSE. |
 #' | `mainfont` | The main font to use with `xelatex`. I use `Open Sans` here. Optional, but recommended. |
 #' | `titlefont` | The font for slide titles. I use `Titillium Web` here. Optional, but recommended.  |
-#' | `primarycolor` | Specifies a "primary" color in six-digit RGB color. Defaults to `522D80`. Optional. |
-#' | `secondarycolor` | Specifies a "secondary" color in six-digit RGB color. Defaults to `F56600`. Optional. |
+#' | `primarycolor` | Specifies a "primary" color in six-digit RGB color. Defaults to `002F5F`. Optional. |
+#' | `secondarycolor` | Specifies a "secondary" color in six-digit RGB color. Defaults to `9BB2CE`. Optional. |
 #'
 #'
 #' @inheritParams rmarkdown::beamer_presentation
