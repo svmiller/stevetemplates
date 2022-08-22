@@ -230,19 +230,24 @@ $if(titlegraphic)$\titlegraphic{\includegraphics[width=$if(scaletg)$$scaletg$$el
 \definecolor{uiucblue}{HTML}{003C7D}
 \definecolor{uiucorange}{HTML}{F47F24}
 
+% new gig just dropped
+\definecolor{sublue}{HTML}{002F5F}
+\definecolor{susky}{HTML}{ACDEE6}
+\definecolor{suwater}{HTML}{9BB2CE}
+
 $if(primarycolor)$\definecolor{primarycolor}{HTML}{$primarycolor$}$else$$endif$
 $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$endif$
 
 
 % Some optional color adjustments to Beamer. Change as you see fit.
 %------------------------------------------------------------------
-\setbeamercolor{frametitle}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,bg=white}
-\setbeamercolor{title}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,,bg=white}
-\setbeamercolor{local structure}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,}
-\setbeamercolor{section in toc}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,bg=white}
+\setbeamercolor{frametitle}{fg=$if(primarycolor)$primarycolor$else$sublue$endif$,bg=white}
+\setbeamercolor{title}{fg=$if(primarycolor)$primarycolor$else$sublue$endif$,,bg=white}
+\setbeamercolor{local structure}{fg=$if(primarycolor)$primarycolor$else$sublue$endif$,}
+\setbeamercolor{section in toc}{fg=$if(primarycolor)$primarycolor$else$sublue$endif$,bg=white}
 % \setbeamercolor{subsection in toc}{fg=clemsonorange,bg=white}
-\setbeamercolor{footline}{fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$!50, bg=white}
-\setbeamercolor{block title}{fg=$if(secondarycolor)$secondarycolor$else$clemsonorange$endif$,bg=white}
+\setbeamercolor{footline}{fg=$if(primarycolor)$primarycolor$else$sublue$endif$!50, bg=white}
+\setbeamercolor{block title}{fg=$if(secondarycolor)$secondarycolor$else$sublue$endif$,bg=white}
 
 
 \let\Tiny=\tiny
@@ -278,8 +283,8 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 		\vspace*{1pt}%
             \insertframenumber/\inserttotalframenumber \hspace*{0.1cm}%
             \newline%
-            \color{$if(primarycolor)$primarycolor$else$clemsonpurple$endif$}{\rule{\paperwidth}{0.4mm}}\newline%
-            \color{$if(secondarycolor)$secondarycolor$else$clemsonorange$endif$}{\rule{\paperwidth}{.4mm}}%
+            \color{$if(primarycolor)$primarycolor$else$sublue$endif$}{\rule{\paperwidth}{0.4mm}}\newline%
+            \color{$if(secondarycolor)$secondarycolor$else$suwater$endif$}{\rule{\paperwidth}{.4mm}}%
         }%
     \fi%
 }
@@ -288,13 +293,13 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 %-------------------------------------------------------------------------------------------------------
 \setbeamercolor{structure}{fg=blue}
 \setbeamercolor{local structure}{parent=structure}
-\setbeamercolor{item projected}{parent=item,use=item,fg=$if(primarycolor)$primarycolor$else$clemsonpurple$endif$,bg=white}
+\setbeamercolor{item projected}{parent=item,use=item,fg=$if(primarycolor)$primarycolor$else$sublue$endif$,bg=white}
 \setbeamercolor{enumerate item}{parent=item}
 
 % Adjust some item elements. More cosmetic things.
 %-------------------------------------------------
-\setbeamertemplate{itemize item}{\color{$if(primarycolor)$primarycolor$else$clemsonpurple$endif$}$$\bullet$$}
-\setbeamertemplate{itemize subitem}{\color{$if(primarycolor)$primarycolor$else$clemsonpurple$endif$}\scriptsize{$$\bullet$$}}
+\setbeamertemplate{itemize item}{\color{$if(primarycolor)$primarycolor$else$sublue$endif$}$$\bullet$$}
+\setbeamertemplate{itemize subitem}{\color{$if(primarycolor)$primarycolor$else$sublue$endif$}\scriptsize{$$\bullet$$}}
 \setbeamertemplate{itemize/enumerate body end}{\vspace{.6\baselineskip}} % So I'm less inclined to use \medskip and \bigskip in Markdown.
 
 % Automatically center images
