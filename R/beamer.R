@@ -18,6 +18,7 @@
 #' | `institute` | List your department/college here. Optional. |
 #' | `titlegraphic` | Put a path to university watermark here. Optional. |
 #' | `scaletg` | Scale `titlegraphic` relative to the width of the document. Optional, defaults to .3 |
+#' | `titlegraphshift`| Optional LaTeX commands to move around `titlegraphic`. Manually escape any LaTeX code you put here. Use with care. |
 #' | `make149` | Logical, gives 14:9 dimension to presentation (my favorite). Optional, defaults to FALSE. |
 #' | `mainfont` | The main font to use with `xelatex`. I use `Open Sans` here. Optional, but recommended. |
 #' | `titlefont` | The font for slide titles. I use `Titillium Web` here. Optional, but recommended.  |

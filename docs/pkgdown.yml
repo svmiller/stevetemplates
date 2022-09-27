@@ -1,8 +1,8 @@
-pandoc: 2.11.4
-pkgdown: 2.0.0
+pandoc: '2.18'
+pkgdown: 2.0.3
 pkgdown_sha: ~
 articles: {}
-last_built: 2021-12-01T20:57Z
+last_built: 2022-09-27T13:38Z
 urls:
   reference: http://svmiller.com/reference
   article: http://svmiller.com/articles

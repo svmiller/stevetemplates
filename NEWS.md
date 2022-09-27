@@ -6,6 +6,9 @@
 - Disabled `titlesec` in `cv`. This is admittedly an ad hoc adjustment based on a new computer I have.
 - Default Beamer colors changed from Clemson University colors to Stockholm University colors.
 - Default `titlegraphic` scaling in `beamer` is now .3, because of new gig.
+- `beamer` now hard codes white backgrounds for bouncing between normal theme and a "metropolis" option, which I may start using more.
+- Related to the above: the color for title separator (if you combo this with the Metropolis theme) defaults to a Stockholm University color ("sky") or whatever you supply as a secondary color option.
+- `beamer` now has a `titlegraphshift:` field, completely optional, for moving around whatever is supplied in `titlegraphic`. Use with care, and manually escape any LaTeX code you want here.
 
 # stevetemplates 0.7.0
 
