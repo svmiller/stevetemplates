@@ -9,3 +9,4 @@
 vignettes/
 vignettes
 _dross
+^CRAN-SUBMISSION$
