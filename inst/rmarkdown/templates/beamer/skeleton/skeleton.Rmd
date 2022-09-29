@@ -14,7 +14,7 @@ institute: Department of Economic History and International Relations
 # titlegraphshift: "\\vspace{6cm}" # Optional, you can delete this if you want.
 fontsize: 10pt
 make149: TRUE
-# mainfont: "Open Sans" # Try out some font options if xelatex
+# mainfont: "Open Sans Light" # Try out some font options if xelatex
 # titlefont: "Titillium Web" # Try out some font options if xelatex
 # specify color as six-digit RGB (no pound sign)
 # primarycolor: "990000" 
