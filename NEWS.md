@@ -1,5 +1,4 @@
-# stevetemplates 0.8.0 (in development)
-
+# stevetemplates 0.8.0
 
 - Bug fix for center footer in the non-academic résumé template. HT @mwpeterson for finding this.
 - Bug fix for color in the CV template. HT @dojobo for finding this.
