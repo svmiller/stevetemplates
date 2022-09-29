@@ -8,9 +8,10 @@ output:
 title: An Example R Markdown Document
 subtitle: (A Subtitle Would Go Here if This Were a Class)
 author: Steven V. Miller
-institute: Department of Political Science
-# titlegraphic: "`r paste0(Sys.getenv('HOME'), '/Dropbox/clemson/watermarks/clemson-university-wordmark-orange-purple.png')`"
+institute: Department of Economic History and International Relations
+# titlegraphic: "`r paste0(Sys.getenv('HOME'), '/Dropbox/stockholm/su-logotyp.png')`"
 # scaletg: .9 # Optional, proportional (0, 1) to paper width. Defaults to .3
+# titlegraphshift: "\\vspace{6cm}" # Optional, you can delete this if you want.
 fontsize: 10pt
 make149: TRUE
 # mainfont: "Open Sans" # Try out some font options if xelatex
