@@ -49,10 +49,19 @@ Sheena Easton describes the following scenario for her baby:
 
 ### A Total Conflict Game Between Sheena Easton and Her Baby
 
-|                         | Sheena Easton Stays Home       | Sheena Easton Goes to Baby's Work |
-|-------------------------|---------------------|------------------|
-| **Baby Home Again**          |  -100, **100**         |  **100**, 0       |
-| **Baby Stays at Work**             |   **50**, 0        |  -100, **100**        |
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcc}
+\hline
+ & Sheena Easton & Sheena Easton \\
+ &  Stays Home & Goes to Baby's Work\\
+\hline
+{\bf Baby Home Again} & -100, {\bf 100} & {\bf 100}, 0 \\
+{\bf Baby Stays at Work} & {\bf 50}, 0 & -100, {\bf 100} \\
+\hline
+\end{tabular}
+\end{table}
 
 Sheena Easton and her baby are playing a **zero-sum (total conflict) game**.
 
