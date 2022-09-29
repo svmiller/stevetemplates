@@ -9,6 +9,7 @@
 - `beamer` now hard codes white backgrounds for bouncing between normal theme and a "metropolis" option, which I may start using more.
 - Related to the above: the color for title separator (if you combo this with the Metropolis theme) defaults to a Stockholm University color ("sky") or whatever you supply as a secondary color option.
 - `beamer` now has a `titlegraphshift:` field, completely optional, for moving around whatever is supplied in `titlegraphic`. Use with care, and manually escape any LaTeX code you want here.
+- Until someone tells me why I shouldn't do this, the `beamer` now template will load, by default, the following LaTeX packages: `dcolumn`, `longtable`, `booktabs`, `array`, `multirow`, `wrapfig`, `float`, `colortbl`, `pdflscape`, `tabu`, and `threeparttable`. These are all add-ons for doing stuff with `{kableExtra}` and `{modelsummary}`
 
 # stevetemplates 0.7.0
 
