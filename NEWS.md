@@ -1,3 +1,7 @@
+# stevetemplates 0.9.0
+
+- `beamer` improvement that will allow `xelatex` functionality in the absence of a supplied title font. It would previously error, which was referenced by @ian-adams [here](https://github.com/svmiller/stevetemplates/issues/4).
+
 # stevetemplates 0.8.0
 
 - Bug fix for center footer in the non-academic résumé template. HT @mwpeterson for finding this.

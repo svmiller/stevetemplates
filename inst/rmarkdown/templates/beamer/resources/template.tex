@@ -326,8 +326,11 @@ $if(secondarycolor)$\definecolor{secondarycolor}{HTML}{$secondarycolor$}$else$$e
 % I could customize/generalize this more but the truth is it works for my circumstances.
 
 \ifxetex
-\setbeamerfont{title}{family=\fontspec{$if(titlefont)$$titlefont$$else$serif$endif$}}
-\setbeamerfont{frametitle}{family=\fontspec{$if(titlefont)$$titlefont$$else$serif$endif$}}
+$if(titlefont)$\setbeamerfont{title}{family=\fontspec{$titlefont$}}$else$$endif$
+$if(titlefont)$\setbeamerfont{frametitle}{family=\fontspec{$titlefont$}}$else$$endif$
+% Commented out -----
+%\setbeamerfont{title}{family=\fontspec{$if(titlefont)$$titlefont$$else$\sfdefault$endif$}}
+%\setbeamerfont{frametitle}{family=\fontspec{$if(titlefont)$$titlefont$$else$\sfdefault$endif$}}
 \usepackage[font=small,skip=0pt]{caption}
  \else
  \fi
