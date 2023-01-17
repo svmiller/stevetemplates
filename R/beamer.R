@@ -24,6 +24,7 @@
 #' | `titlefont` | The font for slide titles. I use `Titillium Web` here. Optional, but recommended.  |
 #' | `primarycolor` | Specifies a "primary" color in six-digit RGB color. Defaults to `002F5F`. Optional. |
 #' | `secondarycolor` | Specifies a "secondary" color in six-digit RGB color. Defaults to `9BB2CE`. Optional. |
+#' | `no_toc_after` | When `TRUE`, disables table of contents at end of document. Optional. |
 #'
 #'
 #' @inheritParams rmarkdown::beamer_presentation

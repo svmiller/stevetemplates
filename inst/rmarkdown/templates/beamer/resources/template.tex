@@ -422,7 +422,9 @@ $include-after$
 
 $endfor$
 
+$if(no_toc_after)$$else$
 \section[]{}
 \frame{\small \frametitle{Table of Contents}
 \tableofcontents}
+$endif$
 \end{document}
