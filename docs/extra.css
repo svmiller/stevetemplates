@@ -20,3 +20,40 @@ code {
   background-color: #fff;
     font-family: 'Fira Code', monospace;
 }
+
+a {
+  color: #0d6efd;
+}
+
+a:hover {
+  color: #002f5f;
+}
+
+
+::selection {
+
+    background-color: #e3f4f7;
+
+}
+
+#navbar a:hover {
+
+    background-color: #e3f4f7;
+
+}
+
+.btn-primary {
+  background-color: #002f5f;
+  border-color: #002f5f;
+}
+
+.btn-primary {
+  background-color: #002f5f;
+  border-color: #002f5f;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #acdee6;
+    border-color: #002f5f
+}

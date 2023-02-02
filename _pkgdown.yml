@@ -35,11 +35,11 @@ navbar:
         href: https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/resume-example/svm-resume-example.pdf
       - text: "Beamer Template"
         href: http://posc1020.svmiller.com/terrorism/posc1020-lecture-terrorism.pdf
-      - text: "HTML Template"
+      - text: "HTML Article Template"
         href: http://svmiller.com/peacesciencer/ms.html
       - text: "Memo Template"
         href: https://raw.githubusercontent.com/svmiller/svm-r-markdown-templates/master/memo-example/svm-memo-example.pdf
       - text: "Statement Template"
         href: http://svmiller.com/docs/svm-research-statement.pdf
       - text: "Syllabus Template"
-        href: https://www.dropbox.com/s/ffnj5xdswd9pa29/data-science-syllabus.pdf
+        href: http://eh6105.svmiller.com/syllabus/eh6105-fall2022-syllabus.pdf
