@@ -1,7 +1,8 @@
 # stevetemplates 0.9.0
 
 - `beamer` improvement that will allow `xelatex` functionality in the absence of a supplied title font. It would previously error, which was referenced by @ian-adams [here](https://github.com/svmiller/stevetemplates/issues/4).
-- `beamer` now has a `no_toc_after:` field if the user wants to disable the table of contents slide at the end of the document.
+- `beamer` now has a `no_toc_after:` field if the user wants to disable the table of contents slide at the end of the document. I talk about why I have a table of contents by default in [this Github issue](https://github.com/svmiller/stevetemplates/issues/10), though users can now remove this if they'd like.
+- Assorted skeleton changes, now that I've left Clemson University.
 
 # stevetemplates 0.8.0
 
