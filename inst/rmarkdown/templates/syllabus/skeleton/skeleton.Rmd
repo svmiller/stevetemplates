@@ -5,11 +5,11 @@ output:
     dev: cairo_pdf
 geometry: margin=1in
 
-title: "POSC 0000: A Class with an R Markdown Syllabus"
+title: "EH 0000: A Class with an R Markdown Syllabus"
 author: Steven V. Miller
 date: "Spring 2021"
 
-email: "svmille@clemson.edu"
+email: "steven.miller@ekohist.su.se"
 web: "svmiller.com/teaching"
 officehours: "\\shrug"
 office: "\\shrug"

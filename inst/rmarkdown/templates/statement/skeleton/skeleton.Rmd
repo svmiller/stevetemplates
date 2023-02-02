@@ -6,8 +6,8 @@ geometry: margin=1in
 
 title: "A Statement"
 author: Steven V. Miller
-affiliation: Department of Political Science, Clemson University
-email: "svmille@clemson.edu"
+affiliation: Department of Economic History and International Relations, Stockholm University
+email: "steven.miller@ekohist.su.se"
 
 fontfamily: cochineal
 fontsize: 11pt

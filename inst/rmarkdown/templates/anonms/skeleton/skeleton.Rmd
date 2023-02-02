@@ -10,7 +10,7 @@ runhead: "A Running Head"
 thanks: "Replication files are available on the author's Github account (http://github.com/svmiller/svm-r-markdown-templates). **Current version**: `r format(Sys.time(), '%B %d, %Y')`; **Corresponding author**: steven.v.miller@gmail.com."
 author:
 - name: Steven V. Miller
-  affiliation: Clemson University
+  affiliation: Stockholm University
 - name: A Second Author Who Did Less Work
   affiliation: The Ohio State University
 - name: A Graduate Student

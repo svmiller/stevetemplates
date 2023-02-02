@@ -8,7 +8,7 @@ author: Steven V. Miller
 address: |
     | 698 Candlewood Lane
     | Cabot Cove, ME USA
-email: "svmille@clemson.edu"
+email: "steven.miller@ekohist.su.se"
 url: svmiller.com
 phone: +1 555 867 5309
 fontsize: 11pt
