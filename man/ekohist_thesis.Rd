@@ -2,9 +2,12 @@
 % Please edit documentation in R/ekohist_thesis.R
 \name{ekohist_thesis}
 \alias{ekohist_thesis}
+\alias{templ_ekohist_thesis}
 \title{Stockholm University EKOHIST Thesis Template}
 \usage{
 ekohist_thesis(...)
+
+templ_ekohist_thesis()
 }
 \arguments{
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}

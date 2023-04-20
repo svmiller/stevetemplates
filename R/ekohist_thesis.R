@@ -40,7 +40,7 @@ ekohist_thesis <- function(...){
                           ...)
 }
 
-#' @rdname article2
+#' @rdname ekohist_thesis
 #' @export
 templ_ekohist_thesis <- function(){
   print(system.file("rmarkdown", "templates", "ekohist_thesis", "resources", "template.tex", package = "stevetemplates"))
