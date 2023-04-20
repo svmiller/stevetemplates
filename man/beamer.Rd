@@ -30,12 +30,14 @@ here: \url{https://github.com/svmiller/stevetemplates/issues/4}
    \code{subtitle} \tab Subtitle of the presentation. Optional, but useful. For in-class lectures, I put the class name here. \cr
    \code{institute} \tab List your department/college here. Optional. \cr
    \code{titlegraphic} \tab Put a path to university watermark here. Optional. \cr
-   \code{scaletg} \tab Scale \code{titlegraphic} relative to the width of the document. Optional, defaults to .25. \cr
+   \code{scaletg} \tab Scale \code{titlegraphic} relative to the width of the document. Optional, defaults to .3 \cr
+   \code{titlegraphshift} \tab Optional LaTeX commands to move around \code{titlegraphic}. Manually escape any LaTeX code you put here. Use with care. \cr
    \code{make149} \tab Logical, gives 14:9 dimension to presentation (my favorite). Optional, defaults to FALSE. \cr
    \code{mainfont} \tab The main font to use with \code{xelatex}. I use \verb{Open Sans} here. Optional, but recommended. \cr
    \code{titlefont} \tab The font for slide titles. I use \verb{Titillium Web} here. Optional, but recommended. \cr
-   \code{primarycolor} \tab Specifies a "primary" color in six-digit RGB color. Defaults to \verb{522D80}. Optional. \cr
-   \code{secondarycolor} \tab Specifies a "secondary" color in six-digit RGB color. Defaults to \code{F56600}. Optional. \cr
+   \code{primarycolor} \tab Specifies a "primary" color in six-digit RGB color. Defaults to \verb{002F5F}. Optional. \cr
+   \code{secondarycolor} \tab Specifies a "secondary" color in six-digit RGB color. Defaults to \verb{9BB2CE}. Optional. \cr
+   \code{no_toc_after} \tab When \code{TRUE}, disables table of contents at end of document. Optional. \cr
 }
 }
 

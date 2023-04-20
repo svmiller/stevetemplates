@@ -1,3 +1,7 @@
+# stevetemplates 1.0.0
+
+- `ekohist_thesis` is a limited-use R Markdown template for use in masters thesis in the Department of Economic History and International Relations at Stockholm University.
+
 # stevetemplates 0.9.0
 
 - `beamer` improvement that will allow `xelatex` functionality in the absence of a supplied title font. It would previously error, which was referenced by @ian-adams [here](https://github.com/svmiller/stevetemplates/issues/4).

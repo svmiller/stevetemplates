@@ -2,7 +2,7 @@ Package: stevetemplates
 Type: Package
 Title: Steve's R Markdown Templates
 Depends: R (>= 3.5.0)
-Version: 0.9.0
+Version: 0.9.9
 Author: Steven V. Miller
 Maintainer: Steven V. Miller <steven.v.miller@gmail.com>
 Description: These are my collection of 'R Markdown' templates, mostly for compilation to PDF.
@@ -12,6 +12,6 @@ License: GPL-2
 Encoding: UTF-8
 Imports:
     rmarkdown
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Suggests: 
     testthat
