@@ -571,7 +571,13 @@ $endif$
 \patchcmd{\@maketitle}{\vskip 2em}{\vspace*{-3cm}}{}{}
 \makeatother
 
-
+\newcommand{\beginappendix}{
+  \renewcommand{\thesection}{A}
+  \setcounter{table}{0}
+  \renewcommand{\thetable}{A\arabic{table}}
+  \setcounter{figure}{0}
+  \renewcommand{\thefigure}{A\arabic{figure}}
+}
 \begin{document}
 
 % \textsf{\textbf{This is sans-serif bold text.}}
