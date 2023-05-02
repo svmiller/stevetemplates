@@ -71,7 +71,7 @@ knitr::kable(summary(cars), caption = "A Summary Table of the `cars` Data Set")
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE, fig.cap = "A Plot of the Vapor Pressur of Mercury"}
+```{r pressure, echo=FALSE, fig.cap = "A Plot of the Vapor Pressure of Mercury"}
 plot(pressure)
 ```
 
@@ -87,7 +87,7 @@ Optional appendix stuff goes here.
 
 \kant[25]
 
-```{r, fig.cap = "A Plot of the Motore Trend Car Road Tests Data"}
+```{r, fig.cap = "A Plot of the Motor Trend Car Road Tests Data"}
 plot(mtcars)
 ```
 
