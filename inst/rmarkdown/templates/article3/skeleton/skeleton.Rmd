@@ -1,0 +1,110 @@
+---
+output: 
+  stevetemplates::article3:
+    citation_package: natbib
+    dev: cairo_pdf
+biblio-style: apsr
+title: "Yet Another Pandoc Markdown Article Starter and Template"
+thanks: "Replication files are available on the author's Github account (http://github.com/svmiller/stevetemplates). **Current version**: `r format(Sys.time(), '%B %e, %Y')`; **Corresponding author**: steven.v.miller@gmail.com. A user who is familiar with my templates may observe some redundancy with the title footnote and information you can include in the author or paper info fields. That point is well-taken. Do with this what you want."
+abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget consectetur diam. Pellentesque id eros auctor, eleifend sem a, sagittis nisi. Nam vel nisi eget metus consectetur hendrerit nec ut justo. Ut metus eros, ullamcorper in condimentum non, eleifend lacinia mi. Cras sodales, arcu eu fringilla efficitur, lorem purus maximus mauris, id volutpat dui lectus non velit. Aliquam scelerisque nulla rutrum facilisis laoreet. Cras tristique et lorem ac feugiat. Duis eu purus eu ante tristique suscipit. Etiam aliquet egestas tortor et scelerisque. Nullam vulputate quam sed diam dictum, vitae pellentesque nisl fermentum. Curabitur ac rutrum lacus. Proin pellentesque, elit et malesuada porttitor, neque velit pretium dui, sit amet fermentum turpis turpis sed felis. Curabitur urna neque, bibendum non fringilla et, accumsan at orci. In blandit mauris urna, ac accumsan urna vehicula a. Phasellus iaculis nisi id nibh euismod malesuada venenatis in elit. Aenean diam mi, dapibus nec egestas sit amet."
+keywords: "pandoc, r markdown, knitr, god help me why am I doing this"
+author:
+- name: Forename diMcPatronymixsonovez
+  email: steven.miller@ekohist.su.se
+  affil-code: a
+  order: 1
+- name: Previous Employer
+  email: previous@clemson.edu
+  affil-code: b
+  order: 2
+- name: Visiting Lecturer
+  email: visitor@illinois.edu
+  affil-code: c
+  order: 3
+- name: A Graduate Student
+  email: gstudent@ua.edu
+  affil-code: d
+  order: 4
+- name: Same Employer
+  email: same.employer@ekohist.su.se
+  affil-code: a
+  order: 5
+- name: An Undergraduate Student
+  email: undergrad.1234@osu.edu
+  affil-code: e
+  order: 6
+affils:
+- address: Institutionen för ekonomisk historia och internationella relationer Universitetsvägen 10A, 114 18 Stockholm, Sweden
+  code: a
+- address: 232 Brackett Hall, Clemson University, Clemson, SC 29634, USA
+  code: b
+- address: 1407 W Gregory Dr, Urbana, IL 61801, USA
+  code: c
+- address: Department of Political Science, Box 870213, Tuscaloosa, AL 35487, USA
+  code: d
+- address: 411 Woody Hayes Dr, Columbus, OH 43210, USA
+  code: e
+geometry: margin=2.5cm
+mainfont: cochineal
+sansfont: Linux Biolinum O
+#sansitup: TRUE
+fontsize: 11pt
+# doublespacing: TRUE
+endnote: no
+pandocparas: TRUE
+remove-emails: FALSE
+remove-paper-info: FALSE
+paper-info:
+  - "*Last updated*: `r format(Sys.time(), '%e %B %Y')`"
+  - "*Word Count*: 10,000 (pinky swear)"
+  - "*Github*: [svmiller/stevetemplates](http://github.com/svmiller/stevetemplates)"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Uncomment below if you want code captions
+# oldSource <- knitr::knit_hooks$get("source")
+# knitr::knit_hooks$set(source = function(x, options) {
+#   x <- oldSource(x, options)
+#   x <- ifelse(!is.null(options$code.cap), paste0(x, "\\captionof{chunk}{", options$code.cap,"}"), x)
+#   ifelse(!is.null(options$ref), paste0(x, "\\label{", options$ref,"}"), x)
+# })
+# Add `chunkcaption: TRUE` to YAML as well.
+```
+
+
+
+# Introduction
+
+\kant[1]
+
+## A Subsection in the Introduction
+
+\kant[2]
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+# Results
+
+\kant[24]
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+\kant[25]
+
+```{r}
+plot(mtcars)
+```

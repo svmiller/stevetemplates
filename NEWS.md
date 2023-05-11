@@ -1,6 +1,7 @@
 # stevetemplates 1.0.0
 
 - `ekohist_thesis` is a limited-use R Markdown template for use in masters thesis in the Department of Economic History and International Relations at Stockholm University.
+- `article3` is a third article template largely inspired by Elsevier templates. Its designed to optimize information in the abstract section, scales (reasonably) well for the presence of many authors, and may be useful if you encounter a journal that (for reasons) insists on having author *addresses* in the title section of the paper.
 
 # stevetemplates 0.9.0
 
