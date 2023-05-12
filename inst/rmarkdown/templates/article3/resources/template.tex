@@ -684,7 +684,7 @@ $endif$
 		\begin{minipage}[t]{0.35\textwidth}
 
 		$if(remove-emails)$$else$
-		\raisedrule[0.2em]{0.1pt}{\footnotesize Email Address(es)}
+		\raisedrule[0.2em]{0.1pt}{\footnotesize Contact Info}
 
 
 		\vspace{8pt}
@@ -716,6 +716,12 @@ $endif$
 
 			$for(paper-info)$$paper-info$$sep$\vspace{1.5pt}\par
 			$endfor$
+
+			$if(keywords)$
+
+			\vskip 8.5pt \noindent \emph{Keywords}: $keywords$ \par
+			$else$
+			$endif$
 
 
 			}
