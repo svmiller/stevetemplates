@@ -474,7 +474,7 @@ $endif$
 \makeatother
 \hypersetup{breaklinks=true,
             bookmarks=true,
-            pdfauthor={$if(anonymous)$$else$$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$$endif$},
+            pdfauthor={$if(removetitleabstract)$$else$$if(anonymous)$$else$$for(author)$$author.name$$sep$, $endfor$$endif$$endif$},
              pdfkeywords = {$if(keywords)$$keywords$$endif$},
             pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
             colorlinks=true,
@@ -514,9 +514,6 @@ $endif$
 
 
 
-$for(header-includes)$
-$header-includes$
-$endfor$
 
 \newtheorem{hypothesis}{Hypothesis}
 
@@ -577,6 +574,12 @@ $endif$
 %\linespread{1.05}
 
 
+\usepackage[fixed]{fontawesome5}
+
+
+$for(header-includes)$
+$header-includes$
+$endfor$
 \begin{document}
 
 
@@ -594,7 +597,8 @@ $if(title)$
 \vskip 8.5pt
 }
 
-
+$if(anonymous)$
+$else$
 $if(solo-author)$
 $for(author)$$author.name$$endfor$
  \vskip 24.5pt
@@ -603,7 +607,7 @@ $endif$
 $if(two-author)$
 $if(author/allbutlast)$
 $for(author/allbutlast)$
-{$author.name$\textsuperscript{$author.affil-code$$if(remove-emails)$$else$$author.order$$endif$}$sep$$endfor$
+{$author.name$\textsuperscript{$author.affil-code$$if(remove-emails)$$else$,$author.order$$endif$}$sep$$endfor$
 $for(author/last)$
 { and $author.name$\textsuperscript{$author.affil-code$$if(remove-emails)$$else$,$author.order$$endif$}}$endfor$
 $else$
@@ -622,11 +626,15 @@ ${author.name/last}
 $endif$ \vskip 24.5pt
 $endif$
 
+$endif$ % this endif is for removing titles in (anonymous)
+
 $if(alternate-layout)$
 
+$if(anonymous)$
+$else$
 \vskip -14.5pt
 
-{\footnotesize
+{\footnotesize 
 
 
 \begingroup
@@ -641,22 +649,48 @@ $else$
 		\textsuperscript{$affils.code$} \emph{$affils.address/nowrap$}$sep$\par
 		$endfor$
 
-$endif$
+$endif$	
 \endgroup
 
 }
 
-% \vskip 8.5pt
-%
-% {\footnotesize
-%
+$endif$ % this endif is for removing affils in (anonymous)
+
+% \vskip 8.5pt 
+% 
+% {\footnotesize 
+% 
 % \begingroup
 % 	\noindent \emph{Email addresses:} $for(author)$
 % 		\textsuperscript{$author.order$} {\tt $author.email/nowrap$}$sep$,
 % 		$endfor$
-%
+% 
 % \endgroup
 % }
+
+$if(anonymous)$ % if it's anonymous, provide an abstract at the least.
+
+\begin{tabularx}{\linewidth}{@{}X@{}}
+\begin{minipage}[t]{1\textwidth}
+
+\raisedrule[0.2em]{0.1pt}{\footnotesize Abstract}
+
+\vspace{5pt}
+
+\footnotesize{$abstract$}
+
+
+\vskip 8.5pt \noindent \textsc{Keywords}: $keywords$ \par
+
+
+\end{minipage}
+
+\\
+\hline
+\end{tabularx}
+
+$else$ % if it's not anonymous, but it's still alternate layout
+
 
 \begin{tabularx}{\linewidth}{@{}X@{}}
 \begin{minipage}[t]{0.6\textwidth}
@@ -668,29 +702,21 @@ $endif$
 \footnotesize{$abstract$}
 
 
-$if(keywords)$
 
-\vskip 8.5pt \noindent \textsc{Keywords}: $keywords$ \par
-
-
-$else$
-
-
-$endif$
 
 
 \end{minipage}
 		\hfill
 		\begin{minipage}[t]{0.35\textwidth}
-
+		
 		$if(remove-emails)$$else$
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Contact Info}
 
-
+		
 		\vspace{8pt}
-
+			
 		{\footnotesize
-
+		
 		$if(solo-author)$
 		\noindent $for(author)$
 		{\tt $author.email/nowrap$}$sep$\par
@@ -703,32 +729,33 @@ $endif$
 		}
 		\vskip 8.5pt
 		$endif$
-
-
-
+		
+		
+		
 		$if(remove-paper-info)$$else$
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Paper Info}
-
+		
 		\vspace{5pt}
-
-
+		
+		
 			{\footnotesize
-
+			
 			$for(paper-info)$$paper-info$$sep$\vspace{1.5pt}\par
 			$endfor$
-
+			
 			$if(keywords)$
-
+			
 			\vskip 8.5pt \noindent \emph{Keywords}: $keywords$ \par
 			$else$
 			$endif$
-
-
+			
 			}
 			$endif$
-
+			
+			
+			
 			\vskip 8.5pt
-
+		
 		\end{minipage}
 %\bottomrule
 %\rule[#1]{1pt}{#2}
@@ -737,10 +764,37 @@ $endif$
 \hline
 \end{tabularx}
 
-$else$
+$endif$ % this endif is for futzing with the abstract in anonymous mode
+
+$else$ % this is for the "default" layout of the abstract area, not in anonymous mode.
+
+$if(anonymous)$ % that said, if it's anonymous mode, provide an abstract at least.
 
 \begin{tabularx}{\linewidth}{@{}X@{}}
+\begin{minipage}[t]{1\textwidth}
+
+\raisedrule[0.2em]{0.1pt}{\footnotesize Abstract}
+
+\vspace{5pt}
+
+\footnotesize{$abstract$}
+
+
+\vskip 8.5pt \noindent \textsc{Keywords}: $keywords$ \par
+
+
+\end{minipage}
+
+\\
+\hline
+\end{tabularx}
+
+$else$ % otherwise, give the people what they want
+\vskip -14.5pt
+\begin{tabularx}{\linewidth}{@{}X@{}}
 \begin{minipage}[t]{0.6\textwidth}
+
+
 
 \raisedrule[0.2em]{0.1pt}{\footnotesize Abstract}
 
@@ -764,12 +818,12 @@ $endif$
 		\hfill
 		\begin{minipage}[t]{0.35\textwidth}
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Author Info}
-
+		
 		\vspace{5pt}
-
-
+		
+	
 		{\footnotesize
-
+		
 		$if(solo-author)$
 		$for(affils)$
 		$affils.address/nowrap$$sep$\par
@@ -779,16 +833,16 @@ $endif$
 		\textsuperscript{$affils.code$} $affils.address/nowrap$$sep$\par
 		$endfor$
 		$endif$
-
+		
 
 		}
+		
 
-
-
+		
 		\vspace{8pt}
 			$if(remove-emails)$$else$
 		{\footnotesize
-
+		
 		$if(solo-author)$
 			\noindent $for(author)$
 		{\tt $author.email/nowrap$}$sep$\par
@@ -799,28 +853,28 @@ $endif$
 		$endfor$
 		$endif$
 		}
-
+		
 		$endif$
-
+		
 		\vskip 8.5pt
-
+		
 		$if(remove-paper-info)$$else$
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Paper Info}
-
+		
 		\vspace{5pt}
-
-
+		
+		
 			{\footnotesize
-
+			
 			$for(paper-info)$$paper-info$$sep$\vspace{1.5pt}\par
 			$endfor$
-
-
+			
+			
 			}
 			$endif$
-
+			
 			\vskip 8.5pt
-
+		
 		\end{minipage}
 %\bottomrule
 %\rule[#1]{1pt}{#2}
@@ -829,10 +883,9 @@ $endif$
 \hline
 \end{tabularx}
 
-
 }
 
-
+$endif$
 $endif$
 $endif$ % for alternate-layout
 

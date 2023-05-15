@@ -46,14 +46,14 @@ affils:
 geometry: margin=2.5cm
 mainfont: cochineal
 #sansitup: TRUE
-fontsize: 11pt
+fontsize: 12pt
 # doublespacing: TRUE
 endnote: no
 pandocparas: TRUE
 alternate-layout: TRUE
 remove-emails: FALSE
 remove-paper-info: FALSE
-solo-author: TRUE
+n-author: TRUE
 paper-info:
   - "*Last updated*: `r format(Sys.time(), '%e %B %Y')`"
   - "*Word Count*: 10,000 (pinky swear)"

@@ -1,7 +1,9 @@
 #' Steve's 3rd Article/Manuscript Template
 #'
 #' Another template for academic articles/manuscripts. Please note that
-#' `xelatex` is functionally required for this template/function.
+#' `xelatex` is functionally required for this template/function. An (incomplete)
+#' primer on this tutorial is available on my website
+#' <http://svmiller.com/blog/2023/05/a-third-rmarkdown-article-manuscript-template/>.
 #'
 #' If your version of TeX comes by way of Yihui Xie's \pkg{tinytex}, you'll want to
 #' additionally install the "xurl" library. Otherwise, you'll get a vague error about a
@@ -15,6 +17,13 @@
 #' for this template. Just about everything is carried over from the 2nd article
 #' template. The user will want to pay careful attention in the skeleton/example
 #' file about how the YAML is structured for author information.
+#'
+#' Do note that Pandoc limitations preclude a more sophisticated "if-else" logic
+#' to formatting authors and their affiliations. This means (basically: strongly
+#' implies) that one of `solo-author`, `two-author`, or `n-author` is explicitly
+#' set to `TRUE` for this template to look like it makes sense. You do not need
+#' all three in your YAML. You just need one, and to set it to `TRUE`.
+#'
 #'
 #'
 #' | FIELD  | DESCRIPTION |
@@ -36,6 +45,10 @@
 #' | `remove-emails` | optional, defaults to FALSE. If TRUE, removes author email information from document preamble. |
 #' | `remove-paper-info` | optional, defaults to FALSE. If TRUE, removes optional paper information you may want to include. |
 #' | `paper-info` | Additional information you may want to include about the paper. |
+#' | `solo-author` | Is there only one author on this project? Then set as `TRUE`. Has implications for formatting. |
+#' | `two-author` | Are there *only two* authors on this project? Then set as `TRUE`. Has implications for formatting. |
+#' | `n-author` | Are there *more than two* authors on this project? Then set as `TRUE`. Has implications for formatting. |
+#' | `alternate-layout` | If `TRUE`, adjusts the layout slightly (moving affiliations outside the abstract and to near the authors. Experiment with it and see if you like it. |
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Arguments to [`rmarkdown::pdf_document`].
