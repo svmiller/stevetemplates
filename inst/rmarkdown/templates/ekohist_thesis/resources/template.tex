@@ -640,6 +640,7 @@ $if(has-frontmatter)$
 \mainmatter
 $endif$
 
+$if(abstract)$
 \newpage
 
 \begin{abstract}
@@ -647,6 +648,8 @@ $endif$
 \section*{Abstract}
 $abstract$
 \end{abstract}
+$else$
+$endif$
 
 \newpage
 
