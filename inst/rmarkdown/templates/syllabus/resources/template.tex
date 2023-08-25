@@ -187,11 +187,21 @@ $endfor$
 
 	\noindent \begin{tabular*}{\textwidth}{ @{\extracolsep{\fill}} lr @{\extracolsep{\fill}}}
 
+$if(coteaching)$
+
+E-mail: $if(email)$\texttt{$email$}$else$TBD$endif$ &  E-mail: $if(email2)$\texttt{$email2$}$else$TBD$endif$ \\
+Office Hours: $if(officehours)$$officehours$$else$TBD$endif$  &  Office Hours: $if(officehours2)$$officehours2$$else$TBD$endif$\\
+Office: $if(office)$$office$$else$TBD$endif$  & Office: $if(office2)$$office2$$else$TBD$endif$\\
+	&  \\
+
+$else$
 
 E-mail: $if(email)$\texttt{$email$}$else$TBD$endif$ & Web: $if(web)$\href{http://$web$}{\tt $web$}$else$TBD$endif$\\
 Office Hours: $if(officehours)$$officehours$$else$TBD$endif$  &  Class Hours: $if(classhours)$$classhours$$else$TBD$endif$\\
 Office: $if(office)$$office$$else$TBD$endif$  & Class Room: $if(classroom)$$classroom$$else$TBD$endif$\\
 	&  \\
+
+$endif$
 	\hline
 	\end{tabular*}
 

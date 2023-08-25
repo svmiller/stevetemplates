@@ -2,6 +2,7 @@
 
 - `ekohist_thesis` is a limited-use R Markdown template for use in masters thesis in the Department of Economic History and International Relations at Stockholm University.
 - `article3` is a third article template largely inspired by Elsevier templates. Its designed to optimize information in the abstract section, scales (reasonably) well for the presence of many authors, and may be useful if you encounter a journal that (for reasons) insists on having author *addresses* in the title section of the paper.
+- `syllabus` has a "coteaching:" argument now, which might be a specialty hack only of interest to me. My current department doesn't have stable teaching hours or class rooms, but is also keen on co-teaching classes with one (or sometimes more) faculty members. Currently, that's really just one other faculty member that also teaches stuff for which I might be the "course responsible" teacher. Thus, this "coteaching" argument in the YAML will disable the web/class information and add contact information for the other faculty member co-teaching with me.
 
 # stevetemplates 0.9.0
 

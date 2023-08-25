@@ -9,10 +9,16 @@ title: "EH 0000: A Class with an R Markdown Syllabus"
 author: Steven V. Miller
 date: "Spring 2021"
 
+# coteaching: TRUE
 email: "steven.miller@ekohist.su.se"
-web: "svmiller.com/teaching"
 officehours: "\\shrug"
 office: "\\shrug"
+
+# email2: ""
+# officehours2: "\\shrug"
+# office2: "\\shrug"
+
+web: "svmiller.com/teaching"
 classroom: "\\shrug"
 classhours: "\\shrug"
 
