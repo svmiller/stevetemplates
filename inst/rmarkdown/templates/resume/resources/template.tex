@@ -321,7 +321,7 @@ $endif$
                     \affil{$author.affiliation$}
                 $endif$
             $endif$
-            $else$  
+            $else$
             \author{$author$}
         $endif$
     $endfor$
@@ -348,7 +348,7 @@ $endif$
 \makeatother
 
 % Use fontawesome. Note: you'll need TeXLive 2015. Update.
-$if(fontawesome)$\usepackage{fontawesome}$endif$
+$if(fontawesome)$\usepackage{fontawesome5}$endif$
 
 % Mess with sections
 \usepackage{titlesec}
@@ -366,7 +366,7 @@ $if(includephoto)$
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{tikzpagenodes}
-\usetikzlibrary{calc} 
+\usetikzlibrary{calc}
 $endif$
 
 
@@ -428,13 +428,13 @@ $endif$ % includephoto
 
 \flushleft{\footnotesize
 
-$if(email)$$if(fontawesome)$\faEnvelopeO \hspace{1 mm}$else$\emph{E-mail:}$endif$ \href{mailto:}{\tt $email$} \hspace{1 mm}$endif$
+$if(email)$$if(fontawesome)$\faEnvelope \hspace{1 mm}$else$\emph{E-mail:}$endif$ \href{mailto:}{\tt $email$} \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faPhone \hspace{1 mm}$else$\emph{Phone:}$endif$ $phone$ \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faMapMarker \hspace{1 mm}$else$\emph{Location:}$endif$ $location$ \hspace{1 mm}$endif$
 }
 \vspace{-1em}
 \flushleft{\footnotesize
-$if(web)$$if(fontawesome)$\faGlobe \hspace{1 mm}$else$\emph{Web:}$endif$ \href{http://$web$}{\tt $web$}  \hspace{1 mm}$endif$ 
+$if(web)$$if(fontawesome)$\faGlobe \hspace{1 mm}$else$\emph{Web:}$endif$ \href{http://$web$}{\tt $web$}  \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faTwitter \hspace{1 mm}$else$\emph{Twitter:}$endif$ \href{http://twitter.com/$twitter$}{\tt $twitter$} \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faLinkedin \hspace{1 mm}$else$\emph{LinkedIn:}$endif$ \href{https://www.linkedin.com/in/$linkedin$}{\tt $linkedin$} \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faGithub \hspace{1 mm}$else$\emph{Github:}$endif$ \href{http://github.com/$github$}{\tt $github$} \hspace{1 mm}$endif$
@@ -443,4 +443,3 @@ $if(email)$$if(fontawesome)$\faGithub \hspace{1 mm}$else$\emph{Github:}$endif$ \
 $body$
 
 \end{document}
-

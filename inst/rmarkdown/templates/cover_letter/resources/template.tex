@@ -413,7 +413,7 @@ $endif$
 
 $if(title)$
 \title{$title$$if(subtitle)$: $subtitle$$endif$$if(anonymous)$$else$$if(thanks)$\thanks{$thanks$} $endif$$endif$ }
-$endif$ 
+$endif$
 
 
 
@@ -460,7 +460,7 @@ $endif$
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={$if(anonymous)$$else$$for(author)$$author.name$ ($author.affiliation$)$sep$ and $endfor$$endif$},
-             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},
             pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
             colorlinks=true,
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
@@ -484,7 +484,7 @@ $endif$
 
 % This will better treat References as a section when using natbib
 % https://tex.stackexchange.com/questions/49962/bibliography-title-fontsize-problem-with-bibtex-and-the-natbib-package
-$if(natbib)$ 
+$if(natbib)$
 \renewcommand\bibsection{%
    \section*{References}%
    \markboth{\MakeUppercase{\refname}}{\MakeUppercase{\refname}}%
@@ -505,7 +505,7 @@ $endfor$
 
 \newtheorem{hypothesis}{Hypothesis}
 
-$if(fontawesome)$\usepackage{fontawesome}$else$$endif$
+$if(fontawesome)$\usepackage{fontawesome5}$else$$endif$
 
 \newcommand{\blankline}{\quad\pagebreak[2]}
 \usepackage{graphicx}
@@ -520,13 +520,13 @@ $if(fontawesome)$\usepackage{fontawesome}$else$$endif$
 {\bfseries $author$ }\\[.35ex]
 \emph{\small $address$} \\[.35ex]
 $if(phone)$$if(fontawesome)$\faPhone \hspace{1 mm}$else$$endif$ \small{$phone$} \\ $else$$endif$
-$if(email)$$if(fontawesome)$\faEnvelopeO \hspace{1 mm}$else$$endif$ \small{\tt $email$} \\ $else$$endif$
+$if(email)$$if(fontawesome)$\faEnvelope \hspace{1 mm}$else$$endif$ \small{\tt $email$} \\ $else$$endif$
 $if(url)$$if(fontawesome)$\faGlobe \hspace{1 mm}$else$$endif$ \small{\href{http://$url$}{\tt $url$}}\\ $else$$endif$
 \hspace{1cm} \\
 $if(date)$ $date$ \\ $else$$endif$
 \end{minipage}
 
-% \vspace*{1em} 
+% \vspace*{1em}
 
 $if(greetings)$
 \vspace*{1em}
@@ -535,11 +535,11 @@ $greetings$
 
 \vspace*{1em}
 
-$else$$endif$ 
+$else$$endif$
 
 % $if(date)$$date$
-% 
-% \vspace*{1em} 
+%
+% \vspace*{1em}
 % $else$$endif$
 
 % $if(pandocparas)$
@@ -589,4 +589,3 @@ $include-after$
 
 $endfor$
 \end{document}
-
