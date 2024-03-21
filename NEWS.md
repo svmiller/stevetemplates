@@ -1,3 +1,7 @@
+# stevetempaltes 1.1.0
+
+- `word` now has a custom footnote style, which simply decreases the font size from 12 to 9.
+
 # stevetemplates 1.0.0
 
 - `ekohist_thesis` is a limited-use R Markdown template for use in masters thesis in the Department of Economic History and International Relations at Stockholm University.
