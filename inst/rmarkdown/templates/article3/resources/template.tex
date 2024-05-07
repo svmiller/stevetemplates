@@ -514,8 +514,10 @@ $endif$
 
 
 
-
-\newtheorem{hypothesis}{Hypothesis}
+% Disabling this as of 7 May 2024
+% Rationale: I'm gradually pivoting more things outside boilerplate
+% R Markdown, and {bookdown} can do this if you ask it.
+% \newtheorem{hypothesis}{Hypothesis}
 
 $if(doublespacing)$
 \usepackage{setspace}
@@ -634,7 +636,7 @@ $if(anonymous)$
 $else$
 \vskip -14.5pt
 
-{\footnotesize 
+{\footnotesize
 
 
 \begingroup
@@ -649,22 +651,22 @@ $else$
 		\textsuperscript{$affils.code$} \emph{$affils.address/nowrap$}$sep$\par
 		$endfor$
 
-$endif$	
+$endif$
 \endgroup
 
 }
 
 $endif$ % this endif is for removing affils in (anonymous)
 
-% \vskip 8.5pt 
-% 
-% {\footnotesize 
-% 
+% \vskip 8.5pt
+%
+% {\footnotesize
+%
 % \begingroup
 % 	\noindent \emph{Email addresses:} $for(author)$
 % 		\textsuperscript{$author.order$} {\tt $author.email/nowrap$}$sep$,
 % 		$endfor$
-% 
+%
 % \endgroup
 % }
 
@@ -708,15 +710,15 @@ $else$ % if it's not anonymous, but it's still alternate layout
 \end{minipage}
 		\hfill
 		\begin{minipage}[t]{0.35\textwidth}
-		
+
 		$if(remove-emails)$$else$
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Contact Info}
 
-		
+
 		\vspace{8pt}
-			
+
 		{\footnotesize
-		
+
 		$if(solo-author)$
 		\noindent $for(author)$
 		{\tt $author.email/nowrap$}$sep$\par
@@ -729,33 +731,33 @@ $else$ % if it's not anonymous, but it's still alternate layout
 		}
 		\vskip 8.5pt
 		$endif$
-		
-		
-		
+
+
+
 		$if(remove-paper-info)$$else$
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Paper Info}
-		
+
 		\vspace{5pt}
-		
-		
+
+
 			{\footnotesize
-			
+
 			$for(paper-info)$$paper-info$$sep$\vspace{1.5pt}\par
 			$endfor$
-			
+
 			$if(keywords)$
-			
+
 			\vskip 8.5pt \noindent \emph{Keywords}: $keywords$ \par
 			$else$
 			$endif$
-			
+
 			}
 			$endif$
-			
-			
-			
+
+
+
 			\vskip 8.5pt
-		
+
 		\end{minipage}
 %\bottomrule
 %\rule[#1]{1pt}{#2}
@@ -818,12 +820,12 @@ $endif$
 		\hfill
 		\begin{minipage}[t]{0.35\textwidth}
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Author Info}
-		
+
 		\vspace{5pt}
-		
-	
+
+
 		{\footnotesize
-		
+
 		$if(solo-author)$
 		$for(affils)$
 		$affils.address/nowrap$$sep$\par
@@ -833,16 +835,16 @@ $endif$
 		\textsuperscript{$affils.code$} $affils.address/nowrap$$sep$\par
 		$endfor$
 		$endif$
-		
+
 
 		}
-		
 
-		
+
+
 		\vspace{8pt}
 			$if(remove-emails)$$else$
 		{\footnotesize
-		
+
 		$if(solo-author)$
 			\noindent $for(author)$
 		{\tt $author.email/nowrap$}$sep$\par
@@ -853,28 +855,28 @@ $endif$
 		$endfor$
 		$endif$
 		}
-		
+
 		$endif$
-		
+
 		\vskip 8.5pt
-		
+
 		$if(remove-paper-info)$$else$
 		\raisedrule[0.2em]{0.1pt}{\footnotesize Paper Info}
-		
+
 		\vspace{5pt}
-		
-		
+
+
 			{\footnotesize
-			
+
 			$for(paper-info)$$paper-info$$sep$\vspace{1.5pt}\par
 			$endfor$
-			
-			
+
+
 			}
 			$endif$
-			
+
 			\vskip 8.5pt
-		
+
 		\end{minipage}
 %\bottomrule
 %\rule[#1]{1pt}{#2}

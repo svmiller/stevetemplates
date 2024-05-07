@@ -1,6 +1,7 @@
-# stevetempaltes 1.1.0
+# stevetemplates 1.1.0
 
 - `word` now has a custom footnote style, which simply decreases the font size from 12 to 9.
+- `article3` no longer has a hypothesis theorem hard-coded to it. `{bookdown}` can do that, if you need it. Rationale: you also won't need it for the simplest of simple cases, or could add one yourself by way of `header-includes:`. 
 
 # stevetemplates 1.0.0
 
