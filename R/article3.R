@@ -5,11 +5,11 @@
 #' primer on this tutorial is available on my website
 #' <http://svmiller.com/blog/2023/05/a-third-rmarkdown-article-manuscript-template/>.
 #'
-#' If your version of TeX comes by way of Yihui Xie's \pkg{tinytex}, you'll want to
-#' additionally install the "xurl" library. Otherwise, you'll get a vague error about a
-#' missing LaTeX dependency. \code{tinytex::tlmgr_install("xurl")} should suffice. I
-#' thank Ian Adams and Cornelius Hennch for finding this issue and pointing to this
-#' solution.
+#' If your version of TeX comes by way of Yihui Xie's \pkg{tinytex}, you'll want
+#' to additionally install the "xurl" library. Otherwise, you'll get a vague
+#' error about a missing LaTeX dependency. \code{tinytex::tlmgr_install("xurl")}
+#' should suffice. I thank Ian Adams and Cornelius Hennch for finding this issue
+#' and pointing to this solution.
 #'
 #' # About YAML header fields
 #'
