@@ -19,6 +19,16 @@
 #' | `office` | Your office location. Technically optional, but you really should use it. |
 #' | `classroom` | The classroom location. Technically optional, but you really should use it. |
 #' | `classhours` | When/for how long the class meets in a given session. Technically optional, but you really should use it. |
+#' | `coteaching` | If TRUE, changes format to allow for a second (third, or fourth) co-teacher |
+#'
+#' # Additional Comments
+#'
+#' There is a nested conditionality for co-teachers. If `coteaching` is TRUE,
+#' format changes to allow a second teacher. Conditional on `coteaching` being
+#' TRUE *and* there being an `email3` entry, a third co-teacher is added and
+#' entries for the third teacher's office hours and office are assumed. If
+#' `coteaching` is TRUE, `email3` has an entry *and* there is an `email4` entry,
+#' a fourth co-teacher is added.
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Arguments to [`rmarkdown::pdf_document`].

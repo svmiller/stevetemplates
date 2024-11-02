@@ -194,6 +194,14 @@ Office Hours: $if(officehours)$$officehours$$else$TBD$endif$  &  Office Hours: $
 Office: $if(office)$$office$$else$TBD$endif$  & Office: $if(office2)$$office2$$else$TBD$endif$\\
 	&  \\
 
+$if(email3)$
+
+Email: \texttt{$email3$}  & $if(email4)$Email: \texttt{$email4$}$else$$endif$ \\
+Office Hours: $officehours3$  & $if(email4)$Office Hours: $officehours$$else$$endif$ \\
+Office: $office3$  & $if(email4)$Office: $office$$else$$endif$ \\
+
+	&  \\
+$else$$endif$
 $else$
 
 E-mail: $if(email)$\texttt{$email$}$else$TBD$endif$ & Web: $if(web)$\href{http://$web$}{\tt $web$}$else$TBD$endif$\\

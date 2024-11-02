@@ -371,6 +371,27 @@ $if(titlefont)$\setbeamerfont{frametitle}{family=\fontspec{$titlefont$}}$else$$e
 \draw (-0.1,0.2) to [out=15,in=-100] (0.4,0.95);
 \end{tikzpicture}}
 
+% cols environment, for column-hackery.
+
+\newenvironment{cols}[1][]{}{}
+
+\newenvironment{col}[1]{\begin{minipage}{#1}\ignorespaces}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+
 % header includes go last.
 
 $for(header-includes)$

@@ -31,6 +31,16 @@ includes code for a calendar. I discuss this here:
    \code{office} \tab Your office location. Technically optional, but you really should use it. \cr
    \code{classroom} \tab The classroom location. Technically optional, but you really should use it. \cr
    \code{classhours} \tab When/for how long the class meets in a given session. Technically optional, but you really should use it. \cr
+   \code{coteaching} \tab If TRUE, changes format to allow for a second (third, or fourth) co-teacher \cr
 }
+}
+
+\section{Additional Comments}{
+There is a nested conditionality for co-teachers. If \code{coteaching} is TRUE,
+format changes to allow a second teacher. Conditional on \code{coteaching} being
+TRUE \emph{and} there being an \code{email3} entry, a third co-teacher is added and
+entries for the third teacher's office hours and office are assumed. If
+\code{coteaching} is TRUE, \code{email3} has an entry \emph{and} there is an \code{email4} entry,
+a fourth co-teacher is added.
 }
 
