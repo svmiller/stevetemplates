@@ -1,6 +1,6 @@
-% CV2 ----
+% SYLLABUS 2 ----
 % This is just here so I know exactly what I'm looking at in Rstudio when messing with stuff.
-% Options for packages loaded elsewhere
+
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 $if(colorlinks)$
@@ -395,107 +395,13 @@ $if(logo)$
 $endif$
 $endif$
 
-% Now begins the stuff that I added.
-% ----------------------------------
+% Jesus, okay, everything above this comment is default Pandoc LaTeX template. -----
+% ----------------------------------------------------------------------------------
+% I think I had assumed beamer and LaTex were somehow different templates.
 
-% Custom section fonts
-% \usepackage{sectsty}
-% \sectionfont{\rmfamily\mdseries\large\bf\ulemheading}
-% \subsectionfont{\rmfamily\mdseries\normalsize\scshape}
+\usepackage[section]{placeins}
 
-\newenvironment{asbu}[0]{\par\leftskip=2em\rightskip=2em}{\par\medskip}
-\newenvironment{columns}[1][]{}{}
-
-%\let\paragraph\oldparagraph
-%\let\subparagraph\oldsubparagraph
-%\usepackage[nobottomtitles*]{titlesec}
-\usepackage[]{titlesec}
-
-\titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-\titleformat*{\subsection}{\bf \normalsize}
-
-
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}\par}
-
-\titlespacing{\section}{0pt}{15pt}{20pt}
-%
-% \newlength{\cslhangindent}
-% \setlength{\cslhangindent}{1.5em}
-% \newlength{\csllabelwidth}
-% \setlength{\csllabelwidth}{3em}
-% \newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
-%  {% don't indent paragraphs
-%   \setlength{\parindent}{0pt}
-%   % turn on hanging indent if param 1 is 1
-%   \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
-%   % set entry spacing
-%   \ifnum #2 > 0
-%   \setlength{\parskip}{#2\baselineskip}
-%   \fi
-%  }%
-%  {}
-% \usepackage{calc} % for \widthof, \maxof
-% \newcommand{\CSLBlock}[1]{#1\hfill\break}
-% \newcommand{\CSLLeftMargin}[1]{\parbox[t]{\maxof{\widthof{#1}}{\csllabelwidth}}{#1}}
-% \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth}{#1}}
-% \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-
-
-%\newcounter{refpubnum}
-
-\newcommand{\cvlist}{%
-% \begin{enumerate}[leftmargin=!,labelindent=5pt,itemindent=-15pt]
-
-    \rightmargin=0in
-    \leftmargin=0.15in
-    \topsep=0ex
-    \partopsep=0pt
-    \itemsep=0.2ex
-    \parsep=0pt
-    \itemindent=0.0\leftmargin
-    \listparindent=2.0\leftmargin
-    \settowidth{\labelsep}{~}
-%    \usecounter{refpubnum}
-    \leftskip=-10.1in
-    \parindent=-0.1in
-    % \labelindent=5p
-}
-
-
-% Make lists without bullets
-\renewenvironment{itemize}{
-  \begin{list}{}{
-    \setlength{\leftmargin}{1.5em}
-  }
-}{
-  \end{list}
-}
-
-
-% Make parskips rather than indent with lists.
-\usepackage{parskip}
-% \usepackage{titlesec}
-% \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
-% \titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{12pt plus 2pt minus 2pt}
-
-% Use fontawesome. Note: you'll need TeXLive 2015. Update.
-$if(fontawesome)$\usepackage{fontawesome5}$endif$
-%\usepackage{fontawesome5}
-
-% Fancyhdr, as I tend to do with these personal documents.
-\usepackage{fancyhdr,lastpage}
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.0pt}
-\renewcommand{\footrulewidth}{0.0pt}
-\lhead{}
-\chead{}
-\rhead{}
-\lfoot{}
-\cfoot{\scriptsize  $author-meta$ - $title$$if(updated)$$else$ - $if(rdateformat)$$rdateformat$$else$\apstylekinda\today$endif$$endif$}
-\rfoot{\scriptsize \thepage/{\hypersetup{linkcolor=black}\pageref{LastPage}}}
+\usepackage[fixed]{fontawesome5}
 
 % Always load hyperref last.
 \usepackage{hyperref}
@@ -523,46 +429,59 @@ $endif$
             breaklinks=true, bookmarks=true}
 \urlstyle{same}  % don't use monospace font for urls
 
-% Make AP style (kinda) dates for the updated/today field
-
-\usepackage{datetime}
-\newdateformat{apstylekinda}{%
-  \shortmonthname[\THEMONTH]. \THEDAY, \THEYEAR}
-
-% \emph{Updated:} \apstylekinda\today
-% ^ removed from that front bar.
-
-%\usepackage{orcidlink}
-\usepackage{academicons}
-\definecolor{orcidlogocol}{HTML}{A6CE39}
-% \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\aiOrcid}}}
-% \item \href{https://orcid.org/0000-0000-0000-0000}{\textcolor{orcidlogocol}{\aiOrcid} \hspace{2mm} orcid.org/0000-0000-0000-0000}
 \begin{document}
 
 
-\centerline{\huge \bf $author$}
-
-% \vspace{2 mm}
-%
-% \hrule
-%
-% \vspace{2 mm}
-\vspace{4 mm}
-
-
-$if(jobtitle)$\moveleft.5\hoffset\centerline{$jobtitle$}$endif$
-$if(address)$\moveleft.5\hoffset\centerline{$if(fontawesome)${\small \faMapMarker* \hspace{.5 mm}}$else$$endif$$address$}$endif$
-\moveleft.5\hoffset\centerline{ $if(email)$$if(fontawesome)${\small\faEnvelope[regular]\hspace{1 mm}}$else$\emph{E-mail:}$endif$ \href{mailto:}{\tt $email$} \hspace{1 mm}$endif$ $if(phone)$$if(fontawesome)${\small \faPhone \hspace{1 mm}}$else$\emph{Phone:}$endif$  $phone$  \hspace{1 mm} $endif$ $if(github)$$if(fontawesome)${\small\faGithubSquare \hspace{1 mm}}$else$\emph{Github:}$endif$ \href{http://github.com/$github$}{\tt $github$} \hspace{1 mm} $endif$  $if(twitter)$$if(fontawesome)$\faTwitter \hspace{1 mm}$else$\emph{Twitter:}$endif$ \href{https:/twitter.com/$twitter$}{\tt $twitter$} \hspace{1 mm} $endif$ $if(osf)$$if(fontawesome)$\aiOSF \hspace{1 mm}$else$\emph{osf:}$endif$ \href{https:/osf.io/$osf$}{\tt osf.io/$osf$} \hspace{1 mm} $endif$ $if(orcid)$$if(fontawesome)$\href{https://orcid.org/$orcid$}{\textcolor{orcidlogocol}{\aiOrcid}} \hspace{.5 mm}$else$\emph{ORCID:}$endif$ \href{https://orcid.org/$orcid$}{\tt $orcid$} \hspace{1 mm} $endif$ $if(web)$$if(fontawesome)${\small\faGlobe \hspace{1 mm}}$else$\emph{Web:}$endif$ \href{http://$web$}{\tt $web$}  $endif$ $if(updated)$ | \emph{Updated:} $if(rdateformat)$$rdateformat$$else$\apstylekinda\today$endif$$endif$}
 
 
 
-\vspace{2 mm}
-%
-% \hrule
+\thispagestyle{plain}
+
+\begin{flushleft}\Large \bf $title$  \end{flushleft}
+	\vspace{1 mm}
+$if(one-teacher)$
+$for(author)$$author.name$$endfor$
+ % \vskip 24.5pt
+$endif$
+
+$if(two-teachers)$
+$if(author/allbutlast)$
+$for(author/allbutlast)$
+{$author.name$$sep$$endfor$
+$for(author/last)$
+{ and $author.name$}$endfor$
+$else$
+${author.name/last}
+$endif$ % \vskip 24.5pt
+$endif$
+
+$if(n-teachers)$
+$if(author/allbutlast)$
+$for(author/allbutlast)$
+{$author.name$$sep$, $endfor$,
+$for(author/last)$
+{ and $author.name$}$endfor$
+$else$
+${author.name/last}
+$endif$ % \vskip 24.5pt
+$endif$
+
+
+{\small $if(dates)$$if(fontawesome)${\footnotesize\faCalendar*[regular]\hspace{.5 mm}}$else$\emph{Term:}$endif$ $dates$  \hspace{.5 mm} $endif$ $if(web)$$if(fontawesome)${\footnotesize\faGlobe \hspace{.5 mm}}$else$\emph{Web:}$endif$ \href{http://$web$}{\tt $web$}  \hspace{.5 mm} $endif$  $if(email)$$if(fontawesome)${\footnotesize\faEnvelope[regular]\hspace{.5 mm}}$else$\emph{E-mail:}$endif$ \href{mailto:}{\tt $email$} \hspace{.5 mm}$endif$ $if(office)$$if(fontawesome)${\footnotesize\faDoorOpen[regular]\hspace{.5 mm}}$else$\emph{Office:}$endif$ $office$ \hspace{.5 mm}$endif$ } \\
+
+% \blankline
+
+
+\hrule
+
+\vspace{6 mm}
 
 
 
 $body$
+
+
+
 
 $if(natbib)$
 $if(bibliography)$
@@ -580,6 +499,9 @@ $endif$
 $if(biblatex)$
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
 
+
+
+
 $endif$
 $for(include-after)$
 $include-after$
@@ -587,3 +509,14 @@ $include-after$
 $endfor$
 \end{document}
 
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+    {\fontsize{18}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+}
+%\fi
+\makeatother

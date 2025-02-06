@@ -5,6 +5,7 @@
 - `cv2` is an updated version of `cv`, which I use now for my academic CV.
 - `syllabus` now has the ability to add third and fourth co-teachers.
 - `beamer` has some hacks (sic) for two-column layouts.
+- `syllabus2` is another syllabus template for me now that I moved to Stockholm University and have a wildly different format to classes.
 
 # stevetemplates 1.0.0
 
