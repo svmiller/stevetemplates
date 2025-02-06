@@ -1,63 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://svmiller.com/404.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/authors.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/index.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/news/index.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/anonms.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/article.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/article2.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/article3.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/beamer.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/cover_letter.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/cv.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/cv2.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/ekohist_thesis.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/html_article.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/memo.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/resume.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/statement.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/syllabus.html</loc>
-  </url>
-  <url>
-    <loc>http://svmiller.com/reference/word.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>http://svmiller.com/404.html</loc></url>
+<url><loc>http://svmiller.com/authors.html</loc></url>
+<url><loc>http://svmiller.com/index.html</loc></url>
+<url><loc>http://svmiller.com/news/index.html</loc></url>
+<url><loc>http://svmiller.com/reference/anonms.html</loc></url>
+<url><loc>http://svmiller.com/reference/article.html</loc></url>
+<url><loc>http://svmiller.com/reference/article2.html</loc></url>
+<url><loc>http://svmiller.com/reference/article3.html</loc></url>
+<url><loc>http://svmiller.com/reference/beamer.html</loc></url>
+<url><loc>http://svmiller.com/reference/cover_letter.html</loc></url>
+<url><loc>http://svmiller.com/reference/cv.html</loc></url>
+<url><loc>http://svmiller.com/reference/cv2.html</loc></url>
+<url><loc>http://svmiller.com/reference/ekohist_thesis.html</loc></url>
+<url><loc>http://svmiller.com/reference/html_article.html</loc></url>
+<url><loc>http://svmiller.com/reference/index.html</loc></url>
+<url><loc>http://svmiller.com/reference/memo.html</loc></url>
+<url><loc>http://svmiller.com/reference/resume.html</loc></url>
+<url><loc>http://svmiller.com/reference/statement.html</loc></url>
+<url><loc>http://svmiller.com/reference/syllabus.html</loc></url>
+<url><loc>http://svmiller.com/reference/syllabus2.html</loc></url>
+<url><loc>http://svmiller.com/reference/word.html</loc></url>
 </urlset>
+
