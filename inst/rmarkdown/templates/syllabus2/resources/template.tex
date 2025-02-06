@@ -399,35 +399,215 @@ $endif$
 % ----------------------------------------------------------------------------------
 % I think I had assumed beamer and LaTex were somehow different templates.
 
+
+\usepackage{kantlipsum}
+
+\usepackage{abstract}
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center
+
+\renewenvironment{abstract}
+ {{%
+    \setlength{\leftmargin}{0mm}
+    \setlength{\rightmargin}{\leftmargin}%
+  }%
+  \relax}
+ {\endlist}
+
+\makeatletter
+\def\@maketitle{%
+  \newpage
+%  \null
+%  \vskip 2em%
+%  \begin{center}%
+  \let \footnote \thanks
+  $if(sansitup)$
+    {\fontsize{14.5}{20}\selectfont\bfseries\sffamily\raggedright  \setlength{\parindent}{0pt} \@title \par}%
+    $else$
+    {\fontsize{20}{20}\selectfont\raggedright  \setlength{\parindent}{0pt} \@title \par}
+    $endif$
+}
+%\fi
+\makeatother
+
+
+$if(title)$
+\title{$title$$if(subtitle)$: $subtitle$$endif$$if(anonymous)$$else$$if(thanks)$\thanks{$thanks$} $endif$$endif$ }
+$endif$
+
+\date{}
+
+\usepackage{titlesec}
+
+%\titleformat*{\section}{\large\bfseries$if(sansitup)$\sffamily\uppercase$else$$endif$}
+%\titleformat*{\subsection}{$if(sansitup)$\bfseries\sffamily$else$\normalsize\itshape$endif$} % \small\uppercase
+%\titleformat*{\subsubsection}{\normalsize\itshape}
+%\titleformat*{\paragraph}{\normalsize\itshape}
+%\titleformat*{\subparagraph}{\normalsize\itshape}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{6pt plus 2pt minus 2pt}
+\titleformat*{\subsubsection}{\normalsize\itshape}
+
+
+% add some other packages ----------
+
+% \usepackage{multicol}
+% This should regulate where figures float
+% See: https://tex.stackexchange.com/questions/2275/keeping-tables-figures-close-to-where-they-are-mentioned
 \usepackage[section]{placeins}
+
+
+
+\makeatletter
+\@ifpackageloaded{hyperref}{}{%
+\ifxetex
+  \PassOptionsToPackage{hyphens}{url}\usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \PassOptionsToPackage{hyphens}{url}\usepackage[draft,unicode=true]{hyperref}
+\fi
+}
+
+\@ifpackageloaded{color}{
+    \PassOptionsToPackage{usenames,dvipsnames}{color}
+}{%
+    \usepackage[usenames,dvipsnames]{color}
+}
+\makeatother
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={$if(removetitleabstract)$$else$$if(anonymous)$$else$$for(author)$$author.name$$sep$, $endfor$$endif$$endif$},
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},
+            pdftitle={$title$$if(subtitle)$: $subtitle$$endif$},
+            colorlinks=true,
+            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$magenta$endif$,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+
+% Add an option for endnotes. -----
+
+$if(endnotes)$
+\usepackage{endnotes}
+\renewcommand{\enotesize}{\normalsize}
+\let\footnote=\endnote
+$endif$
+
+$if(appendix)$
+\renewcommand*\thetable{$appendixletter$.\arabic{table}}
+\renewcommand*\thefigure{$appendixletter$.\arabic{figure}}
+$endif$
+
+% This will better treat References as a section when using natbib
+% https://tex.stackexchange.com/questions/49962/bibliography-title-fontsize-problem-with-bibtex-and-the-natbib-package
+$if(natbib)$
+\renewcommand\bibsection{%
+   \section*{References}%
+   \markboth{\MakeUppercase{\refname}}{\MakeUppercase{\refname}}%
+  }%
+$else$
+$endif$
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+
+% Disabling this as of 7 May 2024
+% Rationale: I'm gradually pivoting more things outside boilerplate
+% R Markdown, and {bookdown} can do this if you ask it.
+% \newtheorem{hypothesis}{Hypothesis}
+
+$if(doublespacing)$
+\usepackage{setspace}
+$else$
+$endif$
+
+% trick for moving figures to back of document
+% really wish we'd knock this shit off with moving tables/figures to back of document
+% but, alas...
+
+$if(anonymous)$
+\usepackage[notablist,nofiglist]{endfloat}
+\DeclareDelayedFloatFlavor{longtable}{table}
+$if(appendixletter)$
+\renewcommand\floatplace[1]{%
+  \begin{center}
+***\emph{\csname #1name\endcsname~$appendixletter$.\csname thepost#1\endcsname\ about here}***
+  \end{center}}
+$else$
+\renewcommand\floatplace[1]{%
+  \begin{center}
+***\emph{\csname #1name\endcsname~\csname thepost#1\endcsname\ about here}***
+  \end{center}}
+$endif$
+
+
+% \renewcommand\floatplace[1]{%
+%   \begin{center}
+% ***\emph{\csname #1name\endcsname~\csname thepost#1\endcsname\ about here}***
+%   \end{center}}
+% $else$
+% $endif$
+
+% Optional code chunks ------
+% SOURCE: https://stackoverflow.com/questions/50702942/does-rmarkdown-allow-captions-and-references-for-code-chunks
+$if(chunkcaption)$
+\usepackage{caption}
+\usepackage{floatrow}
+
+\DeclareNewFloatType{chunk}{placement=H, fileext=chk, name=}
+\captionsetup{options=chunk}
+\renewcommand{\thechunk}{Chunk~$if(appendix)$$appendixletter$.$else$$endif$\arabic{chunk}}
+\makeatletter
+\@addtoreset{chunk}{section}
+\makeatother
+$else$
+$endif$
+
+% stuff for article 3 ----
+
+\usepackage{tabularx}
+	\newcommand{\raisedrule}[3][0em]{\leavevmode\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill\kern0pt \;\;\small$if(sansitup)$\textsf{\textsc{#3}}$else$\textsc{#3}$endif$\;\; \leavevmode\leaders\hbox{\rule[#1]{1pt}{#2}}\hfill\kern0pt}
+
+\usepackage{longtable}
+\LTcapwidth=.95\textwidth
+%\linespread{1.05}
+
 
 \usepackage[fixed]{fontawesome5}
 
-% Always load hyperref last.
-\usepackage{hyperref}
-%\usepackage{color}
-$if(colorlinks)$
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
-$endif$
 
-%\definecolor{sublue}{rgb}{0,.18431,.37255}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lastpage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.0pt}
 
-\hypersetup{unicode=true,
-$if(title-meta)$
-            pdftitle={$if(author-meta)$$author-meta$: $endif$ $title-meta$ (Curriculum Vitae)},
-$endif$
-$if(author-meta)$
-            pdfauthor={$author-meta$},
-$endif$
-$if(keywords)$
-            pdfkeywords={$for(keywords)$$keywords$$sep$; $endfor$},
-$endif$
-            colorlinks=true,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$blue$endif$,
-            citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$blue$endif$,
-            breaklinks=true, bookmarks=true}
-\urlstyle{same}  % don't use monospace font for urls
+\lhead{}
+\chead{}
+\rhead{\footnotesize $title$ -- $term$}
+\lfoot{}
+\cfoot{\small \thepage/\pageref*{LastPage}}
+\rfoot{}
+
+\fancypagestyle{firststyle}
+{
+\renewcommand{\headrulewidth}{0pt}%
+   \fancyhf{}
+   \fancyfoot[C]{\small \thepage/\pageref*{LastPage}}
+}
+
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
 
 \begin{document}
 
@@ -435,7 +615,7 @@ $endif$
 
 
 
-\thispagestyle{plain}
+\thispagestyle{firststyle}
 
 \begin{flushleft}\Large \bf $title$  \end{flushleft}
 	\vspace{1 mm}
@@ -467,14 +647,14 @@ $endif$ % \vskip 24.5pt
 $endif$
 
 
-{\small $if(dates)$$if(fontawesome)${\footnotesize\faCalendar*[regular]\hspace{.5 mm}}$else$\emph{Term:}$endif$ $dates$  \hspace{.5 mm} $endif$ $if(web)$$if(fontawesome)${\footnotesize\faGlobe \hspace{.5 mm}}$else$\emph{Web:}$endif$ \href{http://$web$}{\tt $web$}  \hspace{.5 mm} $endif$  $if(email)$$if(fontawesome)${\footnotesize\faEnvelope[regular]\hspace{.5 mm}}$else$\emph{E-mail:}$endif$ \href{mailto:}{\tt $email$} \hspace{.5 mm}$endif$ $if(office)$$if(fontawesome)${\footnotesize\faDoorOpen[regular]\hspace{.5 mm}}$else$\emph{Office:}$endif$ $office$ \hspace{.5 mm}$endif$ } \\
+{\small$if(dates)$$if(fontawesome)${\footnotesize\faCalendar*[regular]\hspace{.25 mm}}$else$\emph{Term: }$endif$$dates$\hspace{.25 mm}$endif$ $if(web)$$if(fontawesome)${\footnotesize\faGlobe\hspace{.25 mm}}$else$\emph{Web: }$endif$\href{http://$web$}{\tt $web$} \hspace{.25 mm}$endif$  $if(email)$$if(fontawesome)${\footnotesize\faEnvelope[regular]\hspace{.25 mm}}$else$\emph{E-mail: }$endif$\href{mailto:}{\tt $email$} \hspace{.25 mm}$endif$ $if(office)$$if(fontawesome)${\footnotesize\faDoorOpen\hspace{.25 mm}}$else$\emph{Office: }$endif$ $office$ \hspace{.25 mm}$endif$ } \\
 
 % \blankline
 
 
 \hrule
 
-\vspace{6 mm}
+\vspace{2 mm}
 
 
 

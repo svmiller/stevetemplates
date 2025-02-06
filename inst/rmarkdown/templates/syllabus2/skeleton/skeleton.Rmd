@@ -1,29 +1,32 @@
 ---
 output: 
-    stevetemplates::syllabus2:
-    latex_engine: xelatex
+  stevetemplates::syllabus2:
     dev: cairo_pdf
-geometry: margin=1in
+geometry: margin=2.5cm
 
-title: "IRII.2: New Approaches to European Security Cooperation"
+title: "IRII.2: A Class on This, That, and the Other"
 author:
 - name: Steven V. Miller
-affiliation: Department of Economic History and International Relations, Stockholm University
-email: "steven.miller@su.se"
+
 
 fontawesome: TRUE
 
-dates: "Feb. 12 - March 21"
+term: "Spring 2025"
+dates: "Feb. 20 - March 21"
+email: "steven.miller@su.se"
 web: svmiller.com
 office: Södra Huset A 916
 
-linkcolor: blue
-urlcolor: blue
-
-fontfamily: cochineal
+mainfont: cochineal
 fontsize: 11pt
 one-teacher: TRUE
+
+header-includes:
+   - \linespread{1.05}
+   - \LTcapwidth=.95\textwidth
+
 ---
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ipsum vel lacus eleifend ultrices. Donec metus lectus, pulvinar faucibus pretium id, sollicitudin vel purus. Nulla et metus eu quam tincidunt interdum. Phasellus mi urna, pellentesque et auctor nec, pharetra ultrices ex. Curabitur pretium velit porttitor risus efficitur condimentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras et semper elit. Ut interdum semper venenatis. Nunc vitae massa ut ipsum laoreet posuere. Nulla non libero sed risus finibus mollis a at tellus. Suspendisse egestas sodales lorem. Vivamus eu massa quis lacus blandit mattis. Proin consectetur nunc at elit egestas scelerisque. Morbi vitae metus metus.
 
 Donec mi felis, placerat vitae metus eu, lobortis suscipit quam. Vivamus finibus aliquam tempus. Nulla interdum interdum risus ut rhoncus. Nulla interdum ligula ac ligula porta convallis. Duis rutrum ante quis dolor dignissim maximus. Phasellus at vulputate tortor, vitae laoreet felis. Pellentesque sed orci vulputate, vestibulum magna et, tincidunt justo. Sed elementum libero quis sapien vestibulum, sit amet consectetur est porttitor. Etiam in turpis in erat vehicula sollicitudin id eget libero. Suspendisse potenti. Phasellus in felis nibh. Proin laoreet laoreet arcu accumsan finibus.

@@ -1,10 +1,8 @@
 #' Steve's 2nd Syllabus Template
 #'
-#' This is the R Markdown template I use for my syllabi. For
-#' a discussion of some of its features, see here:
-#' <http://svmiller.com/blog/2016/07/r-markdown-syllabus/>. The skeleton also
-#' includes code for a calendar. I discuss this here:
-#' <http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/>
+#' This is the R Markdown template I use for my syllabi at Stockholm University.
+#' Classes are structured a lot differently here, so a lot of what I'd like to
+#' do or aspire to do has to change.
 #'
 #' # About YAML header fields
 #'
@@ -12,23 +10,21 @@
 #' | ------ | ----------- |
 #' | `title` | Title of the class |
 #' | `author` | Name(s) of the professor(s) |
-#' | `date` | The semester |
-#' | `email` | Your email. Technically optional, but you really should use it. |
+#' | `term` | The term of the class (e.g. Fall 2024, Spring 2025, Summer 2025) |
+#' | `dates` | A basic date range for the course (e.g. Feb. 20 - March 21) |
+#' | `fontawesome` | Logical, defaults to TRUE, for use of Font Awesome icons |
+#' | `email` | The email for the "course responsible" professor. It's a thing here. |
 #' | `web` | Class website. Technically optional, but you really should use it. |
-#' | `officehours` | Your office hours. Technically optional, but you really should use it. |
 #' | `office` | Your office location. Technically optional, but you really should use it. |
-#' | `classroom` | The classroom location. Technically optional, but you really should use it. |
-#' | `classhours` | When/for how long the class meets in a given session. Technically optional, but you really should use it. |
-#' | `coteaching` | If TRUE, changes format to allow for a second (third, or fourth) co-teacher |
+#' | `one-teacher` | Specify this argument in the YAML as `TRUE` for classes with one professor. |
+#' | `two-teachers` | Specify this argument in the YAML as `TRUE` for classes with two professors. Has implications for formatting. |
+#' | `n-teachers` | Specify this argument in the YAML as `TRUE` for classes with more than two professors. Has implications for formatting. |
 #'
 #' # Additional Comments
 #'
-#' There is a nested conditionality for co-teachers. If `coteaching` is TRUE,
-#' format changes to allow a second teacher. Conditional on `coteaching` being
-#' TRUE *and* there being an `email3` entry, a third co-teacher is added and
-#' entries for the third teacher's office hours and office are assumed. If
-#' `coteaching` is TRUE, `email3` has an entry *and* there is an `email4` entry,
-#' a fourth co-teacher is added.
+#' XeLaTeX is imposed by a standard use in RStudio. The one-/two-/n-teacher hack
+#' is inspired by hackery in `article3` in this same package. Specify only one
+#' of those.
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Arguments to [`rmarkdown::pdf_document`].
@@ -38,6 +34,7 @@
 syllabus2 <- function(...){
   templ <- system.file("rmarkdown", "templates", "syllabus2", "resources", "template.tex", package = "stevetemplates")
   rmarkdown::pdf_document(template = templ,
+                          latex_engine = "xelatex",
                           ...)
 }
 
