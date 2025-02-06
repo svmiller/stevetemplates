@@ -22,7 +22,7 @@
 #'
 #' # Additional Comments
 #'
-#' XeLaTeX is imposed by a standard use in RStudio. The one-/two-/n-teacher hack
+#' XeLaTeX is imposed by a standard use in RStudio. The one-/two-/n-teacher(s) hack
 #' is inspired by hackery in `article3` in this same package. Specify only one
 #' of those.
 #'
