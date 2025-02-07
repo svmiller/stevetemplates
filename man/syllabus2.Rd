@@ -13,34 +13,36 @@ templ_syllabus2()
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}
 }
 \description{
-This is the R Markdown template I use for my syllabi. For
-a discussion of some of its features, see here:
-\url{http://svmiller.com/blog/2016/07/r-markdown-syllabus/}. The skeleton also
-includes code for a calendar. I discuss this here:
-\url{http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/}
+This is the R Markdown template I use for my syllabi at Stockholm University.
+Classes are structured a lot differently here, so a lot of what I'd like to
+do or aspire to do has to change.
 }
 \section{About YAML header fields}{
 \tabular{ll}{
    FIELD \tab DESCRIPTION \cr
    \code{title} \tab Title of the class \cr
    \code{author} \tab Name(s) of the professor(s) \cr
-   \code{date} \tab The semester \cr
-   \code{email} \tab Your email. Technically optional, but you really should use it. \cr
+   \code{term} \tab The term of the class (e.g. Fall 2024, Spring 2025, Summer 2025) \cr
+   \code{dates} \tab A basic date range for the course (e.g. Feb. 20 - March 21) \cr
+   \code{fontawesome} \tab Logical, defaults to TRUE, for use of Font Awesome icons \cr
+   \code{email} \tab The email for the "course responsible" professor. It's a thing here. \cr
    \code{web} \tab Class website. Technically optional, but you really should use it. \cr
-   \code{officehours} \tab Your office hours. Technically optional, but you really should use it. \cr
    \code{office} \tab Your office location. Technically optional, but you really should use it. \cr
-   \code{classroom} \tab The classroom location. Technically optional, but you really should use it. \cr
-   \code{classhours} \tab When/for how long the class meets in a given session. Technically optional, but you really should use it. \cr
-   \code{coteaching} \tab If TRUE, changes format to allow for a second (third, or fourth) co-teacher \cr
+   \code{one-teacher} \tab Specify this argument in the YAML as TRUE for classes with one professor. \cr
+   \code{two-teachers} \tab Specify this argument in the YAML as TRUE for classes with two professors. Has implications for formatting. \cr
+   \code{n-teachers} \tab Specify this argument in the YAML as TRUE for classes with more than two professors. Has implications for formatting. \cr
 }
 }
 
 \section{Additional Comments}{
-There is a nested conditionality for co-teachers. If \code{coteaching} is TRUE,
-format changes to allow a second teacher. Conditional on \code{coteaching} being
-TRUE \emph{and} there being an \code{email3} entry, a third co-teacher is added and
-entries for the third teacher's office hours and office are assumed. If
-\code{coteaching} is TRUE, \code{email3} has an entry \emph{and} there is an \code{email4} entry,
-a fourth co-teacher is added.
+XeLaTeX is imposed by a standard use in RStudio. The one-/two-/n-teacher(s) hack
+is inspired by hackery in \code{article3} in this same package. Specify only one
+of those.
+
+The Font Awesome package in LaTeX is \code{fontawesome5}.
+
+The "author" argument should be used as if there were potentially multiple
+professors (even if there is just the one). You'll see what I mean in the
+skeleton file.
 }
 

@@ -30,6 +30,10 @@
 #' `coteaching` is TRUE, `email3` has an entry *and* there is an `email4` entry,
 #' a fourth co-teacher is added.
 #'
+#' In the case of the above nested conditionality for co-teachers, be advised this
+#' was a hacky (sic) solution until I got too frustrated with doing it this way.
+#' You may want to look at the `syllabus2` template in the same package.
+#'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Arguments to [`rmarkdown::pdf_document`].
 #' @md

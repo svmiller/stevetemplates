@@ -42,5 +42,9 @@ TRUE \emph{and} there being an \code{email3} entry, a third co-teacher is added 
 entries for the third teacher's office hours and office are assumed. If
 \code{coteaching} is TRUE, \code{email3} has an entry \emph{and} there is an \code{email4} entry,
 a fourth co-teacher is added.
+
+In the case of the above nested conditionality for co-teachers, be advised this
+was a hacky (sic) solution until I got too frustrated with doing it this way.
+You may want to look at the \code{syllabus2} template in the same package.
 }
 

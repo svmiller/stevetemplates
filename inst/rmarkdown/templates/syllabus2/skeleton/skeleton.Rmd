@@ -7,7 +7,10 @@ geometry: margin=2.5cm
 title: "IRII.2: A Class on This, That, and the Other"
 author:
 - name: Steven V. Miller
+# - name: Forename diMcPatronymixsonovez
+# - name: A Graduate Student
 
+one-teacher: TRUE
 
 fontawesome: TRUE
 
@@ -19,7 +22,6 @@ office: Södra Huset A 916
 
 mainfont: cochineal
 fontsize: 11pt
-one-teacher: TRUE
 
 header-includes:
    - \linespread{1.05}

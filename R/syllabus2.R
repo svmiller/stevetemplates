@@ -16,15 +16,21 @@
 #' | `email` | The email for the "course responsible" professor. It's a thing here. |
 #' | `web` | Class website. Technically optional, but you really should use it. |
 #' | `office` | Your office location. Technically optional, but you really should use it. |
-#' | `one-teacher` | Specify this argument in the YAML as `TRUE` for classes with one professor. |
-#' | `two-teachers` | Specify this argument in the YAML as `TRUE` for classes with two professors. Has implications for formatting. |
-#' | `n-teachers` | Specify this argument in the YAML as `TRUE` for classes with more than two professors. Has implications for formatting. |
+#' | `one-teacher` | Specify this argument in the YAML as TRUE for classes with one professor. |
+#' | `two-teachers` | Specify this argument in the YAML as TRUE for classes with two professors. Has implications for formatting. |
+#' | `n-teachers` | Specify this argument in the YAML as TRUE for classes with more than two professors. Has implications for formatting. |
 #'
 #' # Additional Comments
 #'
 #' XeLaTeX is imposed by a standard use in RStudio. The one-/two-/n-teacher(s) hack
 #' is inspired by hackery in `article3` in this same package. Specify only one
 #' of those.
+#'
+#' The Font Awesome package in LaTeX is `fontawesome5`.
+#'
+#' The "author" argument should be used as if there were potentially multiple
+#' professors (even if there is just the one). You'll see what I mean in the
+#' skeleton file.
 #'
 #' @inheritParams rmarkdown::pdf_document
 #' @param ... Arguments to [`rmarkdown::pdf_document`].
