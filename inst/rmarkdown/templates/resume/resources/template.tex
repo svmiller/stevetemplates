@@ -192,21 +192,51 @@ $else$
 \makesavenoteenv{longtable}
 $endif$
 $endif$
+
+% --------------------------------
+% Separating this because this no
+% longer works as of pandoc 3.2.1
+% -------------------------------
+%$if(graphics)$
+%\usepackage{graphicx}
+%\makeatletter
+%\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+%\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+%\makeatother
+%% Scale images if necessary, so that they will not overflow the page
+%% margins by default, and it is still possible to overwrite the defaults
+%% using explicit options in \includegraphics[width, height, ...]{}
+%\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+%% Set default figure placement to htbp
+%\makeatletter
+%\def\fps@figure{htbp}
+%\makeatother
+%$endif$
+
+% ---------------------------------
+% This works now: HT: Justin Esarey
+% ---------------------------------
 $if(graphics)$
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 $endif$
+
+% ^ saving this note in case I want some kind of conditional operation thingie.
+% Note: I don't think you really need this, but I'll include it here just in case.
+
 $if(links-as-notes)$
 % Make links footnotes instead of hotlinks:
 \DeclareRobustCommand{\href}[2]{#2\footnote{\url{#1}}}
@@ -321,7 +351,7 @@ $endif$
                     \affil{$author.affiliation$}
                 $endif$
             $endif$
-            $else$  
+            $else$
             \author{$author$}
         $endif$
     $endfor$
@@ -366,7 +396,7 @@ $if(includephoto)$
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{tikzpagenodes}
-\usetikzlibrary{calc} 
+\usetikzlibrary{calc}
 $endif$
 
 
@@ -434,7 +464,7 @@ $if(email)$$if(fontawesome)$\faMapMarker \hspace{1 mm}$else$\emph{Location:}$end
 }
 \vspace{-1em}
 \flushleft{\footnotesize
-$if(web)$$if(fontawesome)$\faGlobe \hspace{1 mm}$else$\emph{Web:}$endif$ \href{http://$web$}{\tt $web$}  \hspace{1 mm}$endif$ 
+$if(web)$$if(fontawesome)$\faGlobe \hspace{1 mm}$else$\emph{Web:}$endif$ \href{http://$web$}{\tt $web$}  \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faTwitter \hspace{1 mm}$else$\emph{Twitter:}$endif$ \href{http://twitter.com/$twitter$}{\tt $twitter$} \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faLinkedin \hspace{1 mm}$else$\emph{LinkedIn:}$endif$ \href{https://www.linkedin.com/in/$linkedin$}{\tt $linkedin$} \hspace{1 mm}$endif$
 $if(email)$$if(fontawesome)$\faGithub \hspace{1 mm}$else$\emph{Github:}$endif$ \href{http://github.com/$github$}{\tt $github$} \hspace{1 mm}$endif$
