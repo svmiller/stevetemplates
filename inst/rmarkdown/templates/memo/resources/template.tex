@@ -12,7 +12,7 @@ $endif$
 \newcommand{\blankline}{\quad\pagebreak[2]}
 
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}} 
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \usepackage{longtable,booktabs}
 
 \usepackage{parskip}
@@ -25,8 +25,8 @@ $endif$
 
 %\setlength{\parindent}{0pt}
 %\setlength{\parskip}{6pt plus 2pt minus 1pt}
-%\setlength{\emergencystretch}{3em}  % prevent overfull lines 
-\setlength{\parskip}{12pt} 
+%\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setlength{\parskip}{12pt}
 
 \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -36,7 +36,7 @@ $endif$
 \pagestyle{fancy}
 \usepackage{lastpage}
 \renewcommand{\headrulewidth}{0.0pt}
-\renewcommand{\footrulewidth}{0.0pt} 
+\renewcommand{\footrulewidth}{0.0pt}
 
 \lhead{}
 \chead{}
@@ -81,7 +81,7 @@ $endif$
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={$from$},
-             pdfkeywords = {$if(keywords)$$keywords$$endif$},  
+             pdfkeywords = {$if(keywords)$$keywords$$endif$},
             pdftitle={$subject$},
             colorlinks=true,
             citecolor=$if(citecolor)$$citecolor$$else$blue$endif$,
@@ -109,18 +109,45 @@ $if(tables)$
 \usepackage{longtable}
 $endif$
 
+% --------------------------------
+% Separating this because this no
+% longer works as of pandoc 3.2.1
+% -------------------------------
+%$if(graphics)$
+%\usepackage{graphicx}
+%% We will generate all images so they have a width \maxwidth. This means
+%% that they will get their normal width if they fit onto the page, but
+%% are scaled down if they would overflow the margins.
+%\makeatletter
+%\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+%\else\Gin@nat@width\fi}
+%\makeatother
+%\let\Oldincludegraphics\includegraphics
+%\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
+%$endif$
+
+% ---------------------------------
+% This works now: HT: Justin Esarey
+% ---------------------------------
 $if(graphics)$
 \usepackage{graphicx}
-% We will generate all images so they have a width \maxwidth. This means
-% that they will get their normal width if they fit onto the page, but
-% are scaled down if they would overflow the margins.
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
-\else\Gin@nat@width\fi}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
 \makeatother
-\let\Oldincludegraphics\includegraphics
-\renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=\maxwidth]{#1}}
 $endif$
+
+% ^ saving this note in case I want some kind of conditional operation thingie.
 
 
 $if(natbib)$
@@ -138,7 +165,7 @@ $if(listings)$
 \usepackage{listings}
 $endif$
 
-\usepackage{setspace} 
+\usepackage{setspace}
 
 $if(graphics)$
 \usepackage[export]{adjustbox}
@@ -151,11 +178,11 @@ $endfor$
 
 
 \def\citeapos#1{\citeauthor{#1}'s (\citeyear{#1})}
-\begin{document}  
+\begin{document}
 
 
 
-\thispagestyle{plain} 
+\thispagestyle{plain}
 % Here's where it starts to differ from my statement template ----
 
 $if(graphics)$$if(logo)$\Oldincludegraphics[width=$if(width)$$width$$else$0.3$endif$\textwidth, $if(logoposition)$$logoposition$$else$right$endif$]{$logo$}$else$$endif$$endif$
@@ -164,7 +191,7 @@ $if(graphics)$$if(logo)$\Oldincludegraphics[width=$if(width)$$width$$else$0.3$en
 
 
 $if(memorandum)$
-\begin{center} 
+\begin{center}
 \Large \bfseries{\scshape{Memorandum}}
 \end{center}
 $endif$
@@ -190,7 +217,7 @@ $endif$
 
 
 \vspace{6 mm}
-	
+
 
 
 $body$
