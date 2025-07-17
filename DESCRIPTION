@@ -2,7 +2,7 @@ Package: stevetemplates
 Type: Package
 Title: Steve's R Markdown Templates
 Depends: R (>= 3.5.0)
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: person("Steven", "Miller",
                   email = "steve@svmiller.com", 
                   role = c("aut", "cre"),

@@ -1,3 +1,7 @@
+# stevetemplates 1.2.0
+
+All LaTeX documents have a graphics fix to which I credit Justin Esarey. Issue [#20](https://github.com/svmiller/stevetemplates/issues/20) summarizes the issue as it was relayed to me by email. This now assumes the user has a version of Pandoc greater than 3.2.1. I don't think this is a major problem as I'm usually the one not updating things like this unless it were absolutely necessary.
+
 # stevetemplates 1.1.0
 
 - `word` now has a custom footnote style, which simply decreases the font size from 12 to 9.
