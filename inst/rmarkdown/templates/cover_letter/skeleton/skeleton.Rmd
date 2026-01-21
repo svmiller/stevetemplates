@@ -3,6 +3,7 @@ output: stevetemplates::cover_letter
 geometry: margin=1in
 header-includes:
   - \linespread{1.05}
+  - \usepackage{xurl}
 
 author: Steven V. Miller
 address: |
