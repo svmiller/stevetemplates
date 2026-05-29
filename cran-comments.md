@@ -9,3 +9,7 @@ R CMD check done via `devtools::check()`, resulting in 0 errors, 0 warnings, 0 n
 ## Downstream dependencies
 
 This is a simple template package with no downstream dependencies to note.
+
+## Feedback Upon Initial Rejection
+
+I earnestly tried to catch all the URL redirects but somehow the `devtools::check()` did not find that one.

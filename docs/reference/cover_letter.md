@@ -1,8 +1,6 @@
 # Steve's (Non-Academic) Cover Letter Template
 
-A template for cover letters when applying for non-academic jobs. For
-more information, see here:
-<https://twitter.com/stevenvmiller/status/1320831949469065218>. This
+A template for cover letters when applying for non-academic jobs. This
 template will force the use of `xelatex`.
 
 ## Usage

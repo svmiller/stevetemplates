@@ -13,9 +13,8 @@ templ_cover_letter()
 \item{...}{Arguments to \code{\link[rmarkdown:pdf_document]{rmarkdown::pdf_document}}.}
 }
 \description{
-A template for cover letters when applying for non-academic jobs. For more information, see here:
-\url{https://twitter.com/stevenvmiller/status/1320831949469065218}. This template will force the use of
-\code{xelatex}.
+A template for cover letters when applying for non-academic jobs. This
+template will force the use of \code{xelatex}.
 }
 \section{About YAML header fields}{
 This section documents some of the YAML fields to know
