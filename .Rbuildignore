@@ -10,3 +10,5 @@ vignettes/
 vignettes
 _dross
 ^CRAN-SUBMISSION$
+^\.positai$
+^\.claude$

@@ -1,6 +1,9 @@
+
 # stevetemplates 1.3.0
 
 - `syllabus2` now has "normal-size" for subsections.
+- `article3` fixes an endnote issue and updates formatting for use of CSL.
+- `article2` updates formatting for use of CSL.
 
 # stevetemplates 1.2.0
 

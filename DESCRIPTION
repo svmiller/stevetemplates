@@ -2,7 +2,7 @@ Package: stevetemplates
 Type: Package
 Title: Steve's R Markdown Templates
 Depends: R (>= 3.5.0)
-Version: 1.2.0
+Version: 1.2.9
 Authors@R: person("Steven", "Miller",
                   email = "steve@svmiller.com", 
                   role = c("aut", "cre"),
@@ -15,6 +15,6 @@ License: GPL-2
 Encoding: UTF-8
 Imports:
     rmarkdown
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Suggests: 
     testthat
