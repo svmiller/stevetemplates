@@ -15,9 +15,9 @@ templ_syllabus()
 \description{
 This is the R Markdown template I use for my syllabi. For
 a discussion of some of its features, see here:
-\url{http://svmiller.com/blog/2016/07/r-markdown-syllabus/}. The skeleton also
+\url{https://svmiller.com/blog/2016/07/r-markdown-syllabus/}. The skeleton also
 includes code for a calendar. I discuss this here:
-\url{http://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/}
+\url{https://svmiller.com/blog/2020/08/a-ggplot-calendar-for-your-semester/}
 }
 \section{About YAML header fields}{
 \tabular{ll}{

@@ -14,7 +14,7 @@ templ_article2()
 }
 \description{
 Another template for academic articles/manuscripts. For more information, see here:
-\url{http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/}. Please note
+\url{https://svmiller.com/blog/2020/09/another-rmarkdown-article-template/}. Please note
 that \code{xelatex} is functionally required for this template/function.
 }
 \details{

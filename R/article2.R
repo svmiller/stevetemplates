@@ -1,7 +1,7 @@
 #' Steve's 2nd Article/Manuscript Template
 #'
 #' Another template for academic articles/manuscripts. For more information, see here:
-#' <http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/>. Please note
+#' <https://svmiller.com/blog/2020/09/another-rmarkdown-article-template/>. Please note
 #' that `xelatex` is functionally required for this template/function.
 #'
 #' If your version of TeX comes by way of Yihui Xie's \pkg{tinytex}, you'll want to

@@ -1,7 +1,7 @@
 # Steve's Academic CV Template
 
 A template for academic CVs. For more information, see here:
-<http://svmiller.com/blog/2016/03/svm-r-markdown-cv/>.
+<https://svmiller.com/blog/2016/03/svm-r-markdown-cv/>.
 
 ## Usage
 

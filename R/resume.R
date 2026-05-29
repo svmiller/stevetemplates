@@ -1,7 +1,7 @@
 #' Steve's Non-Academic Résumé Template:
 #'
 #' A template for non-academic résumés . For more information, see here:
-#' <http://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/>.
+#' <https://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/>.
 #' Do note that `xelatex` is functionally required for this template.
 #'
 #' # About YAML header fields

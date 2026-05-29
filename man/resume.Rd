@@ -14,7 +14,7 @@ templ_resume()
 }
 \description{
 A template for non-academic résumés . For more information, see here:
-\url{http://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/}.
+\url{https://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/}.
 Do note that \code{xelatex} is functionally required for this template.
 }
 \section{About YAML header fields}{

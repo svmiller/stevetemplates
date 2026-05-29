@@ -3,7 +3,7 @@
 Another template for academic articles/manuscripts. Please note that
 `xelatex` is functionally required for this template/function. An
 (incomplete) primer on this tutorial is available on my website
-<http://svmiller.com/blog/2023/05/a-third-rmarkdown-article-manuscript-template/>.
+<https://svmiller.com/blog/2023/05/a-third-rmarkdown-article-manuscript-template/>.
 
 ## Usage
 

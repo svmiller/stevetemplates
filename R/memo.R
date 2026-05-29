@@ -1,7 +1,7 @@
 #' Steve's Memo Template
 #'
 #' A template for memos. For more information, see here:
-#' <http://svmiller.com/blog/2019/06/r-markdown-memo-template/>.
+#' <https://svmiller.com/blog/2019/06/r-markdown-memo-template/>.
 #'
 #' # About YAML header fields
 #'

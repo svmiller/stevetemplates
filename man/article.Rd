@@ -14,7 +14,7 @@ templ_article()
 }
 \description{
 A template for academic articles/manuscripts. For more information, see here:
-\url{http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/}.
+\url{https://svmiller.com/blog/2020/09/another-rmarkdown-article-template/}.
 }
 \section{About YAML header fields}{
 This section documents some of the YAML fields to know

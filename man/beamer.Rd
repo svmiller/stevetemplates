@@ -15,7 +15,7 @@ templ_beamer()
 \description{
 This is the R Markdown template I use for in-class or in-person presentations. For
 a discussion of some of its features, see here:
-\url{http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/}.
+\url{https://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/}.
 }
 \details{
 Note that \code{xelatex} is not required for this template but is heavily suggested. If

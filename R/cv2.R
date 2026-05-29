@@ -2,7 +2,7 @@
 #'
 #' A template for academic CVs. This is an evolution of the first one, though
 #' has slightly different aesthetic features you can see for yourself. For more
-#' information, see here: <http://svmiller.com/blog/2016/03/svm-r-markdown-cv/>.
+#' information, see here: <https://svmiller.com/blog/2016/03/svm-r-markdown-cv/>.
 #'  You can also check my current CV.
 #'
 #' # About YAML header fields

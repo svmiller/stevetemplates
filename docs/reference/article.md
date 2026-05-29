@@ -2,7 +2,7 @@
 
 A template for academic articles/manuscripts. For more information, see
 here:
-<http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/>.
+<https://svmiller.com/blog/2020/09/another-rmarkdown-article-template/>.
 
 ## Usage
 

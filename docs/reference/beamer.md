@@ -2,7 +2,7 @@
 
 This is the R Markdown template I use for in-class or in-person
 presentations. For a discussion of some of its features, see here:
-<http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/>.
+<https://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/>.
 
 ## Usage
 

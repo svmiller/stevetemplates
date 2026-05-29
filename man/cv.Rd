@@ -14,7 +14,7 @@ templ_cv()
 }
 \description{
 A template for academic CVs. For more information, see here:
-\url{http://svmiller.com/blog/2016/03/svm-r-markdown-cv/}.
+\url{https://svmiller.com/blog/2016/03/svm-r-markdown-cv/}.
 }
 \section{About YAML header fields}{
 This section documents some of the YAML fields to know

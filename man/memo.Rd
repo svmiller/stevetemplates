@@ -14,7 +14,7 @@ templ_memo()
 }
 \description{
 A template for memos. For more information, see here:
-\url{http://svmiller.com/blog/2019/06/r-markdown-memo-template/}.
+\url{https://svmiller.com/blog/2019/06/r-markdown-memo-template/}.
 }
 \section{About YAML header fields}{
 This section documents some of the YAML fields to know

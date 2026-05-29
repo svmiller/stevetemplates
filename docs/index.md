@@ -6,7 +6,7 @@
 [![](http://cranlogs.r-pkg.org/badges/last-week/stevetemplates?color=green)](https://cran.r-project.org/package=stevetemplates)
 
 ![My stevetemplates
-hexlogo](http://svmiller.com/images/stevetemplates-hexlogo.png)
+hexlogo](https://svmiller.com/images/stevetemplates-hexlogo.png)
 
 `stevetemplates` is an R package to help you create lovely R Markdown
 documents, primarily for conversion to LaTeX PDFs. They come from [my
@@ -16,8 +16,8 @@ I’m making available as an R package. The impetus behind the R package
 is three-fold. First, I’ve always wanted to get something on CRAN just
 to say I did it. Two, I’m hopelessly vain and like making my first name
 as a prefix for various R-related things (see also:
-[`{stevemisc}`](http://svmiller.com/stevemisc/) and
-[`{stevedata}`](http://svmiller.com/stevedata/) as part of the
+[`{stevemisc}`](https://svmiller.com/stevemisc/) and
+[`{stevedata}`](https://svmiller.com/stevedata/) as part of the
 hypothetical `{steveverse}` for all things R and me (i.e. Steve)).
 Three, it would be nice to cut down on how clunky my YAML can get and
 it’d be nice for me and other users to have one single place to store
@@ -54,7 +54,7 @@ development version includes the following templates:
   that needed to look an exact way. That submission was not published at
   that journal. I have not had the occasion to submit there again.
 - [**Steve’s First Article/Manuscript
-  Template**](http://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/):
+  Template**](https://svmiller.com/blog/2016/02/svm-r-markdown-manuscript/):
   This is my first article/manuscript template and I made over five
   years ago. I used this template quite often for my manuscripts, but I
   switched to another template (also included in this package). It’s
@@ -62,56 +62,63 @@ development version includes the following templates:
   this template anymore, but it has lots of goodies (e.g. appendix
   support, suppressing title pages, etc.). You can call it in the YAML
   with
-  [`stevetemplates::article`](http://svmiller.com/reference/article.md).
+  [`stevetemplates::article`](https://svmiller.com/reference/article.md).
 - [**Steve’s 2nd Article/Manuscript
-  Template**](http://svmiller.com/blog/2020/09/another-rmarkdown-article-template/):
+  Template**](https://svmiller.com/blog/2020/09/another-rmarkdown-article-template/):
   This is my second article/manuscript template that I made in
   September 2020. It’s patterned off [the Association for Computing
   Machinery (ACM) LaTeX
   templates](https://www.latextemplates.com/template/acm-publications).
   You can call it in the YAML with
-  [`stevetemplates::article2`](http://svmiller.com/reference/article2.md).
+  [`stevetemplates::article2`](https://svmiller.com/reference/article2.md).
 - [**Steve’s Academic CV
-  Template**](http://svmiller.com/blog/2016/03/svm-r-markdown-cv/): This
-  is my academic CV template I made in 2016, and I think it’s my most
-  popular. It’s certainly the one I see most often in the wild. It’s
-  also what I currently use for [my CV](http://svmiller.com/cv/). You
-  can call it in the YAML with
-  [`stevetemplates::cv`](http://svmiller.com/reference/cv.md).
+  Template**](https://svmiller.com/blog/2016/03/svm-r-markdown-cv/):
+  This is my academic CV template I made in 2016, and I think it’s my
+  most popular. It’s certainly the one I see most often in the wild.
+  It’s also what I currently use for [my CV](https://svmiller.com/cv/).
+  You can call it in the YAML with
+  [`stevetemplates::cv`](https://svmiller.com/reference/cv.md).
 - [**Steve’s Non-Academic Résumé
-  Template**](http://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/):
+  Template**](https://svmiller.com/blog/2020/09/rmarkdown-template-non-academic-resume/):
   This is an addition I made in 2020 to my suite of R Markdown
   templates. It’s a bit clunky, but it’s useful and markup-light for
   non-academic résumés. You can call it in the YAML with
-  [`stevetemplates::resume`](http://svmiller.com/reference/resume.md).
+  [`stevetemplates::resume`](https://svmiller.com/reference/resume.md).
 - [**Steve’s Beamer
-  Template**](http://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/):
+  Template**](https://svmiller.com/blog/2019/08/r-markdown-template-beamer-presentations/):
   This is my go-to presentation template as I prefer Beamer PDFs to
   other presentation formats. You can call it in the YAML with
-  [`stevetemplates::beamer`](http://svmiller.com/reference/beamer.md).
+  [`stevetemplates::beamer`](https://svmiller.com/reference/beamer.md).
+- [**Steve’s (Non-Academic) Cover Letter
+  Template**](https://twitter.com/stevenvmiller/status/1320831949469065218):
+  I created this in 2020 when I was applying for some non-academic jobs
+  because I still have some misgivings about the future of academia and
+  I do not want to live in South Carolina. You can call it in the YAML
+  with
+  [`stevetemplates::cover_letter`](https://svmiller.com/reference/cover_letter.md).
 - **Steve’s HTML Template**: I created this template on the fly for
   formatting academic manuscripts to an HTML document. Capabilities are
   limited the extent to which there’s more CSS I need to adjust. This
   manuscript features prominently in my
   [`{steveproj}`](https://github.com/svmiller/steveproj) package.
 - [**Steve’s Memo
-  Template**](http://svmiller.com/blog/2019/06/r-markdown-memo-template/):
+  Template**](https://svmiller.com/blog/2019/06/r-markdown-memo-template/):
   I created this for a memo I needed to write in 2019. You can call it
   in the YAML with
-  [`stevetemplates::memo`](http://svmiller.com/reference/memo.md).
+  [`stevetemplates::memo`](https://svmiller.com/reference/memo.md).
 - **Steve’s Statement Template**: I created this template in 2016 (I
   believe). I use it for writing various “statements” (e.g. [my research
-  statement](http://svmiller.com/docs/svm-research-statement.pdf),
+  statement](https://svmiller.com/docs/svm-research-statement.pdf),
   statement of [teaching
-  philosophy](http://svmiller.com/docs/svm-teaching-philosophy.pdf))
+  philosophy](https://svmiller.com/docs/svm-teaching-philosophy.pdf))
   when applying for jobs. I also use it for miscellaneous university
   busy work. You can call it in the YAML with
-  [`stevetemplates::statement`](http://svmiller.com/reference/statement.md).
+  [`stevetemplates::statement`](https://svmiller.com/reference/statement.md).
 - [**Steve’s Syllabus
-  Template**](http://svmiller.com/blog/2016/07/r-markdown-syllabus/):
+  Template**](https://svmiller.com/blog/2016/07/r-markdown-syllabus/):
   This is one of my first templates, dating to mid-2016. I use it for
   all my syllabi for any class I teach. You can call it in the YAML with
-  [`stevetemplates::syllabus`](http://svmiller.com/reference/syllabus.md).
+  [`stevetemplates::syllabus`](https://svmiller.com/reference/syllabus.md).
 - **Steve’s Word Template**: I created this template many years ago and
   never worked with it because Word is limited in its functionality.
   I’ve since come back to this template because its limitations make it

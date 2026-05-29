@@ -16,7 +16,7 @@ templ_article3()
 Another template for academic articles/manuscripts. Please note that
 \code{xelatex} is functionally required for this template/function. An (incomplete)
 primer on this tutorial is available on my website
-\url{http://svmiller.com/blog/2023/05/a-third-rmarkdown-article-manuscript-template/}.
+\url{https://svmiller.com/blog/2023/05/a-third-rmarkdown-article-manuscript-template/}.
 }
 \details{
 If your version of TeX comes by way of Yihui Xie's \pkg{tinytex}, you'll want
