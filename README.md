@@ -85,7 +85,7 @@ development version includes the following templates:
   other presentation formats. You can call it in the YAML with
   `stevetemplates::beamer`.
 - [**Steve’s (Non-Academic) Cover Letter
-  Template**](https://twitter.com/stevenvmiller/status/1320831949469065218):
+  Template**](https://svmiller.com/stevetemplates/reference/cover_letter.html):
   I created this in 2020 when I was applying for some non-academic jobs
   because I still have some misgivings about the future of academia and
   I do not want to live in South Carolina. You can call it in the YAML
